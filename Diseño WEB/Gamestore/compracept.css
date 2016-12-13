@@ -1,0 +1,47 @@
+
+#todo {
+  width: 100%;
+  height: 78.5%;
+}
+
+#mensaje{
+  background-color: rgba(179, 179, 178, 1);
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  padding: 150px;
+  font-family:'Oswald', Arial, Sans-serif;
+}
+
+h1 {
+  text-align: center;
+}
+
+h2 {
+  padding: 20px;
+  text-align: center;
+}
+
+#botones {
+width: 100px;
+position: relative;
+top:9em;
+left: 100%;
+
+}
+
+a {
+  color: black;
+}
+button {
+  width: 100px;
+  height: 30px;
+}
+
+button:hover[type="submit"] {
+  color:#CCC;
+  background-color: grey;
+  border-color:#888;
+  transition:all 0.5s ease;
+}

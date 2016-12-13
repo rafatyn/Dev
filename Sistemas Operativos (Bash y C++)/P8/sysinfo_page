@@ -1,0 +1,165 @@
+TITLE="Informacion del sistema para $HOSTNAME"
+RIGHT_NOW=$(date +"%x %r %Z")
+TIME_STAMP="Actualizada el $RIGHT_NOW por $USER"
+interactive=0
+filename=./sysinfo_page.html
+partitions=0
+tiempo=0
+n=99:99:99
+cpu=1
+
+system_info()
+{
+  echo "<h2>Informacion de version del sistema</h2>"
+   echo "<p>Funcion no implementada</p>"
+}
+
+
+show_uptime()
+{
+  echo "<h2>Tiempo de encendido del sistema</h2>"
+  echo "<pre>"
+  uptime
+  echo "</pre>"
+}
+
+drive_space()
+{
+  echo "<h2>Espacio ocupado en los discos duros/particiones del sistema</h2>"
+  echo "<pre>"
+   if [ $partitions -eq 1 ]; then
+     df -h | grep $filter
+   else
+     df -h
+   fi
+  echo "</pre>"
+}
+
+
+home_space()
+{
+  echo "<h2>Espacio ocupado por los directorios personales del usuario: $USER</h2>"
+  if test $USER = root; then
+  echo "<pre>"
+  du -s /home/* | sort -nr
+  echo "</pre>"
+  else
+  echo "<pre>"
+  du -s /home/$USER | sort -nr
+  echo "</pre>"
+  fi
+}
+
+time_usage()
+{
+    echo "<h2>Procesos que superan $n de tiempo de cpu</h2>"
+    for i in $(ps -Ao user,time,cmd --noheaders | tr -s ' ' '|' | cut -d'|' -f1,2); 
+      do 
+        tiempo=$(echo $i | cut -d'|' -f2); 
+        nombrepro=$(echo $i | cut -d'|' -f1);
+        if [[ $tiempo > $n ]]; then
+            echo $nombrepro; 
+        fi
+      done
+}
+
+usage()
+{
+   echo "usage: sysinfo_page [[[-f file ] [-i]] | [-h]]"
+}
+
+press_enter()
+{
+    echo -en "\nPresiona enter para continuar"
+    read
+    clear
+}
+
+while [ "$1" != "" ]; do
+   case $1 in
+       -f | --file )              shift
+                                  filename=$1
+                                  shift
+                                  ;;
+       -i | --interactive )       interactive=1
+                                  shift
+                                  ;;
+       -h | --help )              usage
+                                  exit
+                                  ;;
+       -p | --partitons-filter )  shift
+                                  partitions=1
+                                  filter=$1
+                                  shift
+                                  ;;
+       -cpu )                     shift
+                                  n=$1
+                                  shift
+                                  ;;
+       * )                     usage
+                               exit 1
+   esac
+done
+
+if [ $interactive -eq 1 ]; then
+  selection=
+  until [ "$selection" = "0" ]; do
+      echo "
+      PROGRAM MENU
+      1 - Tiempo de encendido del sistema
+      2 - Espacio ocupado en los discos duros/particiones del sistema
+      3 - Espacio ocupado por los directorios personales del usuario
+      4 - Procesos que superan $n de tiempo de cpu
+      0 - exit program
+  "
+      echo -n "Enter selection: "
+      read selection
+      echo ""
+      case $selection in
+          1 ) $(show_uptime) ;;
+          2 ) $(drive_space) ;;
+          3 ) $(home_space) ;;
+          4 ) $(time_usage) ;;
+          0 ) break ;;
+          * ) echo "Please enter 1, 2, 3, 4 or 0"
+      esac
+      press_enter
+  done
+  file=
+  echo "Introduzca el nombre del archivo donde desea guardar: "
+  read file
+  if [ -f ./$file ]; then
+    echo "
+    El archivo introducido ya existe, desea sobreescribirlo?
+    0 - Si.
+    1 - No.
+    "
+    read selection
+    case $selection in
+        0 ) filename=$file ;;
+        * ) exit
+    esac
+  else
+    filename=$file
+  fi
+fi
+
+cat << _EOF_ > $filename
+<html>
+<head>
+  <title>
+  $TITLE
+  </title>
+</head>
+
+<body>
+  <h1>$TITLE</h1>
+   <p>$TIME_STAMP</p>
+   $(system_info)
+   $(show_uptime)
+   $(drive_space)
+   $(home_space)
+   $(time_usage)
+</body>
+</html>
+_EOF_

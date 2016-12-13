@@ -1,0 +1,47 @@
+<!doctype html>
+
+<html lang="es">
+	<link rel="stylesheet" type="text/css" href="stylesheet.css">
+	<link rel="stylesheet" type="text/css" href="about.css">
+	<script src="js/app.js" ></script>
+	<meta charset="utf-8"/>
+	<header>
+		<div id="logo">
+			<img id="a1" src="img/logo.png" alt="">
+		</div>
+    <div class="nav">
+	    <title class="brand-name">E-Commerce</title>
+      <ul>
+        <li class="home"><a href="index.html">Home</a></li>
+        <li class="dropdown"><a href="#">Productos<span id="droparrow">&#9662;</span></a><button onclick="toggleMenu('droplist')"></button>
+          <ul id="droplist">
+            <li><a href="consoles.html">Consolas</a></li>
+            <li><a href="games.html">Videojuegos</a></li>
+            <li><a href="accesorios.html">Accesorios</a></li>
+          </ul>
+        </li>
+        <li class="about"><a href="#" class="active">Acerca de</a></li>
+      </ul>
+    </div>
+  </header>
+
+	<body>
+		<h1>¿Quiénes Somos?</h1>
+		<p class="info" onclick="oc('droplist')">
+			E-Commerce nace en 2016. Desde el primer momento, apostamos por la venta online de informática, algo que en aquellos años era todavía difícil de asimilar. La idea principal era, y sigue siendo a día de hoy, poder ofrecer a todos los amantes de la informática y las nuevas tecnologías productos específicos a precios asequibles sin renunciar a la calidad. Todo, manteniendo la esencia del pequeño comercio, estando cerca de los clientes y ofreciendo un trato personalizado. Hicimos de esas máximas nuestra filosofía y pronto conseguimos ganarnos la confianza de los consumidores.<br><br>Tras un comienzo fulgurante, en muy poco tiempo, www.E-Commerce.com se afianzó como punto de referencia en la venta online de productos informáticos y tecnológicos en España, contando con miles de compradores en su primer año de vida en la red.<br><br>Gracias a nuestro esfuerzo diario, al trato personal y directo y a nuestro servicio postventa nos hemos posicionado como la tienda online española de informática y tecnología más visitada.<br><br>
+		</p>
+
+		<div class="center">
+			<div id="map"></div>
+			<script src="https://maps.googleapis.com/maps/api/js?callback=initMap" async defer></script>
+		</div>
+
+	</body>
+
+	<footer>
+		 <p><a>&copy; 2016 E-Commerce, Inc. &middot; </a><a href="privacy.html">Privacidad</a> &middot; <a href="#">Términos</a><a style="float: right" href="#">Ir Arriba</a></p>
+	</footer>
+
+
+
+</html>

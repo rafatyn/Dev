@@ -1,0 +1,854 @@
+/*
+vw = viewport width
+vh = viewport height
+Las uso para hacer que toda la animacion sea redimensionable sin ningun problema de tamaños
+Y ademas uso la funcion calc para hacer una operacion matemática
+*/
+
+#pag {
+  background-image: url("http://i.imgsafe.org/954d362.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: 0 -110.5vw;
+  width: 100vw;
+  height: 56.25vw;
+  margin: auto;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background-color: black;
+  cursor: url("http://www.dolliehost.com/dolliecrave/graphics/cursors-geeky/pokemon.gif"), auto;
+}
+
+#fondo {
+  margin: 0;
+}
+
+#bpersonaje {
+  animation: moverarriba 1.6s forwards linear;
+  width: 6vw;
+  height: 5.2vw;
+  position: relative;
+  left: 53.4vw;
+  top: 50.8vw;
+}
+
+#personaje {
+  background-image: url("http://i39.tinypic.com/2mmcp08.png");
+  background-size: 1200% 100%;
+  background-repeat: no-repeat;
+  width: 6vw;
+  height: 5.2vw;
+  animation: animacionmoverarriba .8s steps(2) 2;
+}
+
+@keyframes moverarriba {
+  0% {
+    top: 50.8vw;
+  }
+  100% {
+    top: 34vw;
+  }
+}
+
+@keyframes animacionmoverabajo {
+  0% {
+    background-position: -6vw;
+  }
+  100% {
+    background-position: -18vw;
+  }
+}
+
+@keyframes animacionmoverarriba {
+  0% {
+    background-position: -24vw;
+  }
+  100% {
+    background-position: -36vw;
+  }
+}
+
+@keyframes animacionmoverderecha {
+  0% {
+    background-position: -42vw;
+  }
+  100% {
+    background-position: -54vw;
+  }
+}
+
+@keyframes animacionmoverizquierda {
+  0% {
+    background-position: -60vw;
+  }
+  100% {
+    background-position: -72vw;
+  }
+}
+
+#parpadeo {
+  position: absolute;
+  top: 0;
+  background-color: grey;
+  width: 100vw;
+  height: 56.25vw;
+  opacity: 0;
+  animation: parpadeo .15s linear 1.6s, parpadeo .15s linear 1.7s;
+}
+
+@keyframes parpadeo {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+#barras {
+  position: absolute;
+  top: 0;
+  animation: ocultar .2s linear 2.7s forwards;
+  width: 100vw;
+  height: 56.25vw;
+}
+
+.barra1 {
+  background-color: black;
+  width: 100vw;
+  height: 0.5625vw;
+  position: relative;
+  left: -100vw;
+  animation: barras1 .7s linear 1.8s forwards;
+}
+
+.barra2 {
+  background-color: black;
+  width: 100vw;
+  height: 0.5625vw;
+  position: relative;
+  right: -100vw;
+  animation: barras2 .7s linear 1.8s forwards;
+}
+
+@keyframes barras1 {
+  0% {
+    left: -100vw;
+  }
+  100% {
+    left: 0;
+  }
+}
+
+@keyframes barras2 {
+  0% {
+    right: -100vw;
+  }
+  100% {
+    right: 0;
+  }
+}
+
+@keyframes ocultar {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+#negro {
+  width: 100vw;
+  height: 56.25vw;
+}
+
+#negro div {
+  background-color: black;
+  width: 100vw;
+  height: 28.125vw;
+  opacity: 0;
+}
+
+#negroa {
+  position: absolute;
+  top: 0;
+  animation: aparecer .1s linear 2.5s forwards, barriba 1s linear 2.9s forwards;
+}
+
+#negrob {
+  position: absolute;
+  top: 28.125vw;
+  animation: aparecer .1s linear 2.5s forwards, babajo 1s linear 2.9s forwards, ocultar .1s linear 3.9s forwards, barriba .1s linear 4.1s forwards;
+}
+
+@keyframes aparecer {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes barriba {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: -28.125vw;
+  }
+}
+
+@keyframes babajo {
+  0% {
+    top: 28.125;
+  }
+  100% {
+    top: 56.25vw;
+  }
+}
+
+#fcombate {
+  background-image: url("http://i.imgsafe.org/9add650.png");
+  background-size: 100% 140%;
+  width: 100vw;
+  height: 42.1875vw;
+  position: absolute;
+  top: 0;
+  opacity: 0;
+  animation: aparecer .1s linear 2.9s forwards;
+}
+
+#carriba {
+  background-image: url("http://i.imgsafe.org/9c3fbdb.png");
+  background-size: 100% 140%;
+  width: 100vw;
+  height: 28.125vw;
+  position: absolute;
+  top: 0;
+  left: -100vw;
+  animation: carri .5s linear 4.9s forwards;
+}
+
+@keyframes carri {
+  0% {
+    left: -100vw;
+  }
+  100% {
+    left: 0;
+  }
+}
+
+#cabajo {
+  background-image: url("http://i.imgsafe.org/988d2ab.png");
+  background-size: 100% 100%;
+  width: 100vw;
+  height: 14.0625vw;
+  position: absolute;
+  top: 28.125vw;
+  left: 100vw;
+  animation: caba .5s linear 4.9s forwards;
+}
+
+@keyframes caba {
+  0% {
+    left: 100vw;
+  }
+  100% {
+    left: 0;
+  }
+}
+
+#h1 {
+  background-image: url("http://i.imgsafe.org/960812d.png");
+  background-size: 100% 100%;
+  width: 100vw;
+  height: 25vw;
+  position: absolute;
+  top: 17.1875vw;
+  opacity: 0;
+  animation: aparecer .1s linear 2.9s forwards, bajarhierba 1.5s linear 3.9s forwards, moverhierba 1.5s linear 2.9s 3, ocultar .1s linear 5.4s forwards, ordenar .1s linear 5.5s forwards;
+}
+
+#h2 {
+  background-image: url("http://i.imgsafe.org/960812d.png");
+  background-size: 100% 100%;
+  width: 100vw;
+  height: 25vw;
+  position: absolute;
+  top: 17.1875vw;
+  left: 100vw;
+  opacity: 0;
+  animation: aparecer .1s linear 2.9s forwards, bajarhierba 1.5s linear 3.9s forwards, moverhierba2 1.5s linear 2.9s 3, ocultar .1s linear 5.4s forwards, ordenar .1s linear 5.5s forwards;
+}
+
+
+@keyframes ordenar {
+  0% {
+    left:0;
+  }
+  100% {
+    left:0;
+  }
+}
+
+@keyframes bajarhierba {
+  0% {
+    top: 17.1875vw;
+  }
+  100% {
+    top: 42.1875vw;
+  }
+}
+
+@keyframes moverhierba {
+  0% {
+    opacity: 1;
+    left: 0;
+  }
+  99.8% {
+    opacity: 1;
+  }
+  99.9% {
+    left: -100vw;
+    opacity: 0;
+  }
+  99.99% {
+    left: 100vw;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes moverhierba2 {
+  0% {
+    opacity: 1;
+    left: 100vw;
+  }
+  99.8% {
+    opacity: 1;
+  }
+  99.9% {
+    left: 0;
+    opacity: 0;
+  }
+  99.99% {
+    left: 100vw;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+#btexto {
+  background-image: url("http://i.imgsafe.org/9462c3f.png");
+  background-size: 100% 100%;
+  width: 100vw;
+  height: 14.0625vw;
+  position: absolute;
+  top: 42.1875vw;
+  opacity: 0;
+  padding: 0;
+  animation: aparecer .1s linear 2.9s forwards;
+}
+
+#p1 {
+  background-image: url("http://i.imgsafe.org/966ba83.png");
+  background-size: 100% 102%;
+  width: 20vw;
+  height: 20vw;
+  position: absolute;
+  top: 56.25vw;
+  left: 17vw;
+  opacity: 0;
+  animation: aparecer .1s linear 5.4s forwards, subirp1 .5s linear 6.6s forwards;
+}
+
+@keyframes subirp1 {
+  0% {
+    top: 56.25vw;
+  }
+  100% {
+    top: 22.1875vw;
+  }
+}
+
+#p2 {
+  background-image: url("http://i.imgsafe.org/9d0296d.png");
+  background-size: 100% 100%;
+  width: 20vw;
+  height: 20vw;
+  position: absolute;
+  top: 2vw;
+  left: 162vw;
+  opacity: 0;
+  animation: aparecer .1s linear 4.5s forwards, subirp2 .5s linear 4.9s forwards, retroceso .5s linear 14.5s forwards, parpadeo2 .5s linear 14.8s 2 forwards, bajarp2 .5s linear 16s forwards;
+}
+
+@keyframes retroceso {
+  0% {
+    left: 62vw;
+  }
+  50% {
+    left: 64vw;
+  }
+  100% {
+    left:62vw;
+  }
+}
+
+@keyframes parpadeo2 {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes subirp2 {
+  0% {
+    left: -38vw;
+  }
+  100% {
+    left: 62vw;
+  }
+}
+
+@keyframes bajarp2 {
+  0% {
+    top: 2vw;
+  }
+  100% {
+    top: 42.1875vw;
+  }
+}
+
+
+#btexto > div {
+  opacity: 0;
+  position: absolute;
+}
+
+#btexto div:first-child, .ttext {
+  display: inline-block;
+}
+
+#t1, #t2, #t3, #t4, #t5, #t6, #t7 {
+  font-family: 'Ropa Sans', sans-serif;
+  text-shadow: 0.25vw 0.15vw grey;
+  word-spacing: .2vw;
+  letter-spacing: 0.2vw;
+  font-size: 3.5vw;
+  color: white;
+  position: relative;
+  top: 3vw;
+  left: 5vw;
+}
+
+#text1 {
+  animation: aparecer .2s linear 5.4s forwards, ocultar .2s linear 6.5s forwards;
+}
+
+#text2 {
+  animation: aparecer .2s linear 6.6s forwards, ocultar .2s linear 7.6s forwards;
+}
+
+#text3 {
+  animation: aparecer .2s linear 7.7s forwards, ocultar .2s linear 11s forwards;
+}
+
+#text4 {
+  animation: aparecer .2s linear 13s forwards, ocultar .2s linear 14s forwards;
+}
+
+#text5 {
+  animation: aparecer .2s linear 17s forwards, ocultar .2s linear 18s forwards;
+}
+
+#text6 {
+  animation: aparecer .2s linear 18s forwards, ocultar .2s linear 19.5s forwards;
+}
+
+#text7 {
+  animation: aparecer .2s linear 19.5s forwards, ocultar .2s linear 20.5s forwards;
+}
+
+.ttext {
+  background-image: url("http://i.imgsafe.org/9937035.png");
+  background-size: 100% 100%;
+  width: 3vw;
+  height: 2vw;
+  position: relative;
+  top: 2.5vw;
+  left: 5.5vw;
+  animation: froja .4s linear 5.4s infinite;
+}
+
+#esp1 {
+  left: .8vw;
+}
+
+#esp2 {
+  left: -3vw;
+}
+
+@keyframes froja {
+  0% {
+    top: 2.5vw;
+  }
+  50% {
+    top: 3.5vw;
+  }
+  100% {
+    top: 2.5vw;
+  }
+}
+
+#marc > div {
+  background-image: url("http://i.imgsafe.org/9764929.png");
+  background-size: 100% 200%;
+  width: 40vw;
+  height: 15vw;
+}
+
+#m1 {
+  position: absolute;
+  top: 5vw;
+  left: -92.5vw;
+  opacity:0;
+  animation: aparecer .1s linear 4.5s forwards, m1izq .5s linear 4.9s forwards, ocultar .5s linear 16.3s forwards;
+}
+
+@keyframes m1izq {
+  0% {
+    left: -92.5vw;
+  }
+  100% {
+    left: 7.5vw;
+  }
+}
+
+#m2 {
+  background-position:0 -15vw;
+  position: absolute;
+  top: 27vw;
+  left: 155vw;
+  opacity: 0;
+  animation: aparecer .1s linear 5.4s forwards, m2der .5s linear 6.6s forwards;
+}
+
+@keyframes m2der {
+  0% {
+    left: 155vw;
+  }
+  100% {
+    left: 55vw;
+  }
+}
+
+#m1 div {
+  display:inline-block;
+  font-family: 'Ropa Sans', sans-serif;
+  text-shadow: 0.25vw 0.15vw ligthgrey;
+  font-size: 3.5vw;
+  color: 	#383838;
+  position: relative;
+  top: 1.7vw;
+}
+
+#m2 div {
+  display:inline-block;
+  font-family: 'Ropa Sans', sans-serif;
+  text-shadow: 0.25vw 0.15vw ligthgrey;
+  font-size: 3.5vw;
+  color: 	#383838;
+  position: relative;
+  top:2.5vw;
+}
+
+#n1 {
+  left: 2vw;
+}
+
+#l1 {
+  left: 20vw;
+}
+
+#n2 {
+  left:5.5vw;
+}
+
+#l2 {
+  left:10.5vw;
+}
+
+#sexo {
+  background-image:url("http://i.imgsafe.org/97f2804.png");
+  background-size:70% 70%;
+  background-repeat:no-repeat;
+  width:4vw;
+  height:3vw;
+  position:absolute;
+  transform:translateY(1vw);
+  left:5.5vw;
+}
+
+#exp {
+  background-color:#40c8f8;
+  width:0vw;
+  height:.82vw;
+  position:absolute;
+  top:40.45vw;
+  left:67.1vw;
+  animation: extend .5s linear 7.2s forwards, extend2 .5s linear 19.5s forwards;
+}
+
+@keyframes extend {
+  0% {
+    width:0;
+  }
+
+  100% {
+    width:13vw;
+  }
+}
+
+@keyframes extend2 {
+  0% {
+    width:13vw;
+  }
+
+  100% {
+    width:18vw;
+  }
+}
+
+#elegirqh {
+  background-image: url("http://i.imgsafe.org/67c5735.png");
+  background-size:100% 100%;
+  width:40vw;
+  height:14.0625vw;
+  position:absolute;
+  top:42.1875vw;
+  left:60vw;
+  opacity:0;
+  animation: aparecer .1s linear 7.8s forwards, ocultar .1s linear 11s forwards;
+}
+
+#barraapp {
+  background-image: url("http://i.imgsafe.org/9a35d66.png");
+  background-size:100% 100%;
+  width:100vw;
+  height:14.0625vw;
+  position: absolute;
+  top:42.1875vw;
+  opacity:0;
+  animation: aparecer .1s linear 11.1s forwards, ocultar .1s linear 13s forwards;
+}
+
+#elegira div {
+  display:inline-block;
+  font-family: 'Ropa Sans', sans-serif;
+  text-shadow: 0.8vw 0.8vw ligthgrey;
+  font-size: 4vw;
+  color: 	#383838;
+  position: absolute;
+}
+
+#cp, #cp2 {
+  position:absolute;
+  left:75vw;
+  height:14.0625vw;
+  width:25vw;
+}
+
+#cp div {
+  font-family: 'Ropa Sans', sans-serif;
+  text-shadow: 0.8vw 0.8vw ligthgrey;
+  color:#383838;
+  position:relative;
+  top:2vw;
+  left:8.5vw;
+  animation: ocultar .001s linear 11.8s forwards, aparecer .001s linear 12.4s forwards;
+}
+
+#cp2 div {
+  font-family: 'Ropa Sans', sans-serif;
+  text-shadow: 0.8vw 0.8vw ligthgrey;
+  color:#383838;
+  position:relative;
+  top:2vw;
+  left:8.5vw;
+  opacity:0;
+  animation: aparecer .001s linear 11.8s forwards, ocultar .001s linear 12.4s forwards;
+}
+
+#pp, #pp2 {
+  display:inline-block;
+  font-size: 5vw;
+}
+
+#pp2 {
+  margin-left:2.3vw;
+}
+
+#tt, #tt2 {
+  font-size: 5vw;
+  display:inline-block;
+}
+
+#tt2 {
+  margin-left:2.3vw;
+}
+
+#tipo, #tipo2 {
+  font-size: 3.5vw;
+  margin-top:.5vw;
+  margin-left:-3.5vw;
+}
+
+#a {
+  top:2.2vw;
+  left:5vw;
+}
+
+#b {
+  top:2.2vw;
+  left:37vw;
+}
+
+#c {
+  top:7.2vw;
+  left:5vw;
+}
+
+#d {
+  top:7.2vw;
+  left:37vw;
+}
+
+#punt {
+  background-image: url("http://i.imgsafe.org/9ba8af0.png");
+  background-size:100% 100%;
+  width:2vw;
+  height:4vw;
+  position:absolute;
+  top:2.8vw;
+  left:2.8vw;
+  animation: ocultar .001s linear 11.8s forwards, moverab .001s linear 11.81s forwards, aparecer .001s linear 11.9s forwards, ocultar .001s linear 12.3s forwards, moverarr .001s linear 12.31s forwards, aparecer .001s linear 12.4s forwards;
+}
+
+@keyframes moverab {
+  0% {
+    top:2.8vw;
+  }
+  100% {
+    top:7.7vw;
+  }
+}
+
+@keyframes moverarr {
+  0% {
+    top:7.7vw;
+  }
+  100% {
+    top:2.8vw;
+  }
+}
+
+#vene {
+  background-color:black;
+  width:0;
+  height:1.6vw;
+  position:absolute;
+  top:11.3vw;
+  left:22.3vw;
+  border-radius:1.5vw;
+  animation: aperderv 1s linear 15s forwards, ocultar .5s linear 16.3s forwards;
+}
+
+@keyframes aperderv {
+  0% {
+    width:0;
+  }
+
+  100% {
+    width:18.8vw;
+  }
+}
+
+#ataque {
+  background-image: url("http://i.imgsafe.org/674ebd6.png");
+  background-size:100% 100%;
+  width:15vw;
+  height:15vw;
+  position:absolute;
+  top:18vw;
+  left:32vw;
+  opacity:0;
+  transform:rotate(28deg);
+  animation: aparecer .2s linear 13s forwards, llama2 1.5s linear 13s forwards, ocultar .5s linear 14.5s forwards;
+}
+
+@keyframes llama1 {
+  0% {
+    width:7vw;
+    height:7vw;
+  }
+
+  100% {
+    width:15vw;
+    height:15vw;
+  }
+}
+
+@keyframes llama2 {
+  0% {
+    top:18vw;
+    left:32vw;
+  }
+
+  100% {
+    top:6vw;
+    left:62vw;
+  }
+}
+
+#negrof {
+  background-color:black;
+  width:100vw;
+  height:56.25vw;
+  position:absolute;
+  top:0;
+  left:0;
+  opacity:0;
+  animation: aparecer 1s linear 21s forwards;
+}
+
+#negrobajo {
+  background-color:black;
+  width:100vw;
+  min-height:calc(100vh - 56.25vw); /*Uso la funcion calc para hacer una operacion matemática*/
+  height:100%;
+  position:absolute;
+  top:56.25vw;
+  left:0;
+}
+
+@media screen and (max-width:460px) {
+  body {
+    opacity:0;
+  }
+}

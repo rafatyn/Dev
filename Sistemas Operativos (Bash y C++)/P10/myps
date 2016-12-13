@@ -1,0 +1,258 @@
+#!/bin/bash
+filename=./myps.html
+pid=
+user=
+apid=
+appid=
+aux=
+auser=
+astate=
+agroup=
+ahilo=
+acwd=
+acmdline=
+
+get_cmdline()   #Recibe un PID e imprime la linea de comandos del proceso
+{
+  if [ -f "/proc/$pid/cmdline" ]; then   
+    acmdline=$(echo $(cat /proc/$pid/cmdline))
+    echo $acmdline
+  else
+    echo ""
+  fi
+}
+
+auid=
+agid=
+
+get_user()    #Recibe un PID e imprime el nombre del usuario al que pertenece el proceso
+{
+  if [ -f "/proc/$pid/status" ]; then  
+    auid=$(echo $(cat /proc/$pid/status | grep Uid: | tr -s '\t' '|' | cut -d'|' -f2))
+    agid=$(echo $(cat /proc/$pid/status | grep Gid: | tr -s '\t' '|' | cut -d'|' -f2))
+    auser=$(getent passwd | grep x:$auid:$agid: | cut -d':' -f1)
+    echo $auser
+  else
+    echo ""
+  fi
+}
+
+get_cwd()     #Recibe un PID e imprime el directorio actual de trabajo
+{
+  if [ -d "/proc/$pid/cwd" ]; then    
+    acwd=$(echo $(readlink /proc/$pid/cwd))
+    echo $acwd 
+  else
+    echo ""
+  fi
+}
+
+get_pid()      #Calcula el PID de un proceso
+{
+  apid=$(echo $(cat ./status | grep Pid | head -n1 | tr -s '\t' '|' |  cut -d'|' -f2))
+  echo $apid
+}
+
+get_ppid()      #Calcula el PPid de un proceso
+{
+  if [ -f "/proc/$pid/status" ]; then    
+    appid=$(echo $(cat /proc/$pid/status | grep PPid | tr -s '\t' '|' |  cut -d'|' -f2))
+    echo $appid
+  else
+    echo ""
+  fi
+
+}
+
+get_group()      #Calcula los grupos de un proceso
+{
+ if [ -f "/proc/$pid/status" ]; then
+  for i in $(cat /proc/$pid/status | grep Groups | cut -d':' -f2);
+    do
+	aux=$(echo $(cat /etc/group | grep $i | head -n1 | cut -d':' -f1))
+	agroup="$agroup $aux"
+    done
+    echo $agroup
+ else
+    echo ""
+ fi
+}
+
+get_estado()        #Calcula el estado en el que esta un proceso      
+{
+  if [ -f "/proc/$pid/status" ]; then    
+    astate=$(echo $(echo $(echo $(cat /proc/$pid/status | grep State | tr -s '\t' '|' | cut -d'|' -f2) | tr -s ' ' '|' | cut -d'|' -f2) | cut -d'(' -f2) | cut -d')' -f1)
+    echo $astate
+  else
+    echo ""
+  fi
+}
+
+get_hilos()         #Calcula el numero de hilos usados por ese proceso
+{
+  if [ -f "/proc/$pid/status" ]; then    
+    ahilo=$(echo $(cat /proc/$pid/status | grep Threads: | tr -s '\t' '|' | cut -d'|' -f2))
+    echo $ahilo
+  else
+    echo ""
+  fi  
+}
+
+abase=
+xx=
+
+get_basemane()
+{
+    for i in $(echo /proc/[[:digit:]]*);
+      do
+        aux=$(echo $i | cut -d'/' -f3)
+	if [ -f "/proc/$aux/cmdline" ]; then
+	  if [ "$(cat /proc/$aux/cmdline)" != "" ]; then
+	    if [[ "$abase" = "$(basename $(cat /proc/$aux/cmdline))" ]]; then
+	      pid=$aux
+	    fi
+	  fi
+	fi
+      done
+}
+
+get_io()
+{
+  if [ -f "/proc/$pid/io" ]; then
+    if [ "$USER" = "root" ]; then
+      cat /proc/$pid/io
+    fi
+  else
+    echo ""
+  fi
+}
+
+get_limits()
+{
+  if [ -f "/proc/$pid/limits" ]; then
+    cat /proc/$pid/limits
+  else
+    echo ""
+  fi
+}
+
+get_tu()
+{
+  if [ -f "/proc/$pid/stat" ]; then
+    cat /proc/$pid/stat | cut -d' ' -f14
+  else
+    echo ""
+  fi
+}
+
+get_tk()
+{
+  if [ -f "/proc/$pid/stat" ]; then
+    cat /proc/$pid/stat | cut -d' ' -f15
+  else
+    echo ""
+  fi
+}
+
+get_time()
+{
+  if [[ -f "/proc/uptime" && -f "/proc/cpuinfo" ]]; then
+    arep=$(echo $(echo $(cat /proc/uptime | cut -d' ' -f2) | cut -d'.' -f1))
+    acpus=$(echo $(cat /proc/cpuinfo | grep cpu | grep cores | head -n1 | cut -d':' -f2))
+    arep=$(($arep/$acpus))
+    auso=$(echo $(echo $(cat /proc/uptime | cut -d' ' -f1) | cut -d'.' -f1))
+    atot=$(($auso+$arep))
+    auso=$(($auso*100))
+    atime=$(($auso/$atot))
+    echo "$atime%"
+  else
+    echo ""
+  fi
+}
+
+tabla()       #Muestra una tabla con toda la info de cada proceso
+{
+  echo ""
+  printf "%6s|%6s|%10s|%55s|%10s|%5s|%15s|%90s|\n" "PID" "PPID" "USUARIOS" "GRUPOS" "ESTADO" "HILOS" "DIREC. ACTUAL" "LINEA DE COMANDOS"
+  for i in $(echo /proc/[[:digit:]]*);
+    do
+	pid=$(echo $i | cut -d'/' -f3)
+	echo "-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------"
+	printf "%6s|%6s|%10s|%55s|%10s|%5s|%15s|%89s |\n" "$pid" "$(get_ppid)" "$(get_user)" "$(get_group)" "$(get_estado)" "$(get_hilos)" "$(get_cwd)" "$(get_cmdline)"
+    done
+  echo "-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------"
+}
+
+tabla_pid()
+{
+  echo ""
+  printf "%6s|%6s|%10s|%55s|%10s|%5s|%15s|%90s|\n" "PID" "PPID" "USUARIOS" "GRUPOS" "ESTADO" "HILOS" "DIREC. ACTUAL" "LINEA DE COMANDOS"
+  echo "-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------"
+  printf "%6s|%6s|%10s|%55s|%10s|%5s|%15s|%89s |\n" "$pid" "$(get_ppid)" "$(get_user)" "$(get_group)" "$(get_estado)" "$(get_hilos)" "$(get_cwd)" "$(get_cmdline)"
+  echo "-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------"
+  echo -e "\n"
+  echo "-----------------------------------------------------------------------------------INFORMACION ADICIONAL-----------------------------------------------------------------------------------------------------"
+  get_io
+  echo -e "\n"
+  get_limits
+  echo -e "\n"
+  echo "Tiempo ejecutandose en modo usuario"
+  get_tu
+  echo "Tiempo ejecutandose en modo kernel"
+  get_tk
+  echo "Porcentaje de tiempo que se usado la CPU"
+  get_time
+}
+
+error_exit()
+{
+        echo "$1" 1>&2
+        exit 1
+} 
+
+usage()
+{
+        echo "usage: myps [[-n] 'comando' | [-p] 'pid' | [-h]]"
+}
+
+pp=
+
+if [ "$1" != "" ]; then
+  while [ "$1" != "" ]; do
+    case $1 in
+	  -n | --command )
+	    shift
+	    if [ "$pp" = "1" ]; then
+	      error_exit "No se pueden introducir ambas opciones a la vez"
+	    else
+	      pp=1
+	    fi
+	    abase=$1
+	    get_basemane
+	    tabla_pid
+	    ;;
+	  -p | --pid )
+	    shift
+	    if [ "$pp" = "1" ]; then
+	      error_exit "No se pueden introducir ambas opciones a la vez"
+	    else
+	      pp=1
+	    fi
+	    pid=$1
+	    tabla_pid
+	    ;;
+	  -h | --help )
+	    usage
+	    exit 0
+	    ;; 
+	  * )
+	    usage
+	    error_exit "La opcion introducida no es valida"
+    esac
+    shift
+  done
+
+else
+  tabla
+  
+fi

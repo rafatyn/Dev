@@ -1,0 +1,82 @@
+Script iniciado (jue 02 oct 2014 13:05:43 WEST
+)alu4825@cc342:~$ ls
+datos	   Documentos						     ficheros-perfil-local			IMPORTANTE.TXT					       Plantillas  typescript
+Descargas  DONT-SAVE-YOUR-FILES-IN-THIS-FOLDER-THEY-WILL-BE-DELETED  files-in-this-directory-at-login-time.txt	Música						       Público	   Vídeos
+Desktop    Escritorio						     Imágenes					NO-GUARDE-SUS-ARCHIVOS-EN-ESTA-CARPETA-SERAN-BORRADOS  README.txt
+alu4825@cc342:~$ mkdir alu4825
+alu4825@cc342:~$ cd alu4825
+alu4825@cc342:~/alu4825$ mkdir tmp asignaturas varios
+alu4825@cc342:~/alu4825$ mkdir .-[K/asignaturas/[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kcd asignaturas
+alu4825@cc342:~/alu4825/asignaturas$ mkdir informatica algebra calculo
+alu4825@cc342:~/alu4825/asignaturas$ cd o[Kinformatica
+alu4825@cc342:~/alu4825/asignaturas/informatica$ mkdir a[Kteoria pa[Kracticas[Kalu4825@cc342:~/alu4825/asignaturas/informatica$ mkdir teoria practicas[Kalu4825@cc342:~/alu4825/asignaturas/informatica$ mkdir teoria practicas+
+alu4825@cc342:~/alu4825/asignaturas/informatica$ ls
+practicas+  teoria
+alu4825@cc342:~/alu4825/asignaturas/informatica$ mv prcticas [K[K[K[K[K[K[Kacticas+ practicas
+alu4825@cc342:~/alu4825/asignaturas/informatica$ ls
+practicas  teoria
+alu4825@cc342:~/alu4825/asignaturas/informatica$ cd practicas
+alu4825@cc342:~/alu4825/asignaturas/informatica/practicas$ mkdir p1 p1[K2
+alu4825@cc342:~/alu4825/asignaturas/informatica/practicas$ cd /home/alu4825
+alu4825@cc342:~$ ls
+alu4825    Desktop						     Escritorio					Imágenes	NO-GUARDE-SUS-ARCHIVOS-EN-ESTA-CARPETA-SERAN-BORRADOS  README.txt
+datos	   Documentos						     ficheros-perfil-local			IMPORTANTE.TXT	Plantillas					       typescript
+Descargas  DONT-SAVE-YOUR-FILES-IN-THIS-FOLDER-THEY-WILL-BE-DELETED  files-in-this-directory-at-login-time.txt	Música		Público						       Vídeos
+alu4825@cc342:~$ d al[K[K[K[Kcd alu4825
+alu4825@cc342:~/alu4825$ who > ./tmp/usuarios.txt
+alu4825@cc342:~/alu4825$ who > ./tmp [K/texto.txt
+alu4825@cc342:~/alu4825$ who >> ./tmp/texto.txt
+alu4825@cc342:~/alu4825$ cd tmp
+alu4825@cc342:~/alu4825/tmp$ ls
+texto.txt  usuarios.txt
+alu4825@cc342:~/alu4825/tmp$ ls -l
+total 8
+-rw-r--r-- 1 alu4825 Alumno 92 oct  2 13:11 texto.txt
+-rw-r--r-- 1 alu4825 Alumno 46 oct  2 13:10 usuarios.txt
+alu4825@cc342:~/alu4825/tmp$ chmod u+x [K usuarios.txt
+alu4825@cc342:~/alu4825/tmp$ chmod o-r usus[Karios.txt
+alu4825@cc342:~/alu4825/tmp$ ls -k[Kl
+total 8
+-rw-r--r-- 1 alu4825 Alumno 92 oct  2 13:11 texto.txt
+-rwxr----- 1 alu4825 Alumno 46 oct  2 13:10 usuarios.txt
+alu4825@cc342:~/alu4825/tmp$ cd ..
+alu4825@cc342:~/alu4825$ ls -l
+total 12
+drwxr-xr-x 5 alu4825 Alumno 4096 oct  2 13:07 asignaturas
+drwxr-xr-x 2 alu4825 Alumno 4096 oct  2 13:11 tmp
+drwxr-xr-x 2 alu4825 Alumno 4096 oct  2 13:06 varios
+alu4825@cc342:~/alu4825$ chmod u [K-wx tmp
+alu4825@cc342:~/alu4825$ chmod g [K-x tmp
+alu4825@cc342:~/alu4825$ chmod o-x tmp
+alu4825@cc342:~/alu4825$ ls -l
+total 12
+drwxr-xr-x 5 alu4825 Alumno 4096 oct  2 13:07 asignaturas
+dr--r--r-- 2 alu4825 Alumno 4096 oct  2 13:11 tmp
+drwxr-xr-x 2 alu4825 Alumno 4096 oct  2 13:06 varios
+alu4825@cc342:~/alu4825$ cp ./tmp [K/texto.txt ./varo[Kios
+cp: no se puede efectuar `stat' sobre «./tmp/texto.txt»: Permiso denegado
+alu4825@cc342:~/alu4825$ cp ./tmp/usuc[Karios.txt ./varios
+cp: no se puede efectuar `stat' sobre «./tmp/usuarios.txt»: Permiso denegado
+alu4825@cc342:~/alu4825$ find . *.txt
+.
+./tmp
+./asignaturas
+./asignaturas/informatica
+./asignaturas/informatica/practicas
+./asignaturas/informatica/practicas/p2
+./asignaturas/informatica/practicas/p1
+./asignaturas/informatica/teoria
+./asignaturas/algebra
+./asignaturas/calculo
+./varios
+find: «*.txt»: No existe el archivo o el directorio
+alu4825@cc342:~/alu4825$ finf[Kd . -name *.txt
+alu4825@cc342:~/alu4825$ rm -Rf .
+rm: no se puede borrar el directorio: «.»
+alu4825@cc342:~/alu4825$ rm -Rf /home/alu4025[K[K[K825/alu4825
+rm: no se puede borrar «/home/alu4825/alu4825/tmp/texto.txt»: Permiso denegado
+rm: no se puede borrar «/home/alu4825/alu4825/tmp/usuarios.txt»: Permiso denegado
+alu4825@cc342:~/alu4825$ exit
+
+Script terminado (jue 02 oct 2014 13:32:14 WEST
+)

@@ -1,0 +1,70 @@
+TITLE="Informacion del sistema para $HOSTNAME"
+RIGHT_NOW=$(date +"%x %r %Z")
+TIME_STAMP="Actualizada el $RIGHT_NOW por $USER"
+
+funcion_nueva()
+{
+  echo "<h2>Numero de procesos activos actualmente</h2>"
+  if test $(ps -A | wc -l) -gt 100; then
+  echo "<p>Hay mas de 100 procesos ejcutandose actualmente</p>"
+  fi
+}
+
+system_info()
+{
+  echo "<h2>Informacion de version del sistema</h2>"
+  echo "<p>Funcion no implementada</p>"
+}
+
+
+show_uptime()
+{
+  echo "<h2>Tiempo de encendido del sistema</h2>"
+  echo "<pre>"
+  uptime
+  echo "</pre>"
+}
+
+
+drive_space()
+{
+  echo "<h2>Espacio ocupado en los discos duros/particiones del sistema</h2>"
+  echo "<pre>"
+  df -h
+  echo "</pre>"
+}
+
+
+home_space()
+{
+  echo "<h2>Espacio ocupado por los directorios personales del usuario: $USER</h2>"
+  if test $USER = root; then
+  echo "<pre>"
+  du -s /home/* | sort -nr
+  echo "</pre>"
+  else
+  echo "<pre>"
+  du -s /home/$USER | sort -nr
+  echo "</pre>"
+  fi
+}
+
+cat << _EOF_
+<html>
+<head>
+  <title>
+  $TITLE
+  </title>
+</head>
+
+<body>
+  <h2>$TITLE</h2>
+   <p>$TIME_STAMP</p>
+   $(system_info)
+   $(show_uptime)
+   $(drive_space)
+   $(home_space)
+   $(funcion_nueva)
+</body>
+</html>
+_EOF_

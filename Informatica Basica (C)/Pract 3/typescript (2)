@@ -1,0 +1,124 @@
+Script iniciado (jue 09 oct 2014 13:20:22 WEST
+)alu4825@cc335:~$ ssh alu4825@exthost.etsii.ull.es
+Ubuntu 12.04.3 LTS
+alu4825@exthost.etsii.ull.es's password: 
+Welcome to Ubuntu 12.04.3 LTS (GNU/Linux 3.2.0-53-generic-pae i686)
+
+The programs included with the Ubuntu system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Ubuntu comes with ABSOLUTELY NO WARRANTY, to the extent permitted by
+applicable law.
+
+alu4825@exthost:~$ hostname
+exthost
+alu4825@exthost:~$ cd ./datos/homes.rala
+alu4825@exthost:~/datos/homes.rala$ mkid[K[Kdir alu [K4825
+alu4825@exthost:~/datos/homes.rala$ cd alu4835[K[K25
+alu4825@exthost:~/datos/homes.rala/alu4825$ mkdir tmp asignaturas varios
+alu4825@exthost:~/datos/homes.rala/alu4825$ cd asignaturas
+alu4825@exthost:~/datos/homes.rala/alu4825/asignaturas$ mkdir informatica algebra calculo
+alu4825@exthost:~/datos/homes.rala/alu4825/asignaturas$ cd informatica
+alu4825@exthost:~/datos/homes.rala/alu4825/asignaturas/informatica$ mkdir teoria practicas
+alu4825@exthost:~/datos/homes.rala/alu4825/asignaturas/informatica$ cd practicas 
+alu4825@exthost:~/datos/homes.rala/alu4825/asignaturas/informatica/practicas$ mkdir p1 p2
+alu4825@exthost:~/datos/homes.rala/alu4825/asignaturas/informatica/practicas$ cd ../../..7[K/al[K[Ktmp
+alu4825@exthost:~/datos/homes.rala/alu4825/tmp$ who > exthor[Kst.txt
+alu4825@exthost:~/datos/homes.rala/alu4825/tmp$ ssh alu4825@banot.etss[Kii.ull.es
+The authenticity of host 'banot.etsii.ull.es (193.145.101.246)' can't be established.
+RSA key fingerprint is d6:e0:af:e8:8a:81:c3:3c:1e:35:ed:5c:58:75:8b:8f.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added 'banot.etsii.ull.es,193.145.101.246' (RSA) to the list of known hosts.
+Password: 
+Last login: Thu Oct  9 13:08:11 2014 from guarapo.csi.ull.es
+-bash-3.2$ hostname
+banot.etsii.ull.es
+-bash-3.2$ hostname[K[K[K[K[K[K[K[Kwho > banot.txt
+-bash-3.2$ exit
+logout
+Connection to banot.etsii.ull.es closed.
+alu4825@exthost:~/datos/homes.rala/alu4825/tmp$ exit
+logout
+Connection to exthost.etsii.ull.es closed.
+alu4825@cc335:~$ sftp alu4825@est[K[Kxthost.est[K[Ktsii.ull.es
+Ubuntu 12.04.3 LTS
+alu4825@exthost.etsii.ull.es's password: 
+Connected to exthost.etsii.ull.es.
+sftp> ./datos/homes.rala/alu4825/tmp/esthost.txt[1@g.[1@e.[1@t.[1@ ../datos/homes.rala/alu4825/tmp/esthost.txt
+Couldn't stat remote file: No such file or directory
+File "/home/alu4825/./datos/homes.rala/alu4825/tmp/esthost.txt" not found.
+sftp> cd ./datos/moe[K[K[Khome.rala
+Couldn't canonicalise: No such file or directory
+sftp> ls
+DONT-SAVE-YOUR-FILES-IN-THIS-FOLDER-THEY-WILL-BE-DELETED   Desktop                                                    Escritorio                                                 
+IMPORTANTE.TXT                                             NO-GUARDE-SUS-ARCHIVOS-EN-ESTA-CARPETA-SERAN-BORRADOS      README.txt                                                 
+datos                                                      ficheros-perfil-local                                      files-in-this-directory-at-login-time.txt                  
+sftp> cd datos
+sftp> ls
+homes.rala  
+sftp> cd homes.rala
+sftp> ls
+alu4825               perfil-ubuntu12.04    
+sftp> cd alu4825
+sftp> ls
+asignaturas  tmp          varios       
+sftp> cd tmp
+sftp> ls
+exthost.txt  
+sftp> get exthost.txt
+Fetching /home/alu4825/datos/homes.rala/alu4825/tmp/exthost.txt to exthost.txt
+/home/alu4825/datos/homes.rala/alu4825/tmp/exthost.txt                                                                                           0%    0     0.0KB/s   --:-- ETA/home/alu4825/datos/homes.rala/alu4825/tmp/exthost.txt                                                                                         100%  434     0.4KB/s   00:00    
+sftp> exit
+alu4825@cc335:~$ ss[K[Ksftp banot
+Password: 
+Connected to banot.
+sftp> cd datos
+Couldn't canonicalise: No such file or directory
+sftp> ls
+banot.txt  
+sftp> get banot.txt
+Fetching /home/alu4825/banot.txt to banot.txt
+/home/alu4825/banot.txt                                                                                                                          0%    0     0.0KB/s   --:-- ETA/home/alu4825/banot.txt                                                                                                                        100%  119     0.1KB/s   00:00    
+sftp> exu[Kit
+alu4825@cc335:~$ ls
+banot.txt   DONT-SAVE-YOUR-FILES-IN-THIS-FOLDER-THEY-WILL-BE-DELETED  Imágenes						     Público
+datos	    Escritorio						      IMPORTANTE.TXT					     README.txt
+Descargas   exthost.txt						      Música						     typescript
+Desktop     ficheros-perfil-local				      NO-GUARDE-SUS-ARCHIVOS-EN-ESTA-CARPETA-SERAN-BORRADOS  Vídeos
+Documentos  files-in-this-directory-at-login-time.txt		      Plantillas
+alu4825@cc335:~$ cat banot.txt
+alu4831  pts/0        2014-10-09 13:14 (guarapo.etsii.ull.es)
+alu4825  pts/1        2014-10-09 13:14 (193.145.101.242)
+alu4825@cc335:~$ cat exthost.txt
+alu4733  pts/1        2014-10-09 13:22 (guarapo.etsii.ull.es)
+alu4780  pts/2        2014-10-09 13:10 (guarapo.etsii.ull.es)
+alu4821  pts/3        2014-10-09 13:22 (guarapo.etsii.ull.es)
+alu4899  pts/4        2014-10-09 13:13 (guarapo.etsii.ull.es)
+alu4825  pts/5        2014-10-09 13:21 (guarapo.etsii.ull.es)
+alu4661  pts/6        2014-10-09 13:14 (guarapo.etsii.ull.es)
+alu4918  pts/7        2014-10-09 13:23 (guarapo.etsii.ull.es)
+alu4825@cc335:~$ ssh exthost
+Ubuntu 12.04.3 LTS
+alu4825@exthost's password: 
+Welcome to Ubuntu 12.04.3 LTS (GNU/Linux 3.2.0-53-generic-pae i686)
+
+The programs included with the Ubuntu system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Ubuntu comes with ABSOLUTELY NO WARRANTY, to the extent permitted by
+applicable law.
+
+alu4825@exthost:~$ cd ./datp[Kos/homes.rala
+alu4825@exthost:~/datos/homes.rala$ ls
+alu4825  perfil-ubuntu12.04
+alu4825@exthost:~/datos/homes.rala$ alu[K[K[Kcda[K alu4825
+alu4825@exthost:~/datos/homes.rala/alu4825$ ls
+asignaturas  tmp  varios
+alu4825@exthost:~/datos/homes.rala/alu4825$ logout
+Connection to exthost closed.
+alu4825@cc335:~$ exit
+
+Script terminado (jue 09 oct 2014 13:32:27 WEST
+)
