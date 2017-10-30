@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=Client
+Exec=/usr/bin/Client
+Icon=/usr/share/icons/hicolor/32x32/apps/Client.png
+Type=Application
+Categories=Network;

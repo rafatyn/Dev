@@ -1,0 +1,74 @@
+module sin_table (input wire [5:0] select, output reg [15:0] wave);
+
+always@(select[5:0])
+begin
+    case(select[5:0])
+ 0 :wave=16'h0;
+ 1 :wave=16'h0;
+ 2 :wave=16'h0;
+ 3 :wave=16'h0;
+ 4 :wave=16'h0;
+ 5 :wave=16'h0;
+ 6 :wave=16'h246;
+ 7 :wave=16'hC36;
+ 8 :wave=16'hCFC;
+ 9 :wave=16'hC17;
+ 10 :wave=16'hAEE;
+ 11 :wave=16'hAA0;
+ 12 :wave=16'hBB8;
+ 13 :wave=16'hBAE;
+ 14 :wave=16'h9E4;
+ 15 :wave=16'h834;
+ 16 :wave=16'h789;
+ 17 :wave=16'hA89;
+ 18 :wave=16'h115A;
+ 19 :wave=16'h19D4;
+ 20 :wave=16'h2316;
+ 21 :wave=16'h2825;
+ 22 :wave=16'h24BA;
+ 23 :wave=16'h1D2E;
+ 24 :wave=16'h143B;
+ 25 :wave=16'hE10;
+ 26 :wave=16'h1345;
+ 27 :wave=16'h1E4B;
+ 28 :wave=16'h2392;
+ 29 :wave=16'h1E0A;
+ 30 :wave=16'hF4A;
+ 31 :wave=16'h37F;
+ 32 :wave=16'h1E0;
+ 33 :wave=16'h560;
+ 34 :wave=16'h9B7;
+ 35 :wave=16'hF84;
+ 36 :wave=16'h16D8;
+ 37 :wave=16'h1B1D;
+ 38 :wave=16'h1B6C;
+ 39 :wave=16'h1B5D;
+ 40 :wave=16'h175E;
+ 41 :wave=16'hD34;
+ 42 :wave=16'h33A;
+ 43 :wave=16'hFFFFFCF5;
+ 44 :wave=16'hFFFFFAC0;
+ 45 :wave=16'hFFFFF9B0;
+ 46 :wave=16'hFFFFF3FE;
+ 47 :wave=16'hFFFFF103;
+ 48 :wave=16'hFFFFF394;
+ 49 :wave=16'hFFFFEBEE;
+ 50 :wave=16'hFFFFDD00;
+ 51 :wave=16'hFFFFD7D4;
+ 52 :wave=16'hFFFFE07A;
+ 53 :wave=16'hFFFFEA88;
+ 54 :wave=16'hFFFFE8BA;
+ 55 :wave=16'hFFFFE507;
+ 56 :wave=16'hFFFFE4C4;
+ 57 :wave=16'hFFFFE68E;
+ 58 :wave=16'hFFFFEBB8;
+ 59 :wave=16'hFFFFED46;
+ 60 :wave=16'hFFFFF2B2;
+ 61 :wave=16'hFFFFF899;
+ 62 :wave=16'hFFFFF4AF;
+ 63 :wave=16'hFFFFFAA7;
+default :wave=0;
+        endcase
+end
+
+endmodule

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="IA_busqueda" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/IA_busqueda" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+					<Add option="`pkg-config --cflags --libs allegro-5.0 allegro_image-5.0 allegro_dialog-5.0`" />
+					<Add option="-DALLEGRO_STATICLINK" />
+					<Add directory="../Librerias/include" />
+				</Compiler>
+				<Linker>
+					<Add library="../Librerias/lib/liballegro_dialog-5.0.10-static-mt-debug.a" />
+					<Add library="../Librerias/lib/liballegro_image-5.0.10-static-mt-debug.a" />
+					<Add library="../Librerias/lib/liballegro-5.0.10-static-mt-debug.a" />
+					<Add library="libgdiplus.a" />
+					<Add library="libuuid.a" />
+					<Add library="libkernel32.a" />
+					<Add library="libwinmm.a" />
+					<Add library="libpsapi.a" />
+					<Add library="libopengl32.a" />
+					<Add library="libglu32.a" />
+					<Add library="libuser32.a" />
+					<Add library="libcomdlg32.a" />
+					<Add library="libgdi32.a" />
+					<Add library="libshell32.a" />
+					<Add library="libole32.a" />
+					<Add library="libadvapi32.a" />
+					<Add library="libws2_32.a" />
+					<Add library="libshlwapi.a" />
+					<Add library="liballegro-5.0.10-monolith-mt.a" />
+					<Add directory="../Librerias/lib" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/IA_busqueda" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-fexceptions" />
+		</Compiler>
+		<Unit filename="main.cpp" />
+		<Unit filename="node.cpp" />
+		<Unit filename="node.hpp" />
+		<Unit filename="path.cpp" />
+		<Unit filename="path.hpp" />
+		<Unit filename="simulationsystem.cpp" />
+		<Unit filename="simulationsystem.hpp" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

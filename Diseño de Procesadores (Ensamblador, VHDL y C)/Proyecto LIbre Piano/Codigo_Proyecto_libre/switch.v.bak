@@ -1,0 +1,15 @@
+module switch(input wire clk, input wire [3:0] select, output wire [15:0] sample_rate);
+
+always@(select)
+begin
+	case(select)
+		4'b0111:	sample_rate <= 10000*2;
+		4'b1011:	sample_rate <= 12000*2;
+		4'b1101:	sample_rate <= 14000*2;
+		4'b1110:	sample_rate <= 16000*2;
+		default:	sample_rate <= 0;
+	endcase
+end
+
+endmodule
+

@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+<!-- Definicion de elementos simples -->
+<xs:element name="titulo" type="xs:string"/>
+
+<xs:element name="Nombre">
+  <xs:simpleType>
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[A-Z]([a-z])+"/>
+    </xs:restriction>
+  </xs:simpleType>
+</xs:element>
+
+<xs:element name="Apellidos" type="xs:string"/>
+
+<xs:element name="Fecha">
+  <xs:simpleType>
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[0-9][0-9]-[0-9][0-9]-[0-9][0-9][0-9][0-9]"/>
+    </xs:restriction>
+  </xs:simpleType>
+</xs:element>
+
+<xs:element name="Ciudad" type="xs:string"/>
+<xs:element name="foto" type="xs:anyURI"/>
+
+<xs:element name="js">
+  <xs:simpleType>
+    <xs:restriction base="xs:string">
+      <xs:pattern value="([a-z])+"/>
+    </xs:restriction>
+  </xs:simpleType>
+</xs:element>
+
+<!-- Definicion de atributos -->
+<xs:attribute name="ff">
+  <xs:simpleType>
+    <xs:restriction base="xs:string">
+      <xs:pattern value="actual|[0-9]{4}"/>
+    </xs:restriction>
+  </xs:simpleType>
+</xs:attribute>
+
+<xs:attribute name="fi">
+  <xs:simpleType>
+    <xs:restriction base="xs:positiveInteger">
+      <xs:minInclusive value="1850"/>
+      <xs:maxInclusive value="2017"/>
+    </xs:restriction>
+  </xs:simpleType>
+</xs:attribute>
+
+<xs:attribute name="c">
+  <xs:simpleType>
+    <xs:restriction base="xs:string">
+      <xs:pattern value="([a-z])*"/>
+    </xs:restriction>
+  </xs:simpleType>
+</xs:attribute>
+
+<xs:attribute name="icon" type="xs:string"/>
+
+<!-- Definicion de elementos complejos -->
+<!-- Elementos con atributos-->
+<xs:element name="curso">
+  <xs:complexType>
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute ref="ff" use="required"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+</xs:element>
+
+<xs:element name="estudio">
+  <xs:complexType>
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute ref="fi" use="required"/>
+        <xs:attribute ref="ff" use="required"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+</xs:element>
+
+<xs:element name="trabajo">
+  <xs:complexType>
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute ref="fi" use="required"/>
+        <xs:attribute ref="ff" use="required"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+</xs:element>
+
+<xs:element name="campo">
+  <xs:complexType>
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute ref="c"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+</xs:element>
+
+<xs:element name="Facebook">
+  <xs:complexType>
+    <xs:simpleContent>
+      <xs:extension base="xs:anyURI">
+        <xs:attribute ref="icon"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+</xs:element>
+
+<xs:element name="Twitter">
+  <xs:complexType>
+    <xs:simpleContent>
+      <xs:extension base="xs:anyURI">
+        <xs:attribute ref="icon"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+</xs:element>
+
+<xs:element name="Linkedin">
+  <xs:complexType>
+    <xs:simpleContent>
+      <xs:extension base="xs:anyURI">
+        <xs:attribute ref="icon"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+</xs:element>
+
+<xs:element name="Email">
+  <xs:complexType>
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute ref="icon"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+</xs:element>
+
+<xs:element name="Telefono">
+  <xs:complexType>
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute ref="icon"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+</xs:element>
+
+<!-- Encabezado -->
+<xs:element name="datos_personales">
+  <xs:complexType>
+    <xs:sequence>
+      <xs:element ref="Nombre"/>
+      <xs:element ref="Apellidos"/>
+      <xs:element ref="Fecha"/>
+      <xs:element ref="Ciudad"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:element>
+
+<xs:element name="encabezado">
+  <xs:complexType>
+    <xs:sequence>
+      <xs:element ref="datos_personales"/>
+      <xs:element ref="foto"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:element>
+
+<!-- Cuerpo -->
+<xs:element name="formacion">
+  <xs:complexType>
+    <xs:choice minOccurs="0" maxOccurs="unbounded">
+      <xs:element ref="estudio"/>
+      <xs:element ref="curso"/>
+    </xs:choice>
+  </xs:complexType>
+</xs:element>
+
+<xs:element name="experiencia">
+  <xs:complexType>
+    <xs:sequence>
+      <xs:element ref="trabajo" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:element>
+
+<xs:element name="campog">
+  <xs:complexType mixed="true">
+    <xs:sequence>
+      <xs:element ref="campo" minOccurs="1" maxOccurs="unbounded"/>
+    </xs:sequence>
+    <xs:attribute ref="icon"/>
+  </xs:complexType>
+</xs:element>
+
+<xs:element name="aptitudes">
+  <xs:complexType>
+    <xs:sequence>
+      <xs:element ref="campog" minOccurs="1" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:element>
+
+<xs:element name="redes">
+  <xs:complexType>
+    <xs:sequence>
+      <xs:element ref="Facebook" minOccurs="0"/>
+      <xs:element ref="Twitter" minOccurs="0"/>
+      <xs:element ref="Email" minOccurs="0"/>
+      <xs:element ref="Linkedin" minOccurs="0"/>
+      <xs:element ref="Telefono" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:element>
+
+<xs:element name="cuerpo">
+  <xs:complexType>
+    <xs:sequence>
+      <xs:element ref="formacion"/>
+      <xs:element ref="experiencia"/>
+      <xs:element ref="aptitudes"/>
+      <xs:element ref="redes"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:element>
+
+<!-- Curriculum -->
+<xs:element name="curriculum">
+  <xs:complexType>
+    <xs:sequence>
+      <xs:element ref="titulo"/>
+      <xs:element ref="encabezado"/>
+      <xs:element ref="cuerpo"/>
+      <xs:element ref="js"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:element>
+
+</xs:schema>

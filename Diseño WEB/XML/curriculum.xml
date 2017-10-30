@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="curriculum.xsl"?>
+<curriculum xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="curriculum.xsd">
+  <titulo>Curriculum profesional</titulo>
+  <encabezado>
+    <datos_personales>
+        <Nombre>Rafael</Nombre>
+        <Apellidos>Gonzalez de Chaves Gonzalez</Apellidos>
+        <Fecha>19-05-1979</Fecha>
+        <Ciudad>S/C de Tenerife</Ciudad>
+    </datos_personales>
+    <foto>https://cdn.pixabay.com/photo/2016/09/24/03/20/passion-1690965_960_720.jpg</foto>
+  </encabezado>
+  <cuerpo>
+    <formacion>
+      <estudio fi="1991" ff="1995">Título en la Educación Secundaria Obligatoria cursado en el Colegio Hispano Inglés</estudio>
+      <curso ff="2010">Curso experto en HTML cursado en la Unirversidad de La Laguna</curso>
+      <curso ff="2010">Curso experto de CSS cursado en la Universidad de La Laguna</curso>
+      <estudio fi="1995" ff="1997">Título en Bachiller cursado en el Colegio Hispano Inglés</estudio>
+      <curso ff="2006">Curso intermedio en JS, PHP y SQL cursado en la Universidad de La Laguna</curso>
+      <curso ff="2005">Curso avanzado en edición de video en After Effetcs y Premiere</curso>
+      <curso ff="1999">Curso experto en Pascal cursado en la Unirversidad de La Laguna</curso>
+      <curso ff="2000">Curso experto en Interfaces Gráficas cursado en la Unirversidad de La Laguna</curso>
+      <estudio fi="1997" ff="2001">Grado Superior en Ingeniería Informática cursado en la Universidad de La Laguna</estudio>
+    </formacion>
+    <experiencia>
+        <trabajo fi="2007" ff="actual">Programador en microsoft</trabajo>
+        <trabajo fi="2005" ff="actual">Diseñador y programador de redes en la TLP Tenerife</trabajo>
+        <trabajo fi="1999" ff="2001">Administrador de Sistemas en la ULL</trabajo>
+        <trabajo fi="2004" ff="2007">Diseñador web en El Corte Inglés</trabajo>
+        <trabajo fi="2001" ff="2004">Gestor de bases de datos en Alcampo</trabajo>
+    </experiencia>
+    <aptitudes>
+        <campog icon="fa fa-laptop">Informatica
+            <campo>C++</campo>
+            <campo>C#</campo>
+            <campo>JavaScript</campo>
+            <campo>Html</campo>
+            <campo>Css</campo>
+            <campo>Php</campo>
+            <campo>Ruby</campo>
+            <campo>Ensamblador</campo>
+            <campo>Prolog</campo>
+            <campo>Clips</campo>
+        </campog>
+        <campog icon="fa fa-calculator">Administracion
+            <campo>Contabilidad</campo>
+            <campo>Calculo de inversiones</campo>
+            <campo>Administracion de cuentas</campo>
+            <campo>Gestor de proyectos</campo>
+        </campog>
+        <campog icon="fa fa-globe">Idiomas
+            <campo c="nativo">Español</campo>
+            <campo c="nativo">Ingles</campo>
+            <campo c="profesional">Frances</campo>
+        </campog>
+    </aptitudes>
+    <redes>
+      <Facebook icon="fa fa-facebook-official">https://www.facebook.com/</Facebook>
+      <Twitter icon="fa fa-twitter-square">https://www.twitter.com/</Twitter>
+      <Email icon="fa fa-envelope">ejemplo@ejemplo.com</Email>
+      <Linkedin icon="fa fa-linkedin-square">https://www.linkedin.com/</Linkedin>
+      <Telefono icon="fa fa-phone-square">555-555-555</Telefono>
+    </redes>
+  </cuerpo>
+  <!-- Si js vale true entonces calcula la edad actual, si vale false solo muestra la fecha de nacimiento-->
+  <js>true</js>
+</curriculum>

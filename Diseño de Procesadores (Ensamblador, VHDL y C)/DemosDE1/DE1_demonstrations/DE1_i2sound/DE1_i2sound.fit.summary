@@ -1,0 +1,16 @@
+Fitter Status : Successful - Thu Dec 31 09:42:01 2015
+Quartus II 64-Bit Version : 12.1 Build 243 01/31/2013 SP 1 SJ Full Version
+Revision Name : DE1_i2sound
+Top-level Entity Name : DE1_i2sound
+Family : Cyclone II
+Device : EP2C20F484C7
+Timing Models : Final
+Total logic elements : 111 / 18,752 ( < 1 % )
+    Total combinational functions : 105 / 18,752 ( < 1 % )
+    Dedicated logic registers : 68 / 18,752 ( < 1 % )
+Total registers : 68
+Total pins : 283 / 315 ( 90 % )
+Total virtual pins : 0
+Total memory bits : 0 / 239,616 ( 0 % )
+Embedded Multiplier 9-bit elements : 0 / 52 ( 0 % )
+Total PLLs : 1 / 4 ( 25 % )

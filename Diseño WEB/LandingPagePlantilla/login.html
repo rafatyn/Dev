@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Login</title>
+        <link rel="stylesheet" href="assets/css/main.css" />
+        <link rel="stylesheet" href="assets/css/login.css" />
+        <style media="screen">
+            p {
+                color: red;
+            }
+        </style>
+    </head>
+    <body>
+        <form class="log" action="" onsubmit="return comprobar()" method="get">
+            <label for="mail">Email:</label>
+            <input type="text" id="mail" name="mail" value="" required autocomplete="off" autofocus placeholder="Introduzca su email"><br>
+            <p id="email"></p>
+            <label for="pass">Contraseña:</label>
+            <input type="password" id="pass" name="pass" value="" required autocomplete="off" autofocus placeholder="Introduzca su contraseña"><br>
+            <p id="epass"></p>
+            <input type="submit" name="submit" value="Entrar">
+        </form>
+        <script type="text/javascript" src="assets/js/log.js"></script>
+    </body>
+</html>

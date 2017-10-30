@@ -1,0 +1,58 @@
+require "spec_helper"
+require "./lib/dieta.rb"
+
+describe Lista_DE do
+
+	before:all do
+        	@almuerzo = Menu_dsl.new("Algo") do
+            		titulo  "Almuerzo"
+            		ingesta :min => 30, :max => 35
+            		plato   :descripcion => "Macarrones con salsa de tomate y queso parmesano",
+                    		:porcion => "1 1/2 cucharon",
+                    		:gramos => 200
+           	 	plato   :descripcion => "Escalope de ternera",
+                    		:porcion => "1 bistec mediano",
+                    		:gramos => 100
+            		plato   :descripcion => "Ensalada basica con zanahoria rallada",
+                    		:porcion => "guarnicion",
+                    		:gramos => 120
+            		plato :descripcion => "Mandarina", :porcion => "1 grande", :gramos => 180
+            		plato :descripcion => "Pan de trigo integral", :porcion => "1 rodaja", :gramos => 20
+            		valor :vct => 785.9, :proteinas => 19, :grasas => 34, :hidratos => 47
+        	end
+
+        	@desayuno = Menu_dsl.new("Algo") do
+            		titulo  "Desayuno"
+            		ingesta :min => 20, :max => 25
+            		plato   :descripcion => "Churros con chocolate",
+                    		:porcion => "1",
+                    		:gramos => 250
+            		plato   :descripcion => "Cafe con leche",
+                    		:porcion => "1",
+                    		:gramos => 75
+            		valor :vct => 999.9, :proteinas => 9, :grasas => 74, :hidratos => 37
+        	end
+
+        	@cena = Menu_dsl.new("Algo") do
+            		titulo  "Cena"
+            		ingesta :min => 20, :max => 25
+            		plato   :descripcion => "Pasta con queso",
+                    		:porcion => "1",
+                    		:gramos => 250
+            		plato   :descripcion => "Cola-cao",
+                    		:porcion => "1",
+                    		:gramos => 75
+            		valor :vct => 467, :proteinas => 0, :grasas => 34, :hidratos => 77
+        	end
+	
+	end
+
+
+
+end
+
+
+
+
+
+

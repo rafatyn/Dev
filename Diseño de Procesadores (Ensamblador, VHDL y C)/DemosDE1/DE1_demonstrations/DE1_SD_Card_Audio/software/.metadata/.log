@@ -1,0 +1,19 @@
+!SESSION 2012-10-16 14:04:01.171 -----------------------------------------------
+eclipse.buildId=M20100909-0800
+java.version=1.6.0_23
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=zh_CN
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+
+!ENTRY org.eclipse.cdt.core 1 0 2012-10-16 14:05:19.562
+!MESSAGE Indexed 'DE1_SD_Card_Audio_bsp' (92 sources, 70 headers) in 1.97 sec: 1,547 declarations; 5,045 references; 135 unresolved inclusions; 5 syntax errors; 267 unresolved names (3.89%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2012-10-16 14:05:24.171
+!MESSAGE Indexed 'DE1_SD_Card_Audio' (0 sources, 13 headers) in 0.02 sec: 0 declarations; 0 references; 13 unresolved inclusions; 0 syntax errors; 0 unresolved names (0.00%)
+
+!ENTRY com.altera.sbtgui.launch 1 0 2012-10-16 14:09:16.671
+!MESSAGE Executing: [C:\WINDOWS\system32\cmd.exe, /C, C:/altera/11.1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2012-10-16 14:09:19.921
+!MESSAGE Executing: [C:\WINDOWS\system32\cmd.exe, /C, C:/altera/11.1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go /cygdrive/e/TASKs/DE1/test/DE1_SD_Card_Audio_Test_1/software/DE1_SD_Card_Audio/DE1_SD_Card_Audio.elf]

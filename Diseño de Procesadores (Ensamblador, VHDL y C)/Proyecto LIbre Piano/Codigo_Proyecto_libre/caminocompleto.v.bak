@@ -1,0 +1,13 @@
+module caminocompleto(input wire clk, reset, input wire [7:0] EntS1, EntS2, EntS3, EntS4, output wire [7:0] ESal1, ESal2, ESal3, ESal4, output wire [9:0] SalPC);
+
+wire s_inc, s_inm, we3, z, entI, SalR, SalI, s_jr, c_jr, s_rel;
+wire [2:0] op;
+wire [5:0] opcode;
+wire [7:0] EntS2Mod;
+
+assign EntS2Mod = {5'b00000,EntS2[2:0]};
+
+microc micro1(clk, reset, s_inc, s_inm, we3, entI, SalR, SalI, s_jr, c_jr, s_rel, op, EntS1, EntS2Mod, EntS3, EntS4, z, opcode, ESal1, ESal2, ESal3, ESal4, SalPC);
+uc uc1(clk, z, opcode, s_inc, s_inm, we3, entI, SalR, SalI, s_jr, c_jr, s_rel, op);
+
+endmodule

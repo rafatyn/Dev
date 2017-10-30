@@ -1,0 +1,48 @@
+body {
+    height: 100vh;
+    overflow: hidden;
+}
+
+#calendar {
+    position: relative;
+    top: 50%;
+    width: 1000px;
+    height: 350px;
+    margin: auto;
+    margin-top: -200px;
+}
+
+#calendarEncabezado {
+    width: 100%;
+}
+
+#calendarToday, #calendarMonthPrev, #calendarMonthNext {
+    width: 20%;
+    margin: 0;
+}
+
+#calendarMonthName {
+    width: 40%;
+    margin: 0;
+    display: inline-block;
+    text-align: center;
+}
+
+.day {
+    border: 1px solid black;
+    padding: 5px;
+    width: 14.28%;
+    height: 16.6%;
+    display: inline-block;
+    box-sizing: border-box;
+    font-size: 30px;
+    color: black;
+}
+
+.name {
+    text-align: center;
+}
+
+.disable {
+    background-color: lightgray;
+}

@@ -1,0 +1,79 @@
+CPU Monociclo:
+
+Instrucciones de salto:
+  Incondicional:
+
+    Opcode: 0000XX (6 bits)
+
+  Condicional:
+    -Si no es cero:
+    
+      Opcode: 0010XX (6 bits)
+  
+    -Si es cero:
+    
+      Opcode: 0011XX (6 bits) 
+
+  Direccion destino: XXXXXXXXXX (10 bits)
+  
+  Instruccion completa: - Opcode - Direccion destino -
+
+Instrucciones de carga inmediata en registro:
+
+  Opcode: 01XX (4 bits)
+  Valor inmediato: XXXXXXXX (8 bits)
+  Registro destino: XXXX (4 bits)
+  
+  Instruccion completa: - Opcode - Valor inmediato - Registro destino -
+
+Instrucciones de operaciones aritmeticas y logicas:
+
+  Opcode: 1XXX (4 bits)
+  Registro fuente A: XXXX (4 bits)
+  Registro fuente B: XXXX (4 bits)
+  Registro destino S: XXXX (4 bits)
+  
+  Instruccion completa: - Opcode - Registro A - Registro B - Registro S -
+  
+  Operaciones posibles en los 3 bits a X del Opcode:
+    
+    000: s = a;
+    001: s = ~a;
+    010: s = a + b;
+    011: s = a - b;
+    100: s = a & b;
+    101: s = a | b;
+    110: s = -a;
+    111: s = -b;
+    
+    
+    
+Se ha verificado el funcionamiento de todas las instrucciones con los siguientes programas:
+    
+    0100_0000_0100_0001  // Carga 4 en R1
+    0100_0000_0001_0100  // Carga 1 en R4
+    0100_0000_0010_0010  // Carga 2 en R2
+    0100_0000_0100_0011  // Carga 4 en R3
+    1010_0010_0011_0010  // Suma R2 con R3 y lo guarda en R2
+    1011_0001_0100_0001  // Resta R1 con R4 y lo guarda en R1
+    0010_0000_0000_0100  // Salta a la instruccion 4 si R1 es distinto de 0
+    
+    
+    0000_0000_0000_0010  // Salta a la instruccion 2
+    0000_0000_0000_0000  // Salta a la instruccion 0 (No se ejecuta porque el salto incondicional anterior se salta esta instruccion)
+    0100_0000_0010_0010  // Carga 2 en R2
+    0100_0000_0100_0011  // Carga 4 en R3
+    1010_0010_0011_0010  // Suma R2 con R3 y lo guarda en R2
+    
+
+Tipo de unidad de control:
+  La unidad de control implementada es cableada ya que se trata de una máquina sensilla con un repertorio de instrucciones pequeño.
+    
+Dificultades:
+
+  Codificación del repertorio de instrucciones.
+  
+    
+    
+  
+

@@ -1,0 +1,5 @@
+task :default => :testunit
+
+desc "Pruebas unitarias sobre receta"
+task :testunit
+	sh "ruby test/tc_receta.rb"

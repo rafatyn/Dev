@@ -1,0 +1,1 @@
+start IA_busqueda\bin\Debug\IA_busqueda.exe

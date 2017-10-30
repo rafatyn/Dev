@@ -1,0 +1,38 @@
+0100000000001111  // Inicializa a 0 el registro 15 (Acumulador)
+0100000000000000  // Inicializa a 0 el registro 0
+0100000011110101  // Inicializa a 15 el registro 5
+0100000000001010  // Inicializa a 0 el registro 10
+0100000011111011  // Inicializa a 15 el registro 11
+0100000001110001  // Inicializa a 7 el registro 1 (DO)
+0100000010110010  // Inicializa a 11 el registro 2 (RE)
+0100000011010011  // Inicializa a 13 el registro 3 (MI)
+0100000011100100  // Inicializa a 14 el registro 4 (FA)
+0010100000000000  // Carga en la salida 1 el registro 0
+0010100000000001  // Carga en la salida 2 el registro 0
+1010101100001010  // Carga el valor del registro 11 en el registro 10
+0010000100001011  // Carga el valor de la entrada 2 en el registro 11
+1011101101011110  // Resta al registro 11 el registro 5 y lo guarda en el registro 14
+0000110000001001  // Salta a la direccion 9 si la ultima operacion fue 0**
+1011101001011110  // Resta al registro 10 el registro 5 y lo guarda en el registro 14
+0000100000001011  // Salta a la direccion 11 si la ultima operacion no fue 0**
+1011101100011110  // Resta al registro 11 el registro 1 y lo guarda en el registro 14 
+0000110000011010  // Salta a la direccion 26 si la ultima operacion fue 0 (DO)**
+1011101100101110  // Resta al registro 11 el registro 2 y lo guarda en el registro 14
+0000110000011101  // Salta a la direccion 29 si la ultima operacion fue 0 (RE)**
+1011101100111110  // Resta al registro 11 el registro 3 y lo guarda en el registro 14
+0000110000100000  // Salta a la direccion 32 si la ultima operacion fue 0 (MI)
+1011101101001110  // Resta al registro 11 el registro 4 y lo guarda en el registro 14
+0000110000100011  // Salta a la direccion 35 si la ultima operacion fue 0 (FA)**
+0000000000001011  // Salta a la direccion 11**
+0010110010001100  // Carga en la salida 1 el inmediato (o)
+0010110010000101  // Carga en la salida 2 el inmediato (d)
+0000000000001011  // Salta a la direccion 11**
+0010110000011000  // Carga en la salida 1 el inmediato (e)
+0010110010111101  // Carga en la salida 2 el inmediato (r)
+0000000000001011  // Salta a la direccion 11**
+0010110100111100  // Carga en la salida 1 el inmediato (i)
+0010110000100101  // Carga en la salida 2 el inmediato (m)
+0000000000001011  // Salta a la direccion 11**
+0010110000100000  // Carga en la salida 1 el inmediato (a)
+0010110000111001  // Carga en la salida 2 el inmediato (f)
+0000000000001011  // Salta a la direccion 11**

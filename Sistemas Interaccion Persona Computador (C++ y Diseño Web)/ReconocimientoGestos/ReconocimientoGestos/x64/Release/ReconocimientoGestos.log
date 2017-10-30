@@ -1,0 +1,9 @@
+﻿  HandGesture.cpp
+HandGesture.cpp(89): warning C4244: 'inicializando': conversión de 'double' a 'float'; posible pérdida de datos
+  Generando código
+  Generación de código finalizada
+  3 of 287 functions ( 1.0%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    0 functions had inline decision re-evaluated but remain unchanged
+  ReconocimientoGestos.vcxproj -> D:\practicas_interaccion_1617\jueves_1430-1630\ReconocimientoGestos\x64\Release\ReconocimientoGestos.exe
+  ReconocimientoGestos.vcxproj -> D:\practicas_interaccion_1617\jueves_1430-1630\ReconocimientoGestos\x64\Release\ReconocimientoGestos.pdb (Full PDB)

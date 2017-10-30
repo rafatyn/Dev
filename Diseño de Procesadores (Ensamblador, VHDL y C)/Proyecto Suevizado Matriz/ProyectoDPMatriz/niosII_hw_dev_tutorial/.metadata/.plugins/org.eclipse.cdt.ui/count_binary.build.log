@@ -1,0 +1,10 @@
+
+**** Build of configuration Nios II for project count_binary ****
+
+make all 
+Info: Building ../count_binary_bsp/
+make --no-print-directory -C ../count_binary_bsp/
+[BSP build complete]
+[count_binary build complete]
+
+**** Build Finished ****

@@ -1,0 +1,535 @@
+/* Type */
+
+	.tab-pane input {
+		color: rgba(255, 255, 255, 0.55);
+		font-family: Arial, Helvetica, sans-serif;
+		font-size: 16.5pt;
+		font-weight: normal;
+		line-height: 1.75;
+	}
+
+		@media screen and (max-width: 1680px) {
+
+			.tab-pane input {
+				font-size: 13pt;
+			}
+
+		}
+
+		@media screen and (max-width: 1280px) {
+
+			.tab-pane input {
+				font-size: 12pt;
+			}
+
+		}
+
+		@media screen and (max-width: 360px) {
+
+			.tab-pane input {
+				font-size: 11pt;
+			}
+
+		}
+
+	.tab-pane a {
+		-moz-transition: color 0.2s ease, border-bottom-color 0.2s ease;
+		-webkit-transition: color 0.2s ease, border-bottom-color 0.2s ease;
+		-ms-transition: color 0.2s ease, border-bottom-color 0.2s ease;
+		transition: color 0.2s ease, border-bottom-color 0.2s ease;
+		border-bottom: dotted 1px rgba(255, 255, 255, 0.35);
+		color: inherit;
+		text-decoration: none;
+	}
+
+		.tab-pane a:hover {
+			border-bottom-color: transparent;
+			color: #ffffff;
+		}
+
+	.tab-pane  b {
+		color: #ffffff;
+		font-weight: bold;
+	}
+
+	.tab-pane i {
+		font-style: italic;
+	}
+
+	.tab-pane p {
+		margin: 0 0 2em 0;
+	}
+
+	.tab-pane h2 {
+		color: #ffffff;
+		font-weight: bold;
+		line-height: 1.5;
+		margin: 0 0 0.5em 0;
+	}
+
+		.tab-pane h2 a {
+			color: inherit;
+			text-decoration: none;
+		}
+
+
+	.tab-pane h2 {
+		font-size: 1.75em;
+	}
+
+	@media screen and (max-width: 736px) {
+
+		.tab-pane h2 {
+			font-size: 1.25em;
+		}
+
+	}
+/* Button */
+
+	.tab-pane input[type="submit"],
+	.tab-pane input[type="reset"],
+	.tab-pane input[type="button"],
+	.tab-pane button,
+	.tab-pane .button {
+		-moz-appearance: none;
+		-webkit-appearance: none;
+		-ms-appearance: none;
+		appearance: none;
+		-moz-transition: border-color 0.2s ease;
+		-webkit-transition: border-color 0.2s ease;
+		-ms-transition: border-color 0.2s ease;
+		transition: border-color 0.2s ease;
+		background-color: transparent;
+		border: solid 1px !important;
+		border-color: rgba(255, 255, 255, 0.15) !important;
+		border-radius: 3em;
+		color: #ffffff !important;
+		cursor: pointer;
+		display: inline-block;
+		font-size: 0.6em;
+		font-weight: bold;
+		height: calc(4.75em + 2px);
+		letter-spacing: 0.25em;
+		line-height: 4.75em;
+		outline: 0;
+		padding: 0 3.75em;
+		position: relative;
+		text-align: center;
+		text-decoration: none;
+		text-transform: uppercase;
+		white-space: nowrap;
+	}
+
+		.tab-pane input[type="submit"]:after,
+		.tab-pane input[type="reset"]:after,
+		.tab-pane input[type="button"]:after,
+		.tab-pane button:after,
+		.tab-pane .button:after {
+			-moz-transform: scale(0.25);
+			-webkit-transform: scale(0.25);
+			-ms-transform: scale(0.25);
+			transform: scale(0.25);
+			-moz-pointer-events: none;
+			-webkit-pointer-events: none;
+			-ms-pointer-events: none;
+			pointer-events: none;
+			-moz-transition: opacity 0.2s ease, -moz-transform 0.2s ease;
+			-webkit-transition: opacity 0.2s ease, -webkit-transform 0.2s ease;
+			-ms-transition: opacity 0.2s ease, -ms-transform 0.2s ease;
+			transition: opacity 0.2s ease, transform 0.2s ease;
+			background: #ffffff;
+			border-radius: 3em;
+			content: '';
+			height: 100%;
+			left: 0;
+			opacity: 0;
+			position: absolute;
+			top: 0;
+			width: 100%;
+		}
+
+		.tab-pane input[type="submit"].icon:before,
+		.tab-pane input[type="reset"].icon:before,
+		.tab-pane input[type="button"].icon:before,
+		.tab-pane button.icon:before,
+		.tab-pane .button.icon:before {
+			margin-right: 0.75em;
+		}
+
+		.tab-pane input[type="submit"].fit,
+		.tab-pane input[type="reset"].fit,
+		.tab-pane input[type="button"].fit,
+		.tab-pane button.fit,
+		.tab-pane .button.fit {
+			display: block;
+			margin: 0 0 1em 0;
+			width: 100%;
+		}
+
+		.tab-pane input[type="submit"].disabled,
+		.tab-pane input[type="submit"]:disabled,
+		.tab-pane input[type="reset"].disabled,
+		.tab-pane input[type="reset"]:disabled,
+		.tab-pane input[type="button"].disabled,
+		.tab-pane input[type="button"]:disabled,
+		.tab-pane button.disabled,
+		.tab-pane button:disabled,
+		.tab-pane .button.disabled,
+		.tab-pane .button:disabled {
+			cursor: default;
+			opacity: 0.5;
+			-moz-pointer-events: none;
+			-webkit-pointer-events: none;
+			-ms-pointer-events: none;
+			pointer-events: none;
+		}
+
+		.tab-pane input[type="submit"]:hover,
+		.tab-pane input[type="reset"]:hover,
+		.tab-pane input[type="button"]:hover,
+		.tab-pane button:hover,
+		.tab-pane .button:hover {
+			border-color: rgba(255, 255, 255, 0.55) !important;
+		}
+
+			.tab-pane input[type="submit"]:hover:after,
+			.tab-pane input[type="reset"]:hover:after,
+			.tab-pane input[type="button"]:hover:after,
+			.tab-pane button:hover:after,
+			.tab-pane .button:hover:after {
+				opacity: 0.05;
+				-moz-transform: scale(1);
+				-webkit-transform: scale(1);
+				-ms-transform: scale(1);
+				transform: scale(1);
+			}
+
+			.tab-pane input[type="submit"]:hover:active,
+			.tab-pane input[type="reset"]:hover:active,
+			.tab-pane input[type="button"]:hover:active,
+			.tab-pane button:hover:active,
+			.tab-pane .button:hover:active {
+				border-color: #ffffff !important;
+			}
+
+				.tab-pane input[type="submit"]:hover:active:after,
+				.tab-pane input[type="reset"]:hover:active:after,
+				.tab-pane input[type="button"]:hover:active:after,
+				.tab-pane button:hover:active:after,
+				.tab-pane .button:hover:active:after {
+					opacity: 0.1;
+				}
+
+/* Form */
+
+	.tab-pane form {
+		margin: 0 0 2em 0;
+	}
+
+		.tab-pane form .field {
+			margin: 0 0 1em 0;
+		}
+
+			.tab-pane form .field.half {
+				width: 50%;
+				float: left;
+				padding: 0 0 0 0.75em;
+			}
+
+				.tab-pane form .field.half.first {
+					padding: 0 0.75em 0 0;
+				}
+
+		.tab-pane form > .actions {
+			margin: 2em 0 0 0 !important;
+		}
+
+		@media screen and (max-width: 736px) {
+
+			.tab-pane form .field.half {
+				width: 100%;
+				float: none;
+				padding: 0;
+			}
+
+				.tab-pane .tab-pane form .field.half.first {
+					padding: 0;
+				}
+
+		}
+
+	.tab-pane label {
+		color: #ffffff;
+		font-weight: bold;
+		line-height: 1.5;
+		margin: 0 0 0.7em 0;
+		display: block;
+		font-size: 1.1em;
+	}
+
+	.tab-pane input[type="text"],
+	.tab-pane input[type="password"],
+	.tab-pane input[type="email"],
+	.tab-pane input[type="tel"],
+	.tab-pane select,
+	.tab-pane textarea {
+		-moz-appearance: none;
+		-webkit-appearance: none;
+		-ms-appearance: none;
+		appearance: none;
+		background: rgba(255, 255, 255, 0.05);
+		border-radius: 0.25em;
+		border: none;
+		border: solid 1px rgba(255, 255, 255, 0.15);
+		display: block;
+		outline: 0;
+		padding: 0 1em;
+		text-decoration: none;
+	}
+
+		.tab-pane input[type="text"]:invalid,
+		.tab-pane input[type="password"]:invalid,
+		.tab-pane input[type="email"]:invalid,
+		.tab-pane input[type="tel"]:invalid,
+		.tab-pane select:invalid,
+		.tab-pane textarea:invalid {
+			box-shadow: none;
+		}
+
+		.tab-pane input[type="text"]:focus,
+		.tab-pane input[type="password"]:focus,
+		.tab-pane input[type="email"]:focus,
+		.tab-pane input[type="tel"]:focus,
+		.tab-pane select:focus,
+		.tab-pane textarea:focus {
+			border-color: #ffffff;
+			box-shadow: 0 0 0 1px #ffffff;
+		}
+
+	.tab-pane select option {
+		background-color: #312450;
+		color: #ffffff;
+	}
+
+	.tab-pane input[type="text"],
+	.tab-pane input[type="password"],
+	.tab-pane input[type="email"],
+	.tab-pane select {
+		height: 2.75em;
+	}
+
+	.tab-pane textarea {
+		padding: 0.75em 1em;
+	}
+
+	.tab-pane input[type="checkbox"],
+	.tab-pane input[type="radio"] {
+		-moz-appearance: none;
+		-webkit-appearance: none;
+		-ms-appearance: none;
+		appearance: none;
+		display: block;
+		float: left;
+		margin-right: -2em;
+		opacity: 0;
+		width: 1em;
+		z-index: -1;
+	}
+
+		.tab-pane input[type="checkbox"] + label,
+		.tab-pane input[type="radio"] + label {
+			text-decoration: none;
+			color: rgba(255, 255, 255, 0.55);
+			cursor: pointer;
+			display: inline-block;
+			font-size: 1em;
+			font-weight: normal;
+			padding-left: 2.4em;
+			padding-right: 0.75em;
+			position: relative;
+		}
+
+			.tab-pane input[type="checkbox"] + label:before,
+			.tab-pane input[type="radio"] + label:before {
+				-moz-osx-font-smoothing: grayscale;
+				-webkit-font-smoothing: antialiased;
+				font-family: FontAwesome;
+				font-style: normal;
+				font-weight: normal;
+				text-transform: none !important;
+			}
+
+			.tab-pane input[type="checkbox"] + label:before,
+			.tab-pane input[type="radio"] + label:before {
+				background: rgba(255, 255, 255, 0.05);
+				border-radius: 0.25em;
+				border: solid 1px rgba(255, 255, 255, 0.15);
+				content: '';
+				display: inline-block;
+				height: 1.65em;
+				left: 0;
+				line-height: 1.58125em;
+				position: absolute;
+				text-align: center;
+				top: 0;
+				width: 1.65em;
+			}
+
+		.tab-pane input[type="checkbox"]:checked + label:before,
+		.tab-pane input[type="radio"]:checked + label:before {
+			background: #ffffff;
+			border-color: #ffffff;
+			color: #b74e91;
+			content: '\f00c';
+		}
+
+		.tab-pane input[type="checkbox"]:focus + label:before,
+		.tab-pane input[type="radio"]:focus + label:before {
+			border-color: #ffffff;
+			box-shadow: 0 0 0 1px #ffffff;
+		}
+
+	.tab-pane input[type="checkbox"] + label:before {
+		border-radius: 0.25em;
+	}
+
+	.tab-pane input[type="radio"] + label:before {
+		border-radius: 100%;
+	}
+
+	.tab-pane ::-webkit-input-placeholder {
+		color: rgba(255, 255, 255, 0.35) !important;
+		opacity: 1.0;
+	}
+
+	.tab-pane :-moz-placeholder {
+		color: rgba(255, 255, 255, 0.35) !important;
+		opacity: 1.0;
+	}
+
+	.tab-pane ::-moz-placeholder {
+		color: rgba(255, 255, 255, 0.35) !important;
+		opacity: 1.0;
+	}
+
+	.tab-pane :-ms-input-placeholder {
+		color: rgba(255, 255, 255, 0.35) !important;
+		opacity: 1.0;
+	}
+
+	.tab-pane .formerize-placeholder {
+		color: rgba(255, 255, 255, 0.35) !important;
+		opacity: 1.0;
+	}
+
+/* General */
+
+.tab-pane form {
+	margin: 50px 0;
+	padding: 25px;
+	background-color: rgba(49, 36, 80, 0.75);
+	border-radius: 15px;
+	font-size: 20px;
+}
+
+.tab-pane input {
+	font-size: 16px;
+	color: white !important;
+	margin-bottom: 15px;
+}
+
+.tab-pane label {
+	margin-bottom: 15px !important;
+}
+
+.tab-pane h2 {
+	text-align: center;
+	color: white !important;
+	margin: 0;
+	margin-bottom: 20px;
+	font-weight: bold !important;
+}
+
+.tab-pane p {
+	color: red;
+	margin: 0;
+	font-style: italic;
+	text-align: center;
+}
+
+.tab-pane td, .tab-pane th, .tab-pane table {
+	border: 1px black solid;
+}
+
+.tab-pane table {
+	margin: 50px 0;
+}
+
+#get .row {
+	margin: 20px 0;
+}
+
+.tab-pane .chat {
+	margin: 0;
+}
+
+.chat input {
+	margin: 0;
+}
+
+.chat button {
+	padding:0;
+}
+
+#mss {
+	appearance: none;
+	background: rgba(255, 255, 255, 0.05);
+	border-radius: 0.25em;
+	border: none;
+	border: solid 1px rgba(255, 255, 255, 0.15);
+	display: block;
+	outline: 0;
+	padding: 0 1em;
+	text-decoration: none;
+	margin: 0;
+	margin-bottom: 15px;
+	min-height: 150px;
+	max-height: 500px;
+	overflow-y: auto;
+}
+
+#chat .container {
+	margin-top: 20px;
+}
+
+.message {
+	border-radius: 5px;
+	border: 1px solid black;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+
+.message h2 {
+	font-size: 1em;
+	float: left;
+	margin: 0;
+	margin-right: 10px;
+}
+
+.message p {
+	font-size: 0.8em;
+	overflow-x: auto;
+	text-align: left;
+	margin-top: 3.5px;
+	color: black !important;
+}
+
+.purple {
+	background-color: purple;
+}
+
+.blue {
+	background-color:  rgb(185,95,179);
+}

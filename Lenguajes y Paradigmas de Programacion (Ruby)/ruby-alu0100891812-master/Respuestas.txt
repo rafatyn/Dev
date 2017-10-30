@@ -1,0 +1,92 @@
+Respuestas de primeros pasos en Ruby
+
+31-
+* commit 0605b0e (HEAD, ghp04/master, master, doc) 
+| Author: Rafael <alu0100891812@ull.edu.es> 
+| Date:   hace 8 horas 
+| 
+|     Creando el fichero de respuestas 
+| 
+* commit f3a66a9 
+| Author: Rafael <alu0100891812@ull.edu.es> 
+| Date:   hace 8 horas 
+| 
+|     Creando el fichero README.md 
+| 
+* commit d313b0b 
+  Author: Rafael <alu0100891812@ull.edu.es> 
+  Date:   hace 8 horas        
+      Creando el fichero .gitignore
+
+Hay 3 ramas: master, doc y ghp04/master. De ellas master y doc son locales, y ghp04/master es remota
+
+42-
+* commit 81fdd0f (master) 
+| Author: Rafael <alu0100891812@ull.edu.es> 
+| Date:   hace 41 segundos 
+| 
+|     Creando Hola Mundo en Ruby 
+| 
+| * commit 6426c3d (HEAD, doc) 
+|/  Author: Rafael <alu0100891812@ull.edu.es> 
+|   Date:   hace 12 minutos 
+| 
+|       Grafo con la rama doc 
+| 
+* commit 0605b0e (ghp04/master) 
+| Author: Rafael <alu0100891812@ull.edu.es> 
+| Date:   hace 8 horas 
+| 
+|     Creando el fichero de respuestas 
+|
+* commit f3a66a9 
+| Author: Rafael <alu0100891812@ull.edu.es> 
+| Date:   hace 8 horas 
+| 
+|     Creando el fichero README.md 
+| 
+* commit d313b0b 
+  Author: Rafael <alu0100891812@ull.edu.es> 
+  Date:   hace 9 horas 
+      Creando el fichero .gitignore
+49-
+* commit 4e99e59 (HEAD, master, doc) 
+| Author: Rafael <alu0100891812@ull.edu.es> 
+| Date:   hace 3 minutos 
+| 
+|     Grafo con Hello World en Ruby añadido 
+| 
+* commit 5237869 
+| Author: Rafael <alu0100891812@ull.edu.es> 
+| Date:   hace 21 minutos 
+| 
+|     Grafo con la rama doc 
+| 
+* commit 81fdd0f 
+| Author: Rafael <alu0100891812@ull.edu.es> 
+| Date:   hace 10 minutos 
+| 
+|     Creando Hola Mundo en Ruby 
+| 
+* commit 0605b0e (ghp04/master) 
+| Author: Rafael <alu0100891812@ull.edu.es> 
+| Date:   hace 9 horas 
+| 
+|     Creando el fichero de respuestas
+| 
+* commit f3a66a9 
+| Author: Rafael <alu0100891812@ull.edu.es> 
+| Date:   hace 9 horas 
+| 
+|     Creando el fichero README.md 
+| 
+* commit d313b0b 
+  Author: Rafael <alu0100891812@ull.edu.es> 
+  Date:   hace 9 horas 
+
+       Creando el fichero .gitignore
+62- RVM es una herramienta de línea de comandos que permite gestionar varias versiones de Ruby en un solo host, múltiples entornos de intérpretes y gemas.
+
+69- Con el interprete de ruby se muestra "Hola Mundo" y se finaliza el programa, con el interprete interactivo la misma sentencia muestra "Hola Mundo" y ademas muestra nil (NULL).
+
+76- Con el interprete de ruby se muestra "Hola Mundo" y se finaliza el programa, con el interprete interactivo la misma sentencia muestra "Hola Mundo" y ademas muestra nil (NULL).

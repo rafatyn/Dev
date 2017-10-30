@@ -1,0 +1,3 @@
+Trabajo en equipo con git.
+En un archivo compilado, se traduce todo el código a código máquina para posteriormente ejecutarlo mientras que en un archivo interpretado se traduce y ejecuta línea a línea.
+Cada fichero está escrito en su correspondiente lenguaje y en la primera línea del .sh se encuentra la ruta donde se encuentra la bash para enlazarla.

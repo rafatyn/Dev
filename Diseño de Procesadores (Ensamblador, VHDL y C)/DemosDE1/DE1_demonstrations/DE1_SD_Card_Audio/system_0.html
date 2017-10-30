@@ -1,0 +1,1397 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <title>Report</title>
+  <style type="text/css">
+body { font-family:arial ;}
+a { text-decoration:underline ; color:#003000 ;}
+a:hover { text-decoration:underline ; color:0030f0 ;}
+td { padding : 5px ;}
+table.topTitle { width:100% ;}
+table.topTitle td.l { text-align:left ; font-weight: bold ; font-size:30px ;}
+table.topTitle td.r { text-align:right ; font-weight: bold ; font-size:16px ;}
+table.blueBar { width : 100% ; border-spacing : 0px ;}
+table.blueBar td { background:#0036ff ; font-size:12px ; color : white ; text-align : left ; font-weight : bold ;}
+table.blueBar td.l { text-align : left ;}
+table.blueBar td.r { text-align : right ;}
+table.items { width:100% ; border-collapse:collapse ;}
+table.items td.label { font-weight:bold ; font-size:16px ; vertical-align:top ;}
+table.items td.mono { font-family:courier ; font-size:12px ; white-space:pre ;}
+div.label { font-weight:bold ; font-size:16px ; vertical-align:top ; text-align:center ;}
+table.grid { border-collapse:collapse ;}
+table.grid td { border:1px solid #bbb ; font-size:12px ;}
+body { font-family:arial ;}
+table.x { font-family:courier ; border-collapse:collapse ; padding:2px ;}
+table.x td { border:1px solid #bbb ;}
+td.tableTitle { font-weight:bold ; text-align:center ;}
+table.grid { border-collapse:collapse ;}
+table.grid td { border:1px solid #bbb ;}
+table.grid td.tableTitle { font-weight:bold ; text-align:center ;}
+table.mmap { border-collapse:collapse ; text-size:11px ; border:1px solid #d8d8d8 ;}
+table.mmap td { border-color:#d8d8d8 ; border-width:1px ; border-style:solid ;}
+table.mmap td.empty { border-style:none ; background-color:#f0f0f0 ;}
+table.mmap td.slavemodule { text-align:left ; font-size:11px ; border-style:solid solid none solid ;}
+table.mmap td.slavem { text-align:right ; font-size:9px ; font-style:italic ; border-style:none solid none solid ;}
+table.mmap td.slaveb { text-align:right ; font-size:9px ; font-style:italic ; border-style:none solid solid solid ;}
+table.mmap td.mastermodule { text-align:center ; font-size:11px ; border-style:solid solid none solid ;}
+table.mmap td.masterlr { text-align:center ; font-size:9px ; font-style:italic ; border-style:none solid solid solid ;}
+table.mmap td.masterl { text-align:center ; font-size:9px ; font-style:italic ; border-style:none none solid solid ;}
+table.mmap td.masterm { text-align:center ; font-size:9px ; font-style:italic ; border-style:none none solid none ;}
+table.mmap td.masterr { text-align:center ; font-size:9px ; font-style:italic ; border-style:none solid solid none ;}
+table.mmap td.addr { font-family:courier ; font-size:9px ; text-align:right ;}
+table.connectionboxes { border-collapse:separate ; border-spacing:0px ; font-family:arial ;}
+table.connectionboxes td.from { border-bottom:1px solid black ; font-size:9px ; font-style:italic ; vertical-align:bottom ; text-align:left ;}
+table.connectionboxes td.to { font-size:9px ; font-style:italic ; vertical-align:top ; text-align:right ;}
+table.connectionboxes td.lefthandwire { border-bottom:1px solid black ; font-size:9px ; font-style:italic ; vertical-align:bottom ; text-align:right ;}
+table.connectionboxes td.righthandwire { border-bottom:1px solid black ; font-size:9px ; font-style:italic ; vertical-align:bottom ; text-align:left ;}
+table.connectionboxes td.righthandlabel { font-size:11px ; vertical-align:bottom ; text-align:left ;}
+table.connectionboxes td.neighbor { padding:3px ; border:1px solid black ; font-size: 11px ; background:#e8e8e8 ; vertical-align:center ; text-align:center ;}
+table.connectionboxes td.main { padding:8px ; border:1px solid black ; font-size: 14px ; font-weight:bold ; background:#ffffff ; vertical-align:center ; text-align:center ;}
+.parametersbox { border:1px solid #d0d0d0 ; display:inline-block ; max-height:160px ; overflow:auto ; width:360px ; font-size:10px ;}
+.flowbox { display:inline-block ;}
+.parametersbox table { font-size:10px ;}
+td.parametername { font-style:italic ;}
+td.parametervalue { font-weight:bold ;}
+div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; border-top:1px solid #707070 ; border-bottom:1px solid #707070 ; padding:20px ; margin:20px ; width:auto ;}</style>
+ </head>
+ <body>
+  <table class="topTitle">
+   <tr>
+    <td class="l">system_0</td>
+    <td class="r">system_0
+     <br/>1.0
+     <br/>
+    </td>
+   </tr>
+  </table>
+  <table class="blueBar">
+   <tr>
+    <td class="l">2012.10.15.16:14:29</td>
+    <td class="r">Generation Report</td>
+   </tr>
+  </table>
+  <table class="items">
+   <tr>
+    <td class="label">Output Directory</td>
+    <td class="mono">E:/TASKs/DE1/test/DE1_SD_Card_Audio_Test_1/</td>
+   </tr>
+   <tr>
+    <td class="label">Files</td>
+    <td class="mono">E:/TASKs/DE1/test/DE1_SD_Card_Audio_Test_1/system_0/synthesis/system_0.v (736076 bytes VERILOG)
+     <br/>
+     <br/>E:/TASKs/DE1/test/DE1_SD_Card_Audio_Test_1/system_0/synthesis/submodules/system_0_sdram_0.v (23802 bytes VERILOG)
+     <br/>E:/TASKs/DE1/test/DE1_SD_Card_Audio_Test_1/system_0/synthesis/submodules/system_0_sdram_0_test_component.v (9100 bytes VERILOG)
+     <br/>E:/TASKs/DE1/test/DE1_SD_Card_Audio_Test_1/system_0/synthesis/submodules/system_0_epcs_controller.v (18461 bytes VERILOG)
+     <br/>E:/TASKs/DE1/test/DE1_SD_Card_Audio_Test_1/system_0/synthesis/submodules/system_0_epcs_controller_boot_rom_synth.hex (2588 bytes HEX)
+     <br/>E:/TASKs/DE1/test/DE1_SD_Card_Audio_Test_1/system_0/synthesis/submodules/system_0_jtag_uart_0.v (24031 bytes VERILOG)
+     <br/>E:/TASKs/DE1/test/DE1_SD_Card_Audio_Test_1/system_0/synthesis/submodules/system_0_jtag_uart_0_input_mutex.dat (3 bytes OTHER)
+     <br/>E:/TASKs/DE1/test/DE1_SD_Card_Audio_Test_1/system_0/synthesis/submodules/system_0_jtag_uart_0_input_stream.dat (10 bytes OTHER)
+     <br/>E:/TASKs/DE1/test/DE1_SD_Card_Audio_Test_1/system_0/synthesis/submodules/system_0_jtag_uart_0_output_stream.dat (0 bytes OTHER)
+     <br/>E:/TASKs/DE1/test/DE1_SD_Card_Audio_Test_1/system_0/synthesis/submodules/system_0_uart_0.v (35072 bytes VERILOG)
+     <br/>E:/TASKs/DE1/test/DE1_SD_Card_Audio_Test_1/system_0/synthesis/submodules/system_0_uart_0_input_data_mutex.dat (3 bytes OTHER)
+     <br/>E:/TASKs/DE1/test/DE1_SD_Card_Audio_Test_1/system_0/synthesis/submodules/system_0_uart_0_input_data_stream.dat (7 bytes OTHER)
+     <br/>E:/TASKs/DE1/test/DE1_SD_Card_Audio_Test_1/system_0/synthesis/submodules/system_0_uart_0_log_module.txt (0 bytes OTHER)
+     <br/>E:/TASKs/DE1/test/DE1_SD_Card_Audio_Test_1/system_0/synthesis/submodules/system_0_timer_0.v (6932 bytes VERILOG)
+     <br/>E:/TASKs/DE1/test/DE1_SD_Card_Audio_Test_1/system_0/synthesis/submodules/system_0_led_red.v (2242 bytes VERILOG)
+     <br/>E:/TASKs/DE1/test/DE1_SD_Card_Audio_Test_1/system_0/synthesis/submodules/system_0_led_green.v (2264 bytes VERILOG)
+     <br/>E:/TASKs/DE1/test/DE1_SD_Card_Audio_Test_1/system_0/synthesis/submodules/system_0_button_pio.v (4438 bytes VERILOG)
+     <br/>E:/TASKs/DE1/test/DE1_SD_Card_Audio_Test_1/system_0/synthesis/submodules/system_0_switch_pio.v (1953 bytes VERILOG)
+     <br/>E:/TASKs/DE1/test/DE1_SD_Card_Audio_Test_1/system_0/synthesis/submodules/system_0_SD_DAT.v (2739 bytes VERILOG)
+     <br/>E:/TASKs/DE1/test/DE1_SD_Card_Audio_Test_1/system_0/synthesis/submodules/system_0_SD_CLK.v (2221 bytes VERILOG)
+     <br/>E:/TASKs/DE1/test/DE1_SD_Card_Audio_Test_1/system_0/synthesis/submodules/system_0_tri_state_bridge_0_bridge_0.sv (5573 bytes SYSTEM_VERILOG)
+     <br/>E:/TASKs/DE1/test/DE1_SD_Card_Audio_Test_1/system_0/synthesis/submodules/system_0_tri_state_bridge_0_pinSharer_0.v (4743 bytes VERILOG)
+     <br/>E:/TASKs/DE1/test/DE1_SD_Card_Audio_Test_1/system_0/synthesis/submodules/system_0_tri_state_bridge_0_pinSharer_0_pin_sharer.sv (4095 bytes SYSTEM_VERILOG)
+     <br/>E:/TASKs/DE1/test/DE1_SD_Card_Audio_Test_1/system_0/synthesis/submodules/altera_merlin_std_arbitrator_core.sv (8940 bytes SYSTEM_VERILOG)
+     <br/>E:/TASKs/DE1/test/DE1_SD_Card_Audio_Test_1/system_0/synthesis/submodules/system_0_tri_state_bridge_0_pinSharer_0_arbiter.sv (2876 bytes SYSTEM_VERILOG)
+     <br/>E:/TASKs/DE1/test/DE1_SD_Card_Audio_Test_1/system_0/synthesis/submodules/system_0_cfi_flash_0.v (28099 bytes VERILOG)
+     <br/>E:/TASKs/DE1/test/DE1_SD_Card_Audio_Test_1/system_0/synthesis/submodules/altera_tristate_controller_translator.sv (7099 bytes SYSTEM_VERILOG)
+     <br/>E:/TASKs/DE1/test/DE1_SD_Card_Audio_Test_1/system_0/synthesis/submodules/altera_merlin_slave_translator.sv (16043 bytes SYSTEM_VERILOG)
+     <br/>E:/TASKs/DE1/test/DE1_SD_Card_Audio_Test_1/system_0/synthesis/submodules/altera_tristate_controller_aggregator.sv (9385 bytes SYSTEM_VERILOG)
+     <br/>E:/TASKs/DE1/test/DE1_SD_Card_Audio_Test_1/system_0/synthesis/submodules/SEG7_LUT_8.v (657 bytes VERILOG)
+     <br/>E:/TASKs/DE1/test/DE1_SD_Card_Audio_Test_1/system_0/synthesis/submodules/SEG7_LUT.v (705 bytes VERILOG)
+     <br/>E:/TASKs/DE1/test/DE1_SD_Card_Audio_Test_1/system_0/synthesis/submodules/AUDIO_DAC_FIFO.v (3495 bytes VERILOG)
+     <br/>E:/TASKs/DE1/test/DE1_SD_Card_Audio_Test_1/system_0/synthesis/submodules/FIFO_16_256.v (7140 bytes VERILOG)
+     <br/>E:/TASKs/DE1/test/DE1_SD_Card_Audio_Test_1/system_0/synthesis/submodules/SRAM_16Bit_512K.v (910 bytes VERILOG)
+     <br/>E:/TASKs/DE1/test/DE1_SD_Card_Audio_Test_1/system_0/synthesis/submodules/system_0_nios2_qsys_0.ocp (856 bytes OTHER)
+     <br/>E:/TASKs/DE1/test/DE1_SD_Card_Audio_Test_1/system_0/synthesis/submodules/system_0_nios2_qsys_0.sdc (4292 bytes SDC)
+     <br/>E:/TASKs/DE1/test/DE1_SD_Card_Audio_Test_1/system_0/synthesis/submodules/system_0_nios2_qsys_0.v (449264 bytes VERILOG_ENCRYPT)
+     <br/>E:/TASKs/DE1/test/DE1_SD_Card_Audio_Test_1/system_0/synthesis/submodules/system_0_nios2_qsys_0_bht_ram.mif (2392 bytes MIF)
+     <br/>E:/TASKs/DE1/test/DE1_SD_Card_Audio_Test_1/system_0/synthesis/submodules/system_0_nios2_qsys_0_dc_tag_ram.mif (856 bytes MIF)
+     <br/>E:/TASKs/DE1/test/DE1_SD_Card_Audio_Test_1/system_0/synthesis/submodules/system_0_nios2_qsys_0_ic_tag_ram.mif (1881 bytes MIF)
+     <br/>E:/TASKs/DE1/test/DE1_SD_Card_Audio_Test_1/system_0/synthesis/submodules/system_0_nios2_qsys_0_jtag_debug_module_sysclk.v (7240 bytes VERILOG)
+     <br/>E:/TASKs/DE1/test/DE1_SD_Card_Audio_Test_1/system_0/synthesis/submodules/system_0_nios2_qsys_0_jtag_debug_module_tck.v (8634 bytes VERILOG)
+     <br/>E:/TASKs/DE1/test/DE1_SD_Card_Audio_Test_1/system_0/synthesis/submodules/system_0_nios2_qsys_0_jtag_debug_module_wrapper.v (10649 bytes VERILOG)
+     <br/>E:/TASKs/DE1/test/DE1_SD_Card_Audio_Test_1/system_0/synthesis/submodules/system_0_nios2_qsys_0_mult_cell.v (6342 bytes VERILOG)
+     <br/>E:/TASKs/DE1/test/DE1_SD_Card_Audio_Test_1/system_0/synthesis/submodules/system_0_nios2_qsys_0_ociram_default_contents.mif (5714 bytes MIF)
+     <br/>E:/TASKs/DE1/test/DE1_SD_Card_Audio_Test_1/system_0/synthesis/submodules/system_0_nios2_qsys_0_oci_test_bench.v (1531 bytes VERILOG)
+     <br/>E:/TASKs/DE1/test/DE1_SD_Card_Audio_Test_1/system_0/synthesis/submodules/system_0_nios2_qsys_0_rf_ram_a.mif (600 bytes MIF)
+     <br/>E:/TASKs/DE1/test/DE1_SD_Card_Audio_Test_1/system_0/synthesis/submodules/system_0_nios2_qsys_0_rf_ram_b.mif (600 bytes MIF)
+     <br/>E:/TASKs/DE1/test/DE1_SD_Card_Audio_Test_1/system_0/synthesis/submodules/system_0_nios2_qsys_0_test_bench.v (32108 bytes VERILOG)
+     <br/>E:/TASKs/DE1/test/DE1_SD_Card_Audio_Test_1/system_0/synthesis/submodules/altera_merlin_master_translator.sv (16802 bytes SYSTEM_VERILOG)
+     <br/>E:/TASKs/DE1/test/DE1_SD_Card_Audio_Test_1/system_0/synthesis/submodules/altera_merlin_slave_agent.sv (19132 bytes SYSTEM_VERILOG)
+     <br/>E:/TASKs/DE1/test/DE1_SD_Card_Audio_Test_1/system_0/synthesis/submodules/altera_merlin_burst_uncompressor.sv (10373 bytes SYSTEM_VERILOG)
+     <br/>E:/TASKs/DE1/test/DE1_SD_Card_Audio_Test_1/system_0/synthesis/submodules/altera_avalon_sc_fifo.v (32228 bytes VERILOG)
+     <br/>E:/TASKs/DE1/test/DE1_SD_Card_Audio_Test_1/system_0/synthesis/submodules/altera_merlin_master_agent.sv (8686 bytes SYSTEM_VERILOG)
+     <br/>E:/TASKs/DE1/test/DE1_SD_Card_Audio_Test_1/system_0/synthesis/submodules/system_0_addr_router.sv (7288 bytes SYSTEM_VERILOG)
+     <br/>E:/TASKs/DE1/test/DE1_SD_Card_Audio_Test_1/system_0/synthesis/submodules/system_0_addr_router_001.sv (11141 bytes SYSTEM_VERILOG)
+     <br/>E:/TASKs/DE1/test/DE1_SD_Card_Audio_Test_1/system_0/synthesis/submodules/system_0_id_router.sv (6043 bytes SYSTEM_VERILOG)
+     <br/>E:/TASKs/DE1/test/DE1_SD_Card_Audio_Test_1/system_0/synthesis/submodules/system_0_id_router_001.sv (6055 bytes SYSTEM_VERILOG)
+     <br/>E:/TASKs/DE1/test/DE1_SD_Card_Audio_Test_1/system_0/synthesis/submodules/system_0_id_router_003.sv (6054 bytes SYSTEM_VERILOG)
+     <br/>E:/TASKs/DE1/test/DE1_SD_Card_Audio_Test_1/system_0/synthesis/submodules/system_0_id_router_005.sv (5973 bytes SYSTEM_VERILOG)
+     <br/>E:/TASKs/DE1/test/DE1_SD_Card_Audio_Test_1/system_0/synthesis/submodules/altera_merlin_traffic_limiter.sv (12802 bytes SYSTEM_VERILOG)
+     <br/>E:/TASKs/DE1/test/DE1_SD_Card_Audio_Test_1/system_0/synthesis/submodules/altera_avalon_st_pipeline_base.v (4716 bytes VERILOG)
+     <br/>E:/TASKs/DE1/test/DE1_SD_Card_Audio_Test_1/system_0/synthesis/submodules/altera_merlin_burst_adapter.sv (37064 bytes SYSTEM_VERILOG)
+     <br/>E:/TASKs/DE1/test/DE1_SD_Card_Audio_Test_1/system_0/synthesis/submodules/altera_reset_controller.v (3595 bytes VERILOG)
+     <br/>E:/TASKs/DE1/test/DE1_SD_Card_Audio_Test_1/system_0/synthesis/submodules/altera_reset_synchronizer.v (3564 bytes VERILOG)
+     <br/>E:/TASKs/DE1/test/DE1_SD_Card_Audio_Test_1/system_0/synthesis/submodules/altera_reset_controller.sdc (1179 bytes SDC)
+     <br/>E:/TASKs/DE1/test/DE1_SD_Card_Audio_Test_1/system_0/synthesis/submodules/system_0_cmd_xbar_demux.sv (6032 bytes SYSTEM_VERILOG)
+     <br/>E:/TASKs/DE1/test/DE1_SD_Card_Audio_Test_1/system_0/synthesis/submodules/system_0_cmd_xbar_demux_001.sv (14443 bytes SYSTEM_VERILOG)
+     <br/>E:/TASKs/DE1/test/DE1_SD_Card_Audio_Test_1/system_0/synthesis/submodules/altera_merlin_arbitrator.sv (9460 bytes SYSTEM_VERILOG)
+     <br/>E:/TASKs/DE1/test/DE1_SD_Card_Audio_Test_1/system_0/synthesis/submodules/system_0_cmd_xbar_mux.sv (11844 bytes SYSTEM_VERILOG)
+     <br/>E:/TASKs/DE1/test/DE1_SD_Card_Audio_Test_1/system_0/synthesis/submodules/system_0_rsp_xbar_demux.sv (4113 bytes SYSTEM_VERILOG)
+     <br/>E:/TASKs/DE1/test/DE1_SD_Card_Audio_Test_1/system_0/synthesis/submodules/system_0_rsp_xbar_demux_005.sv (3487 bytes SYSTEM_VERILOG)
+     <br/>E:/TASKs/DE1/test/DE1_SD_Card_Audio_Test_1/system_0/synthesis/submodules/system_0_rsp_xbar_mux.sv (13662 bytes SYSTEM_VERILOG)
+     <br/>E:/TASKs/DE1/test/DE1_SD_Card_Audio_Test_1/system_0/synthesis/submodules/system_0_rsp_xbar_mux_001.sv (24371 bytes SYSTEM_VERILOG)
+     <br/>E:/TASKs/DE1/test/DE1_SD_Card_Audio_Test_1/system_0/synthesis/submodules/altera_merlin_width_adapter.sv (35859 bytes SYSTEM_VERILOG)
+     <br/>E:/TASKs/DE1/test/DE1_SD_Card_Audio_Test_1/system_0/synthesis/submodules/system_0_irq_mapper.sv (2165 bytes SYSTEM_VERILOG)
+     <br/>
+    </td>
+   </tr>
+   <tr>
+    <td class="label">Instantiations</td>
+    <td class="mono">
+     <table class="grid">
+      <tr>
+       <td><b>system_0</b>
+        <br/>system_0 v1.0</td>
+       <td><b>system_0_sdram_0</b> as sdram_0
+        <br/><b>system_0_epcs_controller</b> as epcs_controller
+        <br/><b>system_0_jtag_uart_0</b> as jtag_uart_0
+        <br/><b>system_0_uart_0</b> as uart_0
+        <br/><b>system_0_timer_0</b> as timer_0, timer_1
+        <br/><b>system_0_led_red</b> as led_red
+        <br/><b>system_0_led_green</b> as led_green
+        <br/><b>system_0_button_pio</b> as button_pio
+        <br/><b>system_0_switch_pio</b> as switch_pio
+        <br/><b>system_0_SD_DAT</b> as SD_DAT, SD_CMD
+        <br/><b>system_0_SD_CLK</b> as SD_CLK
+        <br/><b>system_0_tri_state_bridge_0_bridge_0</b> as tri_state_bridge_0_bridge_0
+        <br/><b>system_0_tri_state_bridge_0_pinSharer_0</b> as tri_state_bridge_0_pinSharer_0
+        <br/><b>system_0_cfi_flash_0</b> as cfi_flash_0
+        <br/><b>SEG7_LUT_8</b> as SEG7_Display
+        <br/><b>AUDIO_DAC_FIFO</b> as Audio_0
+        <br/><b>SRAM_16Bit_512K</b> as sram_16bit_512k_0
+        <br/><b>system_0_nios2_qsys_0</b> as nios2_qsys_0
+        <br/><b>altera_merlin_master_translator</b> as nios2_qsys_0_instruction_master_translator, nios2_qsys_0_data_master_translator
+        <br/><b>altera_merlin_slave_translator</b> as nios2_qsys_0_jtag_debug_module_translator, sram_16bit_512k_0_avalon_slave_0_translator, epcs_controller_epcs_control_port_translator, cfi_flash_0_uas_translator, sdram_0_s1_translator, Audio_0_avalon_slave_0_translator, SEG7_Display_avalon_slave_translator, led_green_s1_translator, led_red_s1_translator, SD_CLK_s1_translator, SD_CMD_s1_translator, SD_DAT_s1_translator, switch_pio_s1_translator, button_pio_s1_translator, timer_1_s1_translator, timer_0_s1_translator, uart_0_s1_translator, jtag_uart_0_avalon_jtag_slave_translator
+        <br/><b>altera_merlin_slave_agent</b> as SD_CMD_s1_translator_avalon_universal_slave_0_agent, SD_DAT_s1_translator_avalon_universal_slave_0_agent, nios2_qsys_0_jtag_debug_module_translator_avalon_universal_slave_0_agent, switch_pio_s1_translator_avalon_universal_slave_0_agent, timer_1_s1_translator_avalon_universal_slave_0_agent, led_green_s1_translator_avalon_universal_slave_0_agent, led_red_s1_translator_avalon_universal_slave_0_agent, timer_0_s1_translator_avalon_universal_slave_0_agent, cfi_flash_0_uas_translator_avalon_universal_slave_0_agent, sram_16bit_512k_0_avalon_slave_0_translator_avalon_universal_slave_0_agent, sdram_0_s1_translator_avalon_universal_slave_0_agent, epcs_controller_epcs_control_port_translator_avalon_universal_slave_0_agent, uart_0_s1_translator_avalon_universal_slave_0_agent, SD_CLK_s1_translator_avalon_universal_slave_0_agent, button_pio_s1_translator_avalon_universal_slave_0_agent, SEG7_Display_avalon_slave_translator_avalon_universal_slave_0_agent, jtag_uart_0_avalon_jtag_slave_translator_avalon_universal_slave_0_agent, Audio_0_avalon_slave_0_translator_avalon_universal_slave_0_agent
+        <br/><b>altera_avalon_sc_fifo</b> as SD_CMD_s1_translator_avalon_universal_slave_0_agent_rsp_fifo, SD_DAT_s1_translator_avalon_universal_slave_0_agent_rsp_fifo, nios2_qsys_0_jtag_debug_module_translator_avalon_universal_slave_0_agent_rsp_fifo, switch_pio_s1_translator_avalon_universal_slave_0_agent_rsp_fifo, timer_1_s1_translator_avalon_universal_slave_0_agent_rsp_fifo, led_green_s1_translator_avalon_universal_slave_0_agent_rsp_fifo, led_red_s1_translator_avalon_universal_slave_0_agent_rsp_fifo, timer_0_s1_translator_avalon_universal_slave_0_agent_rsp_fifo, cfi_flash_0_uas_translator_avalon_universal_slave_0_agent_rsp_fifo, sram_16bit_512k_0_avalon_slave_0_translator_avalon_universal_slave_0_agent_rsp_fifo, sdram_0_s1_translator_avalon_universal_slave_0_agent_rsp_fifo, epcs_controller_epcs_control_port_translator_avalon_universal_slave_0_agent_rsp_fifo, uart_0_s1_translator_avalon_universal_slave_0_agent_rsp_fifo, SD_CLK_s1_translator_avalon_universal_slave_0_agent_rsp_fifo, button_pio_s1_translator_avalon_universal_slave_0_agent_rsp_fifo, SEG7_Display_avalon_slave_translator_avalon_universal_slave_0_agent_rsp_fifo, jtag_uart_0_avalon_jtag_slave_translator_avalon_universal_slave_0_agent_rsp_fifo, Audio_0_avalon_slave_0_translator_avalon_universal_slave_0_agent_rsp_fifo
+        <br/><b>altera_merlin_master_agent</b> as nios2_qsys_0_instruction_master_translator_avalon_universal_master_0_agent, nios2_qsys_0_data_master_translator_avalon_universal_master_0_agent
+        <br/><b>system_0_addr_router</b> as addr_router
+        <br/><b>system_0_addr_router_001</b> as addr_router_001
+        <br/><b>system_0_id_router</b> as id_router, id_router_002
+        <br/><b>system_0_id_router_001</b> as id_router_001, id_router_004
+        <br/><b>system_0_id_router_003</b> as id_router_003
+        <br/><b>system_0_id_router_005</b> as id_router_005, id_router_006, id_router_007, id_router_008, id_router_009, id_router_010, id_router_011, id_router_012, id_router_013, id_router_014, id_router_015, id_router_016, id_router_017
+        <br/><b>altera_merlin_traffic_limiter</b> as limiter, limiter_001
+        <br/><b>altera_merlin_burst_adapter</b> as burst_adapter, burst_adapter_001, burst_adapter_002
+        <br/><b>altera_reset_controller</b> as rst_controller
+        <br/><b>system_0_cmd_xbar_demux</b> as cmd_xbar_demux
+        <br/><b>system_0_cmd_xbar_demux_001</b> as cmd_xbar_demux_001
+        <br/><b>system_0_cmd_xbar_mux</b> as cmd_xbar_mux, cmd_xbar_mux_001, cmd_xbar_mux_002, cmd_xbar_mux_003, cmd_xbar_mux_004
+        <br/><b>system_0_rsp_xbar_demux</b> as rsp_xbar_demux, rsp_xbar_demux_001, rsp_xbar_demux_002, rsp_xbar_demux_003, rsp_xbar_demux_004
+        <br/><b>system_0_rsp_xbar_demux_005</b> as rsp_xbar_demux_005, rsp_xbar_demux_006, rsp_xbar_demux_007, rsp_xbar_demux_008, rsp_xbar_demux_009, rsp_xbar_demux_010, rsp_xbar_demux_011, rsp_xbar_demux_012, rsp_xbar_demux_013, rsp_xbar_demux_014, rsp_xbar_demux_015, rsp_xbar_demux_016, rsp_xbar_demux_017
+        <br/><b>system_0_rsp_xbar_mux</b> as rsp_xbar_mux
+        <br/><b>system_0_rsp_xbar_mux_001</b> as rsp_xbar_mux_001
+        <br/><b>altera_merlin_width_adapter</b> as width_adapter, width_adapter_001, width_adapter_002, width_adapter_003, width_adapter_004, width_adapter_005
+        <br/><b>system_0_irq_mapper</b> as irq_mapper
+        <br/>
+       </td>
+      </tr>
+      <tr>
+       <td><b>system_0_sdram_0</b>
+        <br/>altera_avalon_new_sdram_controller v11.1</td>
+       <td></td>
+      </tr>
+      <tr>
+       <td><b>system_0_epcs_controller</b>
+        <br/>altera_avalon_epcs_flash_controller v11.1</td>
+       <td></td>
+      </tr>
+      <tr>
+       <td><b>system_0_jtag_uart_0</b>
+        <br/>altera_avalon_jtag_uart v11.1</td>
+       <td></td>
+      </tr>
+      <tr>
+       <td><b>system_0_uart_0</b>
+        <br/>altera_avalon_uart v11.1</td>
+       <td></td>
+      </tr>
+      <tr>
+       <td><b>system_0_timer_0</b>
+        <br/>altera_avalon_timer v11.1</td>
+       <td></td>
+      </tr>
+      <tr>
+       <td><b>system_0_led_red</b>
+        <br/>altera_avalon_pio v11.1</td>
+       <td></td>
+      </tr>
+      <tr>
+       <td><b>system_0_led_green</b>
+        <br/>altera_avalon_pio v11.1</td>
+       <td></td>
+      </tr>
+      <tr>
+       <td><b>system_0_button_pio</b>
+        <br/>altera_avalon_pio v11.1</td>
+       <td></td>
+      </tr>
+      <tr>
+       <td><b>system_0_switch_pio</b>
+        <br/>altera_avalon_pio v11.1</td>
+       <td></td>
+      </tr>
+      <tr>
+       <td><b>system_0_SD_DAT</b>
+        <br/>altera_avalon_pio v11.1</td>
+       <td></td>
+      </tr>
+      <tr>
+       <td><b>system_0_SD_CLK</b>
+        <br/>altera_avalon_pio v11.1</td>
+       <td></td>
+      </tr>
+      <tr>
+       <td><b>system_0_tri_state_bridge_0_bridge_0</b>
+        <br/>altera_tristate_conduit_bridge v11.1</td>
+       <td></td>
+      </tr>
+      <tr>
+       <td><b>system_0_tri_state_bridge_0_pinSharer_0</b>
+        <br/>altera_tristate_conduit_pin_sharer v11.1</td>
+       <td><b>system_0_tri_state_bridge_0_pinSharer_0_pin_sharer</b> as pin_sharer
+        <br/><b>system_0_tri_state_bridge_0_pinSharer_0_arbiter</b> as arbiter
+        <br/>
+       </td>
+      </tr>
+      <tr>
+       <td><b>system_0_cfi_flash_0</b>
+        <br/>altera_generic_tristate_controller v11.1</td>
+       <td><b>altera_tristate_controller_translator</b> as tdt
+        <br/><b>altera_merlin_slave_translator</b> as slave_translator
+        <br/><b>altera_tristate_controller_aggregator</b> as tda
+        <br/>
+       </td>
+      </tr>
+      <tr>
+       <td><b>SEG7_LUT_8</b>
+        <br/>seg7_lut_8 v1.0.1</td>
+       <td></td>
+      </tr>
+      <tr>
+       <td><b>AUDIO_DAC_FIFO</b>
+        <br/>audio_dac_fifo v1.0.2</td>
+       <td></td>
+      </tr>
+      <tr>
+       <td><b>SRAM_16Bit_512K</b>
+        <br/>sram_16bit_512k v1.0.2</td>
+       <td></td>
+      </tr>
+      <tr>
+       <td><b>system_0_nios2_qsys_0</b>
+        <br/>altera_nios2_qsys v11.1</td>
+       <td></td>
+      </tr>
+      <tr>
+       <td><b>altera_merlin_master_translator</b>
+        <br/>altera_merlin_master_translator v11.1</td>
+       <td></td>
+      </tr>
+      <tr>
+       <td><b>altera_merlin_slave_translator</b>
+        <br/>altera_merlin_slave_translator v11.1</td>
+       <td></td>
+      </tr>
+      <tr>
+       <td><b>altera_merlin_slave_agent</b>
+        <br/>altera_merlin_slave_agent v11.1</td>
+       <td></td>
+      </tr>
+      <tr>
+       <td><b>altera_avalon_sc_fifo</b>
+        <br/>altera_avalon_sc_fifo v11.1</td>
+       <td></td>
+      </tr>
+      <tr>
+       <td><b>altera_merlin_master_agent</b>
+        <br/>altera_merlin_master_agent v11.1</td>
+       <td></td>
+      </tr>
+      <tr>
+       <td><b>system_0_addr_router</b>
+        <br/>altera_merlin_router v11.1</td>
+       <td></td>
+      </tr>
+      <tr>
+       <td><b>system_0_addr_router_001</b>
+        <br/>altera_merlin_router v11.1</td>
+       <td></td>
+      </tr>
+      <tr>
+       <td><b>system_0_id_router</b>
+        <br/>altera_merlin_router v11.1</td>
+       <td></td>
+      </tr>
+      <tr>
+       <td><b>system_0_id_router_001</b>
+        <br/>altera_merlin_router v11.1</td>
+       <td></td>
+      </tr>
+      <tr>
+       <td><b>system_0_id_router_003</b>
+        <br/>altera_merlin_router v11.1</td>
+       <td></td>
+      </tr>
+      <tr>
+       <td><b>system_0_id_router_005</b>
+        <br/>altera_merlin_router v11.1</td>
+       <td></td>
+      </tr>
+      <tr>
+       <td><b>altera_merlin_traffic_limiter</b>
+        <br/>altera_merlin_traffic_limiter v11.1</td>
+       <td></td>
+      </tr>
+      <tr>
+       <td><b>altera_merlin_burst_adapter</b>
+        <br/>altera_merlin_burst_adapter v11.1</td>
+       <td></td>
+      </tr>
+      <tr>
+       <td><b>altera_reset_controller</b>
+        <br/>altera_reset_controller v11.1</td>
+       <td></td>
+      </tr>
+      <tr>
+       <td><b>system_0_cmd_xbar_demux</b>
+        <br/>altera_merlin_demultiplexer v11.1</td>
+       <td></td>
+      </tr>
+      <tr>
+       <td><b>system_0_cmd_xbar_demux_001</b>
+        <br/>altera_merlin_demultiplexer v11.1</td>
+       <td></td>
+      </tr>
+      <tr>
+       <td><b>system_0_cmd_xbar_mux</b>
+        <br/>altera_merlin_multiplexer v11.1</td>
+       <td></td>
+      </tr>
+      <tr>
+       <td><b>system_0_rsp_xbar_demux</b>
+        <br/>altera_merlin_demultiplexer v11.1</td>
+       <td></td>
+      </tr>
+      <tr>
+       <td><b>system_0_rsp_xbar_demux_005</b>
+        <br/>altera_merlin_demultiplexer v11.1</td>
+       <td></td>
+      </tr>
+      <tr>
+       <td><b>system_0_rsp_xbar_mux</b>
+        <br/>altera_merlin_multiplexer v11.1</td>
+       <td></td>
+      </tr>
+      <tr>
+       <td><b>system_0_rsp_xbar_mux_001</b>
+        <br/>altera_merlin_multiplexer v11.1</td>
+       <td></td>
+      </tr>
+      <tr>
+       <td><b>altera_merlin_width_adapter</b>
+        <br/>altera_merlin_width_adapter v11.1</td>
+       <td></td>
+      </tr>
+      <tr>
+       <td><b>system_0_irq_mapper</b>
+        <br/>altera_irq_mapper v11.1</td>
+       <td></td>
+      </tr>
+      <tr>
+       <td><b>system_0_tri_state_bridge_0_pinSharer_0_pin_sharer</b>
+        <br/>altera_tristate_conduit_pin_sharer_core v11.1</td>
+       <td></td>
+      </tr>
+      <tr>
+       <td><b>system_0_tri_state_bridge_0_pinSharer_0_arbiter</b>
+        <br/>altera_merlin_std_arbitrator v11.1</td>
+       <td></td>
+      </tr>
+      <tr>
+       <td><b>altera_tristate_controller_translator</b>
+        <br/>altera_tristate_controller_translator v11.1</td>
+       <td></td>
+      </tr>
+      <tr>
+       <td><b>altera_tristate_controller_aggregator</b>
+        <br/>altera_tristate_controller_aggregator v11.1</td>
+       <td></td>
+      </tr>
+     </table>
+    </td>
+   </tr>
+  </table>
+  <div style="width:100% ;  height:10px"> </div>
+  <div class="label">Generation Messages</div>
+  <div style="white-space:pre ; font-family:courier">2012.10.15.16:11:41 [Debug] system_0.tri_state_bridge_0_bridge_0: Timing: ELA:1/0.016s
+2012.10.15.16:11:40 [Debug] system_0.tri_state_bridge_0_pinSharer_0.clock: Timing: ELA:2/0.000s/0.000s
+2012.10.15.16:11:40 [Debug] system_0.tri_state_bridge_0_pinSharer_0.reset: Timing: ELA:2/0.000s/0.000s
+2012.10.15.16:11:40 [Debug] system_0.tri_state_bridge_0_pinSharer_0.pin_sharer: Timing: ELA:10/0.009s/0.016s
+2012.10.15.16:11:40 [Debug] system_0.tri_state_bridge_0_pinSharer_0.arbiter: Timing: ELA:2/0.000s/0.000s
+2012.10.15.16:11:41 [Debug] system_0.tri_state_bridge_0_pinSharer_0: Timing: COM:1/0.125s
+2012.10.15.16:11:40 [Debug] system_0.cfi_flash_0.clk: Timing: ELA:2/0.000s/0.000s
+2012.10.15.16:11:40 [Debug] system_0.cfi_flash_0.reset: Timing: ELA:2/0.000s/0.000s
+2012.10.15.16:11:40 [Debug] system_0.cfi_flash_0.tdt: Timing: ELA:4/0.000s/0.000s
+2012.10.15.16:11:40 [Debug] system_0.cfi_flash_0.slave_translator: Timing: ELA:5/0.015s/0.015s
+2012.10.15.16:11:40 [Debug] system_0.cfi_flash_0.tda: Timing: ELA:4/0.012s/0.016s
+2012.10.15.16:11:41 [Debug] system_0.cfi_flash_0: Timing: COM:1/0.032s
+2012.10.15.16:11:41 [Debug] system_0.SEG7_Display: Timing: QME:1/16.765s
+2012.10.15.16:11:41 [Debug] system_0.Audio_0: Timing: QME:1/9.906s
+2012.10.15.16:11:41 [Debug] system_0.sram_16bit_512k_0: Timing: QME:1/8.437s
+2012.10.15.16:11:00 [Debug] system_0.altera_nios2_qsys: When a generate simulation callback is defined a synthesis generation callback should also be defined
+2012.10.15.16:11:41 [Debug] system_0.nios2_qsys_0: Timing: VAL:1/0.078s ELA:1/0.016s
+2012.10.15.16:11:41 [Info] system_0: Generating <b>system_0</b> "<b>system_0</b>" for QUARTUS_SYNTH
+2012.10.15.16:11:41 [Debug] system_0: queue size: 0 starting:system_0 "system_0"
+2012.10.15.16:11:41 [Debug] Transform: PipelineBridgeSwap
+2012.10.15.16:11:41 [Info] pipeline_bridge_swap_transform: After transform: <b>21</b> modules, <b>91</b> connections
+2012.10.15.16:11:41 [Debug] Transform: ClockCrossingBridgeSwap
+2012.10.15.16:11:41 [Debug] Transform: QsysBetaIPSwap
+2012.10.15.16:11:41 [Debug] Transform: CustomInstructionTransform
+2012.10.15.16:11:41 [Info] No custom instruction connections, skipping transform 
+2012.10.15.16:11:41 [Debug] Transform: TristateConduitUpgradeTransform
+2012.10.15.16:11:42 [Debug] Transform: TranslatorTransform
+2012.10.15.16:11:42 [Progress] min: 0
+2012.10.15.16:11:42 [Progress] max: 1
+2012.10.15.16:11:42 [Progress] current: 1
+2012.10.15.16:11:42 [Progress] min: 0
+2012.10.15.16:11:42 [Progress] max: 1
+2012.10.15.16:11:42 [Progress] current: 1
+2012.10.15.16:11:42 [Progress] min: 0
+2012.10.15.16:11:42 [Progress] max: 1
+2012.10.15.16:11:42 [Progress] current: 1
+2012.10.15.16:11:42 [Progress] min: 0
+2012.10.15.16:11:42 [Progress] max: 1
+2012.10.15.16:11:42 [Progress] current: 1
+2012.10.15.16:11:42 [Progress] min: 0
+2012.10.15.16:11:42 [Progress] max: 1
+2012.10.15.16:11:42 [Progress] current: 1
+2012.10.15.16:11:42 [Progress] min: 0
+2012.10.15.16:11:42 [Progress] max: 1
+2012.10.15.16:11:42 [Progress] current: 1
+2012.10.15.16:11:42 [Progress] min: 0
+2012.10.15.16:11:42 [Progress] max: 1
+2012.10.15.16:11:42 [Progress] current: 1
+2012.10.15.16:11:42 [Progress] min: 0
+2012.10.15.16:11:42 [Progress] max: 1
+2012.10.15.16:11:42 [Progress] current: 1
+2012.10.15.16:11:42 [Progress] min: 0
+2012.10.15.16:11:42 [Progress] max: 1
+2012.10.15.16:11:42 [Progress] current: 1
+2012.10.15.16:11:42 [Progress] min: 0
+2012.10.15.16:11:42 [Progress] max: 1
+2012.10.15.16:11:42 [Progress] current: 1
+2012.10.15.16:11:42 [Progress] min: 0
+2012.10.15.16:11:42 [Progress] max: 1
+2012.10.15.16:11:42 [Progress] current: 1
+2012.10.15.16:11:42 [Progress] min: 0
+2012.10.15.16:11:42 [Progress] max: 1
+2012.10.15.16:11:42 [Progress] current: 1
+2012.10.15.16:11:42 [Progress] min: 0
+2012.10.15.16:11:42 [Progress] max: 1
+2012.10.15.16:11:42 [Progress] current: 1
+2012.10.15.16:11:42 [Progress] min: 0
+2012.10.15.16:11:42 [Progress] max: 1
+2012.10.15.16:11:42 [Progress] current: 1
+2012.10.15.16:11:42 [Progress] min: 0
+2012.10.15.16:11:42 [Progress] max: 1
+2012.10.15.16:11:42 [Progress] current: 1
+2012.10.15.16:11:42 [Progress] min: 0
+2012.10.15.16:11:42 [Progress] max: 1
+2012.10.15.16:11:42 [Progress] current: 1
+2012.10.15.16:11:42 [Progress] min: 0
+2012.10.15.16:11:42 [Progress] max: 1
+2012.10.15.16:11:42 [Progress] current: 1
+2012.10.15.16:11:42 [Progress] min: 0
+2012.10.15.16:11:42 [Progress] max: 1
+2012.10.15.16:11:42 [Progress] current: 1
+2012.10.15.16:11:42 [Progress] min: 0
+2012.10.15.16:11:42 [Progress] max: 1
+2012.10.15.16:11:42 [Progress] current: 1
+2012.10.15.16:11:42 [Progress] min: 0
+2012.10.15.16:11:42 [Progress] max: 1
+2012.10.15.16:11:42 [Progress] current: 1
+2012.10.15.16:11:42 [Info] merlin_translator_transform: After transform: <b>41</b> modules, <b>171</b> connections
+2012.10.15.16:11:42 [Debug] Transform: DomainTransform
+2012.10.15.16:11:42 [Debug] Transform merlin_domain_transform not run on matched interfaces nios2_qsys_0.instruction_master and nios2_qsys_0_instruction_master_translator.avalon_anti_master_0
+2012.10.15.16:11:42 [Debug] Transform merlin_domain_transform not run on matched interfaces nios2_qsys_0.data_master and nios2_qsys_0_data_master_translator.avalon_anti_master_0
+2012.10.15.16:11:42 [Progress] min: 0
+2012.10.15.16:11:42 [Progress] max: 1
+2012.10.15.16:11:42 [Progress] current: 1
+2012.10.15.16:11:42 [Progress] min: 0
+2012.10.15.16:11:42 [Progress] max: 1
+2012.10.15.16:11:42 [Progress] current: 1
+2012.10.15.16:11:42 [Progress] min: 0
+2012.10.15.16:11:42 [Progress] max: 1
+2012.10.15.16:11:42 [Progress] current: 1
+2012.10.15.16:11:42 [Progress] min: 0
+2012.10.15.16:11:42 [Progress] max: 1
+2012.10.15.16:11:42 [Progress] current: 1
+2012.10.15.16:11:42 [Progress] min: 0
+2012.10.15.16:11:42 [Progress] max: 1
+2012.10.15.16:11:42 [Progress] current: 1
+2012.10.15.16:11:42 [Progress] min: 0
+2012.10.15.16:11:42 [Progress] max: 1
+2012.10.15.16:11:42 [Progress] current: 1
+2012.10.15.16:11:42 [Progress] min: 0
+2012.10.15.16:11:42 [Progress] max: 1
+2012.10.15.16:11:42 [Progress] current: 1
+2012.10.15.16:11:42 [Progress] min: 0
+2012.10.15.16:11:42 [Progress] max: 1
+2012.10.15.16:11:42 [Progress] current: 1
+2012.10.15.16:11:42 [Progress] min: 0
+2012.10.15.16:11:42 [Progress] max: 1
+2012.10.15.16:11:42 [Progress] current: 1
+2012.10.15.16:11:42 [Progress] min: 0
+2012.10.15.16:11:42 [Progress] max: 1
+2012.10.15.16:11:42 [Progress] current: 1
+2012.10.15.16:11:42 [Progress] min: 0
+2012.10.15.16:11:42 [Progress] max: 1
+2012.10.15.16:11:42 [Progress] current: 1
+2012.10.15.16:11:42 [Progress] min: 0
+2012.10.15.16:11:42 [Progress] max: 1
+2012.10.15.16:11:42 [Progress] current: 1
+2012.10.15.16:11:42 [Progress] min: 0
+2012.10.15.16:11:42 [Progress] max: 1
+2012.10.15.16:11:42 [Progress] current: 1
+2012.10.15.16:11:42 [Progress] min: 0
+2012.10.15.16:11:42 [Progress] max: 1
+2012.10.15.16:11:42 [Progress] current: 1
+2012.10.15.16:11:43 [Progress] min: 0
+2012.10.15.16:11:43 [Progress] max: 1
+2012.10.15.16:11:43 [Progress] current: 1
+2012.10.15.16:11:43 [Progress] min: 0
+2012.10.15.16:11:43 [Progress] max: 1
+2012.10.15.16:11:43 [Progress] current: 1
+2012.10.15.16:11:43 [Progress] min: 0
+2012.10.15.16:11:43 [Progress] max: 1
+2012.10.15.16:11:43 [Progress] current: 1
+2012.10.15.16:11:43 [Progress] min: 0
+2012.10.15.16:11:43 [Progress] max: 1
+2012.10.15.16:11:43 [Progress] current: 1
+2012.10.15.16:11:43 [Progress] min: 0
+2012.10.15.16:11:43 [Progress] max: 1
+2012.10.15.16:11:43 [Progress] current: 1
+2012.10.15.16:11:43 [Progress] min: 0
+2012.10.15.16:11:43 [Progress] max: 1
+2012.10.15.16:11:43 [Progress] current: 1
+2012.10.15.16:11:43 [Progress] min: 0
+2012.10.15.16:11:43 [Progress] max: 1
+2012.10.15.16:11:43 [Progress] current: 1
+2012.10.15.16:11:43 [Progress] min: 0
+2012.10.15.16:11:43 [Progress] max: 1
+2012.10.15.16:11:43 [Progress] current: 1
+2012.10.15.16:11:43 [Progress] min: 0
+2012.10.15.16:11:43 [Progress] max: 1
+2012.10.15.16:11:43 [Progress] current: 1
+2012.10.15.16:11:43 [Progress] min: 0
+2012.10.15.16:11:43 [Progress] max: 1
+2012.10.15.16:11:43 [Progress] current: 1
+2012.10.15.16:11:43 [Progress] min: 0
+2012.10.15.16:11:43 [Progress] max: 1
+2012.10.15.16:11:43 [Progress] current: 1
+2012.10.15.16:11:43 [Progress] min: 0
+2012.10.15.16:11:43 [Progress] max: 1
+2012.10.15.16:11:43 [Progress] current: 1
+2012.10.15.16:11:43 [Progress] min: 0
+2012.10.15.16:11:43 [Progress] max: 1
+2012.10.15.16:11:43 [Progress] current: 1
+2012.10.15.16:11:43 [Progress] min: 0
+2012.10.15.16:11:43 [Progress] max: 1
+2012.10.15.16:11:43 [Progress] current: 1
+2012.10.15.16:11:43 [Progress] min: 0
+2012.10.15.16:11:43 [Progress] max: 1
+2012.10.15.16:11:43 [Progress] current: 1
+2012.10.15.16:11:43 [Progress] min: 0
+2012.10.15.16:11:43 [Progress] max: 1
+2012.10.15.16:11:43 [Progress] current: 1
+2012.10.15.16:11:43 [Progress] min: 0
+2012.10.15.16:11:43 [Progress] max: 1
+2012.10.15.16:11:43 [Progress] current: 1
+2012.10.15.16:11:43 [Progress] min: 0
+2012.10.15.16:11:43 [Progress] max: 1
+2012.10.15.16:11:43 [Progress] current: 1
+2012.10.15.16:11:43 [Progress] min: 0
+2012.10.15.16:11:43 [Progress] max: 1
+2012.10.15.16:11:43 [Progress] current: 1
+2012.10.15.16:11:43 [Progress] min: 0
+2012.10.15.16:11:43 [Progress] max: 1
+2012.10.15.16:11:43 [Progress] current: 1
+2012.10.15.16:11:43 [Progress] min: 0
+2012.10.15.16:11:43 [Progress] max: 1
+2012.10.15.16:11:43 [Progress] current: 1
+2012.10.15.16:11:43 [Progress] min: 0
+2012.10.15.16:11:43 [Progress] max: 1
+2012.10.15.16:11:43 [Progress] current: 1
+2012.10.15.16:11:43 [Progress] min: 0
+2012.10.15.16:11:43 [Progress] max: 1
+2012.10.15.16:11:43 [Progress] current: 1
+2012.10.15.16:11:43 [Progress] min: 0
+2012.10.15.16:11:43 [Progress] max: 1
+2012.10.15.16:11:43 [Progress] current: 1
+2012.10.15.16:11:43 [Progress] min: 0
+2012.10.15.16:11:43 [Progress] max: 1
+2012.10.15.16:11:43 [Progress] current: 1
+2012.10.15.16:11:43 [Progress] min: 0
+2012.10.15.16:11:43 [Progress] max: 1
+2012.10.15.16:11:43 [Progress] current: 1
+2012.10.15.16:11:43 [Progress] min: 0
+2012.10.15.16:11:43 [Progress] max: 1
+2012.10.15.16:11:43 [Progress] current: 1
+2012.10.15.16:11:43 [Progress] min: 0
+2012.10.15.16:11:43 [Progress] max: 1
+2012.10.15.16:11:43 [Progress] current: 1
+2012.10.15.16:11:43 [Progress] min: 0
+2012.10.15.16:11:43 [Progress] max: 1
+2012.10.15.16:11:43 [Progress] current: 1
+2012.10.15.16:11:43 [Progress] min: 0
+2012.10.15.16:11:43 [Progress] max: 1
+2012.10.15.16:11:43 [Progress] current: 1
+2012.10.15.16:11:43 [Progress] min: 0
+2012.10.15.16:11:43 [Progress] max: 1
+2012.10.15.16:11:43 [Progress] current: 1
+2012.10.15.16:11:43 [Progress] min: 0
+2012.10.15.16:11:43 [Progress] max: 1
+2012.10.15.16:11:43 [Progress] current: 1
+2012.10.15.16:11:43 [Progress] min: 0
+2012.10.15.16:11:43 [Progress] max: 1
+2012.10.15.16:11:43 [Progress] current: 1
+2012.10.15.16:11:43 [Progress] min: 0
+2012.10.15.16:11:43 [Progress] max: 1
+2012.10.15.16:11:43 [Progress] current: 1
+2012.10.15.16:11:43 [Progress] min: 0
+2012.10.15.16:11:43 [Progress] max: 1
+2012.10.15.16:11:43 [Progress] current: 1
+2012.10.15.16:11:43 [Progress] min: 0
+2012.10.15.16:11:43 [Progress] max: 1
+2012.10.15.16:11:43 [Progress] current: 1
+2012.10.15.16:11:43 [Progress] min: 0
+2012.10.15.16:11:43 [Progress] max: 1
+2012.10.15.16:11:43 [Progress] current: 1
+2012.10.15.16:11:43 [Progress] min: 0
+2012.10.15.16:11:43 [Progress] max: 1
+2012.10.15.16:11:43 [Progress] current: 1
+2012.10.15.16:11:43 [Progress] min: 0
+2012.10.15.16:11:43 [Progress] max: 1
+2012.10.15.16:11:43 [Progress] current: 1
+2012.10.15.16:11:43 [Progress] min: 0
+2012.10.15.16:11:43 [Progress] max: 1
+2012.10.15.16:11:43 [Progress] current: 1
+2012.10.15.16:11:43 [Progress] min: 0
+2012.10.15.16:11:43 [Progress] max: 1
+2012.10.15.16:11:43 [Progress] current: 1
+2012.10.15.16:11:43 [Progress] min: 0
+2012.10.15.16:11:43 [Progress] max: 1
+2012.10.15.16:11:43 [Progress] current: 1
+2012.10.15.16:11:43 [Debug] Transform merlin_domain_transform not run on matched interfaces nios2_qsys_0_jtag_debug_module_translator.avalon_anti_slave_0 and nios2_qsys_0.jtag_debug_module
+2012.10.15.16:11:43 [Debug] Transform merlin_domain_transform not run on matched interfaces sram_16bit_512k_0_avalon_slave_0_translator.avalon_anti_slave_0 and sram_16bit_512k_0.avalon_slave_0
+2012.10.15.16:11:43 [Debug] Transform merlin_domain_transform not run on matched interfaces epcs_controller_epcs_control_port_translator.avalon_anti_slave_0 and epcs_controller.epcs_control_port
+2012.10.15.16:11:43 [Debug] Transform merlin_domain_transform not run on matched interfaces cfi_flash_0_uas_translator.avalon_anti_slave_0 and cfi_flash_0.uas
+2012.10.15.16:11:43 [Debug] Transform merlin_domain_transform not run on matched interfaces sdram_0_s1_translator.avalon_anti_slave_0 and sdram_0.s1
+2012.10.15.16:11:43 [Debug] Transform merlin_domain_transform not run on matched interfaces Audio_0_avalon_slave_0_translator.avalon_anti_slave_0 and Audio_0.avalon_slave_0
+2012.10.15.16:11:43 [Debug] Transform merlin_domain_transform not run on matched interfaces SEG7_Display_avalon_slave_translator.avalon_anti_slave_0 and SEG7_Display.avalon_slave
+2012.10.15.16:11:43 [Debug] Transform merlin_domain_transform not run on matched interfaces led_green_s1_translator.avalon_anti_slave_0 and led_green.s1
+2012.10.15.16:11:43 [Debug] Transform merlin_domain_transform not run on matched interfaces led_red_s1_translator.avalon_anti_slave_0 and led_red.s1
+2012.10.15.16:11:43 [Debug] Transform merlin_domain_transform not run on matched interfaces SD_CLK_s1_translator.avalon_anti_slave_0 and SD_CLK.s1
+2012.10.15.16:11:43 [Debug] Transform merlin_domain_transform not run on matched interfaces SD_CMD_s1_translator.avalon_anti_slave_0 and SD_CMD.s1
+2012.10.15.16:11:43 [Debug] Transform merlin_domain_transform not run on matched interfaces SD_DAT_s1_translator.avalon_anti_slave_0 and SD_DAT.s1
+2012.10.15.16:11:43 [Debug] Transform merlin_domain_transform not run on matched interfaces switch_pio_s1_translator.avalon_anti_slave_0 and switch_pio.s1
+2012.10.15.16:11:43 [Debug] Transform merlin_domain_transform not run on matched interfaces button_pio_s1_translator.avalon_anti_slave_0 and button_pio.s1
+2012.10.15.16:11:43 [Debug] Transform merlin_domain_transform not run on matched interfaces timer_1_s1_translator.avalon_anti_slave_0 and timer_1.s1
+2012.10.15.16:11:43 [Debug] Transform merlin_domain_transform not run on matched interfaces timer_0_s1_translator.avalon_anti_slave_0 and timer_0.s1
+2012.10.15.16:11:43 [Debug] Transform merlin_domain_transform not run on matched interfaces uart_0_s1_translator.avalon_anti_slave_0 and uart_0.s1
+2012.10.15.16:11:43 [Debug] Transform merlin_domain_transform not run on matched interfaces jtag_uart_0_avalon_jtag_slave_translator.avalon_anti_slave_0 and jtag_uart_0.avalon_jtag_slave
+2012.10.15.16:11:43 [Info] merlin_domain_transform: After transform: <b>80</b> modules, <b>436</b> connections
+2012.10.15.16:11:43 [Debug] Transform: RouterTransform
+2012.10.15.16:11:43 [Progress] min: 0
+2012.10.15.16:11:43 [Progress] max: 1
+2012.10.15.16:11:43 [Progress] current: 1
+2012.10.15.16:11:43 [Progress] min: 0
+2012.10.15.16:11:43 [Progress] max: 1
+2012.10.15.16:11:43 [Progress] current: 1
+2012.10.15.16:11:43 [Progress] min: 0
+2012.10.15.16:11:43 [Progress] max: 1
+2012.10.15.16:11:43 [Progress] current: 1
+2012.10.15.16:11:43 [Progress] min: 0
+2012.10.15.16:11:43 [Progress] max: 1
+2012.10.15.16:11:43 [Progress] current: 1
+2012.10.15.16:11:43 [Progress] min: 0
+2012.10.15.16:11:43 [Progress] max: 1
+2012.10.15.16:11:43 [Progress] current: 1
+2012.10.15.16:11:43 [Progress] min: 0
+2012.10.15.16:11:43 [Progress] max: 1
+2012.10.15.16:11:43 [Progress] current: 1
+2012.10.15.16:11:43 [Progress] min: 0
+2012.10.15.16:11:43 [Progress] max: 1
+2012.10.15.16:11:43 [Progress] current: 1
+2012.10.15.16:11:43 [Progress] min: 0
+2012.10.15.16:11:43 [Progress] max: 1
+2012.10.15.16:11:43 [Progress] current: 1
+2012.10.15.16:11:43 [Progress] min: 0
+2012.10.15.16:11:43 [Progress] max: 1
+2012.10.15.16:11:43 [Progress] current: 1
+2012.10.15.16:11:43 [Progress] min: 0
+2012.10.15.16:11:43 [Progress] max: 1
+2012.10.15.16:11:43 [Progress] current: 1
+2012.10.15.16:11:43 [Progress] min: 0
+2012.10.15.16:11:43 [Progress] max: 1
+2012.10.15.16:11:43 [Progress] current: 1
+2012.10.15.16:11:43 [Progress] min: 0
+2012.10.15.16:11:43 [Progress] max: 1
+2012.10.15.16:11:43 [Progress] current: 1
+2012.10.15.16:11:43 [Progress] min: 0
+2012.10.15.16:11:43 [Progress] max: 1
+2012.10.15.16:11:43 [Progress] current: 1
+2012.10.15.16:11:43 [Progress] min: 0
+2012.10.15.16:11:43 [Progress] max: 1
+2012.10.15.16:11:43 [Progress] current: 1
+2012.10.15.16:11:44 [Progress] min: 0
+2012.10.15.16:11:44 [Progress] max: 1
+2012.10.15.16:11:44 [Progress] current: 1
+2012.10.15.16:11:44 [Progress] min: 0
+2012.10.15.16:11:44 [Progress] max: 1
+2012.10.15.16:11:44 [Progress] current: 1
+2012.10.15.16:11:44 [Progress] min: 0
+2012.10.15.16:11:44 [Progress] max: 1
+2012.10.15.16:11:44 [Progress] current: 1
+2012.10.15.16:11:44 [Progress] min: 0
+2012.10.15.16:11:44 [Progress] max: 1
+2012.10.15.16:11:44 [Progress] current: 1
+2012.10.15.16:11:44 [Progress] min: 0
+2012.10.15.16:11:44 [Progress] max: 1
+2012.10.15.16:11:44 [Progress] current: 1
+2012.10.15.16:11:44 [Progress] min: 0
+2012.10.15.16:11:44 [Progress] max: 1
+2012.10.15.16:11:44 [Progress] current: 1
+2012.10.15.16:11:44 [Info] merlin_router_transform: After transform: <b>100</b> modules, <b>516</b> connections
+2012.10.15.16:11:44 [Debug] Transform: TrafficLimiterTransform
+2012.10.15.16:11:44 [Progress] min: 0
+2012.10.15.16:11:44 [Progress] max: 1
+2012.10.15.16:11:44 [Progress] current: 1
+2012.10.15.16:11:44 [Progress] min: 0
+2012.10.15.16:11:44 [Progress] max: 1
+2012.10.15.16:11:44 [Progress] current: 1
+2012.10.15.16:11:44 [Info] merlin_traffic_limiter_transform: After transform: <b>102</b> modules, <b>526</b> connections
+2012.10.15.16:11:44 [Debug] Transform: BurstTransform
+2012.10.15.16:11:44 [Progress] min: 0
+2012.10.15.16:11:44 [Progress] max: 1
+2012.10.15.16:11:44 [Progress] current: 1
+2012.10.15.16:11:44 [Progress] min: 0
+2012.10.15.16:11:44 [Progress] max: 1
+2012.10.15.16:11:44 [Progress] current: 1
+2012.10.15.16:11:44 [Progress] min: 0
+2012.10.15.16:11:44 [Progress] max: 1
+2012.10.15.16:11:44 [Progress] current: 1
+2012.10.15.16:11:44 [Info] merlin_burst_transform: After transform: <b>105</b> modules, <b>538</b> connections
+2012.10.15.16:11:44 [Debug] Transform: ResetAdaptation
+2012.10.15.16:11:44 [Progress] min: 0
+2012.10.15.16:11:44 [Progress] max: 1
+2012.10.15.16:11:44 [Progress] current: 1
+2012.10.15.16:11:44 [Info] reset_adaptation_transform: After transform: <b>106</b> modules, <b>418</b> connections
+2012.10.15.16:11:44 [Debug] Transform: NetworkToSwitchTransform
+2012.10.15.16:11:44 [Progress] min: 0
+2012.10.15.16:11:44 [Progress] max: 1
+2012.10.15.16:11:44 [Progress] current: 1
+2012.10.15.16:11:44 [Progress] min: 0
+2012.10.15.16:11:44 [Progress] max: 1
+2012.10.15.16:11:44 [Progress] current: 1
+2012.10.15.16:11:44 [Progress] min: 0
+2012.10.15.16:11:44 [Progress] max: 1
+2012.10.15.16:11:44 [Progress] current: 1
+2012.10.15.16:11:44 [Progress] min: 0
+2012.10.15.16:11:44 [Progress] max: 1
+2012.10.15.16:11:44 [Progress] current: 1
+2012.10.15.16:11:44 [Progress] min: 0
+2012.10.15.16:11:44 [Progress] max: 1
+2012.10.15.16:11:44 [Progress] current: 1
+2012.10.15.16:11:44 [Progress] min: 0
+2012.10.15.16:11:44 [Progress] max: 1
+2012.10.15.16:11:44 [Progress] current: 1
+2012.10.15.16:11:44 [Progress] min: 0
+2012.10.15.16:11:44 [Progress] max: 1
+2012.10.15.16:11:44 [Progress] current: 1
+2012.10.15.16:11:44 [Progress] min: 0
+2012.10.15.16:11:44 [Progress] max: 1
+2012.10.15.16:11:44 [Progress] current: 1
+2012.10.15.16:11:44 [Progress] min: 0
+2012.10.15.16:11:44 [Progress] max: 1
+2012.10.15.16:11:44 [Progress] current: 1
+2012.10.15.16:11:44 [Progress] min: 0
+2012.10.15.16:11:44 [Progress] max: 1
+2012.10.15.16:11:44 [Progress] current: 1
+2012.10.15.16:11:44 [Progress] min: 0
+2012.10.15.16:11:44 [Progress] max: 1
+2012.10.15.16:11:44 [Progress] current: 1
+2012.10.15.16:11:44 [Progress] min: 0
+2012.10.15.16:11:44 [Progress] max: 1
+2012.10.15.16:11:44 [Progress] current: 1
+2012.10.15.16:11:44 [Progress] min: 0
+2012.10.15.16:11:44 [Progress] max: 1
+2012.10.15.16:11:44 [Progress] current: 1
+2012.10.15.16:11:44 [Progress] min: 0
+2012.10.15.16:11:44 [Progress] max: 1
+2012.10.15.16:11:44 [Progress] current: 1
+2012.10.15.16:11:44 [Progress] min: 0
+2012.10.15.16:11:44 [Progress] max: 1
+2012.10.15.16:11:44 [Progress] current: 1
+2012.10.15.16:11:44 [Progress] min: 0
+2012.10.15.16:11:44 [Progress] max: 1
+2012.10.15.16:11:44 [Progress] current: 1
+2012.10.15.16:11:44 [Progress] min: 0
+2012.10.15.16:11:44 [Progress] max: 1
+2012.10.15.16:11:44 [Progress] current: 1
+2012.10.15.16:11:44 [Progress] min: 0
+2012.10.15.16:11:44 [Progress] max: 1
+2012.10.15.16:11:44 [Progress] current: 1
+2012.10.15.16:11:44 [Progress] min: 0
+2012.10.15.16:11:44 [Progress] max: 1
+2012.10.15.16:11:44 [Progress] current: 1
+2012.10.15.16:11:44 [Progress] min: 0
+2012.10.15.16:11:44 [Progress] max: 1
+2012.10.15.16:11:44 [Progress] current: 1
+2012.10.15.16:11:44 [Progress] min: 0
+2012.10.15.16:11:44 [Progress] max: 1
+2012.10.15.16:11:44 [Progress] current: 1
+2012.10.15.16:11:44 [Progress] min: 0
+2012.10.15.16:11:44 [Progress] max: 1
+2012.10.15.16:11:44 [Progress] current: 1
+2012.10.15.16:11:44 [Progress] min: 0
+2012.10.15.16:11:44 [Progress] max: 1
+2012.10.15.16:11:44 [Progress] current: 1
+2012.10.15.16:11:44 [Progress] min: 0
+2012.10.15.16:11:44 [Progress] max: 1
+2012.10.15.16:11:44 [Progress] current: 1
+2012.10.15.16:11:44 [Progress] min: 0
+2012.10.15.16:11:44 [Progress] max: 1
+2012.10.15.16:11:44 [Progress] current: 1
+2012.10.15.16:11:44 [Progress] min: 0
+2012.10.15.16:11:44 [Progress] max: 1
+2012.10.15.16:11:44 [Progress] current: 1
+2012.10.15.16:11:44 [Progress] min: 0
+2012.10.15.16:11:44 [Progress] max: 1
+2012.10.15.16:11:44 [Progress] current: 1
+2012.10.15.16:11:44 [Progress] min: 0
+2012.10.15.16:11:44 [Progress] max: 1
+2012.10.15.16:11:44 [Progress] current: 1
+2012.10.15.16:11:44 [Progress] min: 0
+2012.10.15.16:11:44 [Progress] max: 1
+2012.10.15.16:11:44 [Progress] current: 1
+2012.10.15.16:11:44 [Progress] min: 0
+2012.10.15.16:11:44 [Progress] max: 1
+2012.10.15.16:11:44 [Progress] current: 1
+2012.10.15.16:11:44 [Progress] min: 0
+2012.10.15.16:11:44 [Progress] max: 1
+2012.10.15.16:11:44 [Progress] current: 1
+2012.10.15.16:11:44 [Progress] min: 0
+2012.10.15.16:11:44 [Progress] max: 1
+2012.10.15.16:11:44 [Progress] current: 1
+2012.10.15.16:11:44 [Progress] min: 0
+2012.10.15.16:11:44 [Progress] max: 1
+2012.10.15.16:11:44 [Progress] current: 1
+2012.10.15.16:11:44 [Progress] min: 0
+2012.10.15.16:11:44 [Progress] max: 1
+2012.10.15.16:11:44 [Progress] current: 1
+2012.10.15.16:11:44 [Progress] min: 0
+2012.10.15.16:11:44 [Progress] max: 1
+2012.10.15.16:11:44 [Progress] current: 1
+2012.10.15.16:11:44 [Progress] min: 0
+2012.10.15.16:11:44 [Progress] max: 1
+2012.10.15.16:11:44 [Progress] current: 1
+2012.10.15.16:11:44 [Progress] min: 0
+2012.10.15.16:11:44 [Progress] max: 1
+2012.10.15.16:11:44 [Progress] current: 1
+2012.10.15.16:11:44 [Progress] min: 0
+2012.10.15.16:11:44 [Progress] max: 1
+2012.10.15.16:11:44 [Progress] current: 1
+2012.10.15.16:11:44 [Progress] min: 0
+2012.10.15.16:11:44 [Progress] max: 1
+2012.10.15.16:11:44 [Progress] current: 1
+2012.10.15.16:11:44 [Progress] min: 0
+2012.10.15.16:11:44 [Progress] max: 1
+2012.10.15.16:11:44 [Progress] current: 1
+2012.10.15.16:11:44 [Info] merlin_network_to_switch_transform: After transform: <b>145</b> modules, <b>504</b> connections
+2012.10.15.16:11:44 [Debug] Transform: WidthTransform
+2012.10.15.16:11:44 [Progress] min: 0
+2012.10.15.16:11:44 [Progress] max: 1
+2012.10.15.16:11:44 [Progress] current: 1
+2012.10.15.16:11:44 [Progress] min: 0
+2012.10.15.16:11:44 [Progress] max: 1
+2012.10.15.16:11:44 [Progress] current: 1
+2012.10.15.16:11:44 [Progress] min: 0
+2012.10.15.16:11:44 [Progress] max: 1
+2012.10.15.16:11:44 [Progress] current: 1
+2012.10.15.16:11:44 [Progress] min: 0
+2012.10.15.16:11:44 [Progress] max: 1
+2012.10.15.16:11:44 [Progress] current: 1
+2012.10.15.16:11:44 [Progress] min: 0
+2012.10.15.16:11:44 [Progress] max: 1
+2012.10.15.16:11:44 [Progress] current: 1
+2012.10.15.16:11:44 [Progress] min: 0
+2012.10.15.16:11:44 [Progress] max: 1
+2012.10.15.16:11:44 [Progress] current: 1
+2012.10.15.16:11:44 [Info] merlin_width_transform: After transform: <b>151</b> modules, <b>522</b> connections
+2012.10.15.16:11:44 [Debug] Transform: RouterTableTransform
+2012.10.15.16:11:44 [Debug] Transform: ClockCrossingTransform
+2012.10.15.16:11:44 [Debug] Transform: TrafficLimiterUpdateTransform
+2012.10.15.16:11:44 [Info] limiter_update_transform: After transform: <b>151</b> modules, <b>524</b> connections
+2012.10.15.16:11:44 [Debug] Transform: InterruptMapperTransform
+2012.10.15.16:11:44 [Progress] min: 0
+2012.10.15.16:11:44 [Progress] max: 1
+2012.10.15.16:11:44 [Progress] current: 1
+2012.10.15.16:11:44 [Info] merlin_interrupt_mapper_transform: After transform: <b>152</b> modules, <b>527</b> connections
+2012.10.15.16:11:44 [Debug] Transform: InterruptSyncTransform
+2012.10.15.16:11:44 [Debug] Transform: InterruptFanoutTransform
+2012.10.15.16:11:46 [Warning] system: "No matching role found for epcs_controller:epcs_control_port:endofpacket (endofpacket)"
+2012.10.15.16:11:46 [Warning] system: "No matching role found for epcs_controller:epcs_control_port:dataavailable (dataavailable)"
+2012.10.15.16:11:46 [Warning] system: "No matching role found for epcs_controller:epcs_control_port:readyfordata (readyfordata)"
+2012.10.15.16:11:46 [Warning] system: "No matching role found for uart_0:s1:dataavailable (dataavailable)"
+2012.10.15.16:11:46 [Warning] system: "No matching role found for uart_0:s1:readyfordata (readyfordata)"
+2012.10.15.16:11:46 [Warning] system: "No matching role found for jtag_uart_0:avalon_jtag_slave:dataavailable (dataavailable)"
+2012.10.15.16:11:46 [Warning] system: "No matching role found for jtag_uart_0:avalon_jtag_slave:readyfordata (readyfordata)"
+2012.10.15.16:11:46 [Debug] system_0: "<b>system_0</b>" reuses <b>altera_avalon_new_sdram_controller</b> "<b>submodules/system_0_sdram_0</b>"
+2012.10.15.16:11:46 [Debug] system_0: "<b>system_0</b>" reuses <b>altera_avalon_epcs_flash_controller</b> "<b>submodules/system_0_epcs_controller</b>"
+2012.10.15.16:11:46 [Debug] system_0: "<b>system_0</b>" reuses <b>altera_avalon_jtag_uart</b> "<b>submodules/system_0_jtag_uart_0</b>"
+2012.10.15.16:11:46 [Debug] system_0: "<b>system_0</b>" reuses <b>altera_avalon_uart</b> "<b>submodules/system_0_uart_0</b>"
+2012.10.15.16:11:46 [Debug] system_0: "<b>system_0</b>" reuses <b>altera_avalon_timer</b> "<b>submodules/system_0_timer_0</b>"
+2012.10.15.16:11:46 [Debug] system_0: "<b>system_0</b>" reuses <b>altera_avalon_timer</b> "<b>submodules/system_0_timer_0</b>"
+2012.10.15.16:11:46 [Debug] system_0: "<b>system_0</b>" reuses <b>altera_avalon_pio</b> "<b>submodules/system_0_led_red</b>"
+2012.10.15.16:11:46 [Debug] system_0: "<b>system_0</b>" reuses <b>altera_avalon_pio</b> "<b>submodules/system_0_led_green</b>"
+2012.10.15.16:11:46 [Debug] system_0: "<b>system_0</b>" reuses <b>altera_avalon_pio</b> "<b>submodules/system_0_button_pio</b>"
+2012.10.15.16:11:46 [Debug] system_0: "<b>system_0</b>" reuses <b>altera_avalon_pio</b> "<b>submodules/system_0_switch_pio</b>"
+2012.10.15.16:11:46 [Debug] system_0: "<b>system_0</b>" reuses <b>altera_avalon_pio</b> "<b>submodules/system_0_SD_DAT</b>"
+2012.10.15.16:11:46 [Debug] system_0: "<b>system_0</b>" reuses <b>altera_avalon_pio</b> "<b>submodules/system_0_SD_DAT</b>"
+2012.10.15.16:11:46 [Debug] system_0: "<b>system_0</b>" reuses <b>altera_avalon_pio</b> "<b>submodules/system_0_SD_CLK</b>"
+2012.10.15.16:11:46 [Debug] system_0: "<b>system_0</b>" reuses <b>altera_tristate_conduit_bridge</b> "<b>submodules/system_0_tri_state_bridge_0_bridge_0</b>"
+2012.10.15.16:11:46 [Debug] system_0: "<b>system_0</b>" reuses <b>altera_tristate_conduit_pin_sharer</b> "<b>submodules/system_0_tri_state_bridge_0_pinSharer_0</b>"
+2012.10.15.16:11:46 [Debug] system_0: "<b>system_0</b>" reuses <b>altera_generic_tristate_controller</b> "<b>submodules/system_0_cfi_flash_0</b>"
+2012.10.15.16:11:46 [Debug] system_0: "<b>system_0</b>" reuses <b>seg7_lut_8</b> "<b>submodules/SEG7_LUT_8</b>"
+2012.10.15.16:11:46 [Debug] system_0: "<b>system_0</b>" reuses <b>audio_dac_fifo</b> "<b>submodules/AUDIO_DAC_FIFO</b>"
+2012.10.15.16:11:46 [Debug] system_0: "<b>system_0</b>" reuses <b>sram_16bit_512k</b> "<b>submodules/SRAM_16Bit_512K</b>"
+2012.10.15.16:11:46 [Debug] system_0: "<b>system_0</b>" reuses <b>altera_nios2_qsys</b> "<b>submodules/system_0_nios2_qsys_0</b>"
+2012.10.15.16:11:46 [Debug] system_0: "<b>system_0</b>" reuses <b>altera_merlin_master_translator</b> "<b>submodules/altera_merlin_master_translator</b>"
+2012.10.15.16:11:46 [Debug] system_0: "<b>system_0</b>" reuses <b>altera_merlin_master_translator</b> "<b>submodules/altera_merlin_master_translator</b>"
+2012.10.15.16:11:46 [Debug] system_0: "<b>system_0</b>" reuses <b>altera_merlin_slave_translator</b> "<b>submodules/altera_merlin_slave_translator</b>"
+2012.10.15.16:11:46 [Debug] system_0: "<b>system_0</b>" reuses <b>altera_merlin_slave_translator</b> "<b>submodules/altera_merlin_slave_translator</b>"
+2012.10.15.16:11:46 [Debug] system_0: "<b>system_0</b>" reuses <b>altera_merlin_slave_translator</b> "<b>submodules/altera_merlin_slave_translator</b>"
+2012.10.15.16:11:46 [Debug] system_0: "<b>system_0</b>" reuses <b>altera_merlin_slave_translator</b> "<b>submodules/altera_merlin_slave_translator</b>"
+2012.10.15.16:11:46 [Debug] system_0: "<b>system_0</b>" reuses <b>altera_merlin_slave_translator</b> "<b>submodules/altera_merlin_slave_translator</b>"
+2012.10.15.16:11:46 [Debug] system_0: "<b>system_0</b>" reuses <b>altera_merlin_slave_translator</b> "<b>submodules/altera_merlin_slave_translator</b>"
+2012.10.15.16:11:46 [Debug] system_0: "<b>system_0</b>" reuses <b>altera_merlin_slave_translator</b> "<b>submodules/altera_merlin_slave_translator</b>"
+2012.10.15.16:11:46 [Debug] system_0: "<b>system_0</b>" reuses <b>altera_merlin_slave_translator</b> "<b>submodules/altera_merlin_slave_translator</b>"
+2012.10.15.16:11:46 [Debug] system_0: "<b>system_0</b>" reuses <b>altera_merlin_slave_translator</b> "<b>submodules/altera_merlin_slave_translator</b>"
+2012.10.15.16:11:46 [Debug] system_0: "<b>system_0</b>" reuses <b>altera_merlin_slave_translator</b> "<b>submodules/altera_merlin_slave_translator</b>"
+2012.10.15.16:11:46 [Debug] system_0: "<b>system_0</b>" reuses <b>altera_merlin_slave_translator</b> "<b>submodules/altera_merlin_slave_translator</b>"
+2012.10.15.16:11:46 [Debug] system_0: "<b>system_0</b>" reuses <b>altera_merlin_slave_translator</b> "<b>submodules/altera_merlin_slave_translator</b>"
+2012.10.15.16:11:46 [Debug] system_0: "<b>system_0</b>" reuses <b>altera_merlin_slave_translator</b> "<b>submodules/altera_merlin_slave_translator</b>"
+2012.10.15.16:11:46 [Debug] system_0: "<b>system_0</b>" reuses <b>altera_merlin_slave_translator</b> "<b>submodules/altera_merlin_slave_translator</b>"
+2012.10.15.16:11:46 [Debug] system_0: "<b>system_0</b>" reuses <b>altera_merlin_slave_translator</b> "<b>submodules/altera_merlin_slave_translator</b>"
+2012.10.15.16:11:46 [Debug] system_0: "<b>system_0</b>" reuses <b>altera_merlin_slave_translator</b> "<b>submodules/altera_merlin_slave_translator</b>"
+2012.10.15.16:11:46 [Debug] system_0: "<b>system_0</b>" reuses <b>altera_merlin_slave_translator</b> "<b>submodules/altera_merlin_slave_translator</b>"
+2012.10.15.16:11:46 [Debug] system_0: "<b>system_0</b>" reuses <b>altera_merlin_slave_translator</b> "<b>submodules/altera_merlin_slave_translator</b>"
+2012.10.15.16:11:46 [Debug] system_0: "<b>system_0</b>" reuses <b>altera_merlin_slave_agent</b> "<b>submodules/altera_merlin_slave_agent</b>"
+2012.10.15.16:11:46 [Debug] system_0: "<b>system_0</b>" reuses <b>altera_avalon_sc_fifo</b> "<b>submodules/altera_avalon_sc_fifo</b>"
+2012.10.15.16:11:46 [Debug] system_0: "<b>system_0</b>" reuses <b>altera_merlin_slave_agent</b> "<b>submodules/altera_merlin_slave_agent</b>"
+2012.10.15.16:11:46 [Debug] system_0: "<b>system_0</b>" reuses <b>altera_avalon_sc_fifo</b> "<b>submodules/altera_avalon_sc_fifo</b>"
+2012.10.15.16:11:46 [Debug] system_0: "<b>system_0</b>" reuses <b>altera_merlin_slave_agent</b> "<b>submodules/altera_merlin_slave_agent</b>"
+2012.10.15.16:11:46 [Debug] system_0: "<b>system_0</b>" reuses <b>altera_avalon_sc_fifo</b> "<b>submodules/altera_avalon_sc_fifo</b>"
+2012.10.15.16:11:46 [Debug] system_0: "<b>system_0</b>" reuses <b>altera_merlin_slave_agent</b> "<b>submodules/altera_merlin_slave_agent</b>"
+2012.10.15.16:11:46 [Debug] system_0: "<b>system_0</b>" reuses <b>altera_avalon_sc_fifo</b> "<b>submodules/altera_avalon_sc_fifo</b>"
+2012.10.15.16:11:46 [Debug] system_0: "<b>system_0</b>" reuses <b>altera_merlin_slave_agent</b> "<b>submodules/altera_merlin_slave_agent</b>"
+2012.10.15.16:11:46 [Debug] system_0: "<b>system_0</b>" reuses <b>altera_avalon_sc_fifo</b> "<b>submodules/altera_avalon_sc_fifo</b>"
+2012.10.15.16:11:46 [Debug] system_0: "<b>system_0</b>" reuses <b>altera_merlin_slave_agent</b> "<b>submodules/altera_merlin_slave_agent</b>"
+2012.10.15.16:11:46 [Debug] system_0: "<b>system_0</b>" reuses <b>altera_avalon_sc_fifo</b> "<b>submodules/altera_avalon_sc_fifo</b>"
+2012.10.15.16:11:46 [Debug] system_0: "<b>system_0</b>" reuses <b>altera_merlin_slave_agent</b> "<b>submodules/altera_merlin_slave_agent</b>"
+2012.10.15.16:11:46 [Debug] system_0: "<b>system_0</b>" reuses <b>altera_avalon_sc_fifo</b> "<b>submodules/altera_avalon_sc_fifo</b>"
+2012.10.15.16:11:46 [Debug] system_0: "<b>system_0</b>" reuses <b>altera_merlin_slave_agent</b> "<b>submodules/altera_merlin_slave_agent</b>"
+2012.10.15.16:11:46 [Debug] system_0: "<b>system_0</b>" reuses <b>altera_avalon_sc_fifo</b> "<b>submodules/altera_avalon_sc_fifo</b>"
+2012.10.15.16:11:46 [Debug] system_0: "<b>system_0</b>" reuses <b>altera_merlin_slave_agent</b> "<b>submodules/altera_merlin_slave_agent</b>"
+2012.10.15.16:11:46 [Debug] system_0: "<b>system_0</b>" reuses <b>altera_avalon_sc_fifo</b> "<b>submodules/altera_avalon_sc_fifo</b>"
+2012.10.15.16:11:46 [Debug] system_0: "<b>system_0</b>" reuses <b>altera_merlin_slave_agent</b> "<b>submodules/altera_merlin_slave_agent</b>"
+2012.10.15.16:11:46 [Debug] system_0: "<b>system_0</b>" reuses <b>altera_avalon_sc_fifo</b> "<b>submodules/altera_avalon_sc_fifo</b>"
+2012.10.15.16:11:46 [Debug] system_0: "<b>system_0</b>" reuses <b>altera_merlin_slave_agent</b> "<b>submodules/altera_merlin_slave_agent</b>"
+2012.10.15.16:11:46 [Debug] system_0: "<b>system_0</b>" reuses <b>altera_avalon_sc_fifo</b> "<b>submodules/altera_avalon_sc_fifo</b>"
+2012.10.15.16:11:46 [Debug] system_0: "<b>system_0</b>" reuses <b>altera_merlin_slave_agent</b> "<b>submodules/altera_merlin_slave_agent</b>"
+2012.10.15.16:11:46 [Debug] system_0: "<b>system_0</b>" reuses <b>altera_avalon_sc_fifo</b> "<b>submodules/altera_avalon_sc_fifo</b>"
+2012.10.15.16:11:46 [Debug] system_0: "<b>system_0</b>" reuses <b>altera_merlin_slave_agent</b> "<b>submodules/altera_merlin_slave_agent</b>"
+2012.10.15.16:11:46 [Debug] system_0: "<b>system_0</b>" reuses <b>altera_avalon_sc_fifo</b> "<b>submodules/altera_avalon_sc_fifo</b>"
+2012.10.15.16:11:46 [Debug] system_0: "<b>system_0</b>" reuses <b>altera_merlin_master_agent</b> "<b>submodules/altera_merlin_master_agent</b>"
+2012.10.15.16:11:46 [Debug] system_0: "<b>system_0</b>" reuses <b>altera_merlin_slave_agent</b> "<b>submodules/altera_merlin_slave_agent</b>"
+2012.10.15.16:11:46 [Debug] system_0: "<b>system_0</b>" reuses <b>altera_avalon_sc_fifo</b> "<b>submodules/altera_avalon_sc_fifo</b>"
+2012.10.15.16:11:46 [Debug] system_0: "<b>system_0</b>" reuses <b>altera_merlin_slave_agent</b> "<b>submodules/altera_merlin_slave_agent</b>"
+2012.10.15.16:11:46 [Debug] system_0: "<b>system_0</b>" reuses <b>altera_avalon_sc_fifo</b> "<b>submodules/altera_avalon_sc_fifo</b>"
+2012.10.15.16:11:46 [Debug] system_0: "<b>system_0</b>" reuses <b>altera_merlin_slave_agent</b> "<b>submodules/altera_merlin_slave_agent</b>"
+2012.10.15.16:11:46 [Debug] system_0: "<b>system_0</b>" reuses <b>altera_avalon_sc_fifo</b> "<b>submodules/altera_avalon_sc_fifo</b>"
+2012.10.15.16:11:46 [Debug] system_0: "<b>system_0</b>" reuses <b>altera_merlin_master_agent</b> "<b>submodules/altera_merlin_master_agent</b>"
+2012.10.15.16:11:46 [Debug] system_0: "<b>system_0</b>" reuses <b>altera_merlin_slave_agent</b> "<b>submodules/altera_merlin_slave_agent</b>"
+2012.10.15.16:11:46 [Debug] system_0: "<b>system_0</b>" reuses <b>altera_avalon_sc_fifo</b> "<b>submodules/altera_avalon_sc_fifo</b>"
+2012.10.15.16:11:46 [Debug] system_0: "<b>system_0</b>" reuses <b>altera_merlin_slave_agent</b> "<b>submodules/altera_merlin_slave_agent</b>"
+2012.10.15.16:11:46 [Debug] system_0: "<b>system_0</b>" reuses <b>altera_avalon_sc_fifo</b> "<b>submodules/altera_avalon_sc_fifo</b>"
+2012.10.15.16:11:46 [Debug] system_0: "<b>system_0</b>" reuses <b>altera_merlin_router</b> "<b>submodules/system_0_addr_router</b>"
+2012.10.15.16:11:46 [Debug] system_0: "<b>system_0</b>" reuses <b>altera_merlin_router</b> "<b>submodules/system_0_addr_router_001</b>"
+2012.10.15.16:11:46 [Debug] system_0: "<b>system_0</b>" reuses <b>altera_merlin_router</b> "<b>submodules/system_0_id_router</b>"
+2012.10.15.16:11:46 [Debug] system_0: "<b>system_0</b>" reuses <b>altera_merlin_router</b> "<b>submodules/system_0_id_router_001</b>"
+2012.10.15.16:11:46 [Debug] system_0: "<b>system_0</b>" reuses <b>altera_merlin_router</b> "<b>submodules/system_0_id_router</b>"
+2012.10.15.16:11:46 [Debug] system_0: "<b>system_0</b>" reuses <b>altera_merlin_router</b> "<b>submodules/system_0_id_router_003</b>"
+2012.10.15.16:11:46 [Debug] system_0: "<b>system_0</b>" reuses <b>altera_merlin_router</b> "<b>submodules/system_0_id_router_001</b>"
+2012.10.15.16:11:46 [Debug] system_0: "<b>system_0</b>" reuses <b>altera_merlin_router</b> "<b>submodules/system_0_id_router_005</b>"
+2012.10.15.16:11:46 [Debug] system_0: "<b>system_0</b>" reuses <b>altera_merlin_router</b> "<b>submodules/system_0_id_router_005</b>"
+2012.10.15.16:11:46 [Debug] system_0: "<b>system_0</b>" reuses <b>altera_merlin_router</b> "<b>submodules/system_0_id_router_005</b>"
+2012.10.15.16:11:46 [Debug] system_0: "<b>system_0</b>" reuses <b>altera_merlin_router</b> "<b>submodules/system_0_id_router_005</b>"
+2012.10.15.16:11:46 [Debug] system_0: "<b>system_0</b>" reuses <b>altera_merlin_router</b> "<b>submodules/system_0_id_router_005</b>"
+2012.10.15.16:11:46 [Debug] system_0: "<b>system_0</b>" reuses <b>altera_merlin_router</b> "<b>submodules/system_0_id_router_005</b>"
+2012.10.15.16:11:46 [Debug] system_0: "<b>system_0</b>" reuses <b>altera_merlin_router</b> "<b>submodules/system_0_id_router_005</b>"
+2012.10.15.16:11:46 [Debug] system_0: "<b>system_0</b>" reuses <b>altera_merlin_router</b> "<b>submodules/system_0_id_router_005</b>"
+2012.10.15.16:11:46 [Debug] system_0: "<b>system_0</b>" reuses <b>altera_merlin_router</b> "<b>submodules/system_0_id_router_005</b>"
+2012.10.15.16:11:46 [Debug] system_0: "<b>system_0</b>" reuses <b>altera_merlin_router</b> "<b>submodules/system_0_id_router_005</b>"
+2012.10.15.16:11:46 [Debug] system_0: "<b>system_0</b>" reuses <b>altera_merlin_router</b> "<b>submodules/system_0_id_router_005</b>"
+2012.10.15.16:11:46 [Debug] system_0: "<b>system_0</b>" reuses <b>altera_merlin_router</b> "<b>submodules/system_0_id_router_005</b>"
+2012.10.15.16:11:46 [Debug] system_0: "<b>system_0</b>" reuses <b>altera_merlin_router</b> "<b>submodules/system_0_id_router_005</b>"
+2012.10.15.16:11:46 [Debug] system_0: "<b>system_0</b>" reuses <b>altera_merlin_traffic_limiter</b> "<b>submodules/altera_merlin_traffic_limiter</b>"
+2012.10.15.16:11:46 [Debug] system_0: "<b>system_0</b>" reuses <b>altera_merlin_traffic_limiter</b> "<b>submodules/altera_merlin_traffic_limiter</b>"
+2012.10.15.16:11:46 [Debug] system_0: "<b>system_0</b>" reuses <b>altera_merlin_burst_adapter</b> "<b>submodules/altera_merlin_burst_adapter</b>"
+2012.10.15.16:11:46 [Debug] system_0: "<b>system_0</b>" reuses <b>altera_merlin_burst_adapter</b> "<b>submodules/altera_merlin_burst_adapter</b>"
+2012.10.15.16:11:46 [Debug] system_0: "<b>system_0</b>" reuses <b>altera_merlin_burst_adapter</b> "<b>submodules/altera_merlin_burst_adapter</b>"
+2012.10.15.16:11:46 [Debug] system_0: "<b>system_0</b>" reuses <b>altera_reset_controller</b> "<b>submodules/altera_reset_controller</b>"
+2012.10.15.16:11:46 [Debug] system_0: "<b>system_0</b>" reuses <b>altera_merlin_demultiplexer</b> "<b>submodules/system_0_cmd_xbar_demux</b>"
+2012.10.15.16:11:46 [Debug] system_0: "<b>system_0</b>" reuses <b>altera_merlin_demultiplexer</b> "<b>submodules/system_0_cmd_xbar_demux_001</b>"
+2012.10.15.16:11:46 [Debug] system_0: "<b>system_0</b>" reuses <b>altera_merlin_multiplexer</b> "<b>submodules/system_0_cmd_xbar_mux</b>"
+2012.10.15.16:11:46 [Debug] system_0: "<b>system_0</b>" reuses <b>altera_merlin_multiplexer</b> "<b>submodules/system_0_cmd_xbar_mux</b>"
+2012.10.15.16:11:46 [Debug] system_0: "<b>system_0</b>" reuses <b>altera_merlin_multiplexer</b> "<b>submodules/system_0_cmd_xbar_mux</b>"
+2012.10.15.16:11:46 [Debug] system_0: "<b>system_0</b>" reuses <b>altera_merlin_multiplexer</b> "<b>submodules/system_0_cmd_xbar_mux</b>"
+2012.10.15.16:11:46 [Debug] system_0: "<b>system_0</b>" reuses <b>altera_merlin_multiplexer</b> "<b>submodules/system_0_cmd_xbar_mux</b>"
+2012.10.15.16:11:46 [Debug] system_0: "<b>system_0</b>" reuses <b>altera_merlin_demultiplexer</b> "<b>submodules/system_0_rsp_xbar_demux</b>"
+2012.10.15.16:11:46 [Debug] system_0: "<b>system_0</b>" reuses <b>altera_merlin_demultiplexer</b> "<b>submodules/system_0_rsp_xbar_demux</b>"
+2012.10.15.16:11:46 [Debug] system_0: "<b>system_0</b>" reuses <b>altera_merlin_demultiplexer</b> "<b>submodules/system_0_rsp_xbar_demux</b>"
+2012.10.15.16:11:46 [Debug] system_0: "<b>system_0</b>" reuses <b>altera_merlin_demultiplexer</b> "<b>submodules/system_0_rsp_xbar_demux</b>"
+2012.10.15.16:11:46 [Debug] system_0: "<b>system_0</b>" reuses <b>altera_merlin_demultiplexer</b> "<b>submodules/system_0_rsp_xbar_demux</b>"
+2012.10.15.16:11:46 [Debug] system_0: "<b>system_0</b>" reuses <b>altera_merlin_demultiplexer</b> "<b>submodules/system_0_rsp_xbar_demux_005</b>"
+2012.10.15.16:11:46 [Debug] system_0: "<b>system_0</b>" reuses <b>altera_merlin_demultiplexer</b> "<b>submodules/system_0_rsp_xbar_demux_005</b>"
+2012.10.15.16:11:46 [Debug] system_0: "<b>system_0</b>" reuses <b>altera_merlin_demultiplexer</b> "<b>submodules/system_0_rsp_xbar_demux_005</b>"
+2012.10.15.16:11:46 [Debug] system_0: "<b>system_0</b>" reuses <b>altera_merlin_demultiplexer</b> "<b>submodules/system_0_rsp_xbar_demux_005</b>"
+2012.10.15.16:11:46 [Debug] system_0: "<b>system_0</b>" reuses <b>altera_merlin_demultiplexer</b> "<b>submodules/system_0_rsp_xbar_demux_005</b>"
+2012.10.15.16:11:46 [Debug] system_0: "<b>system_0</b>" reuses <b>altera_merlin_demultiplexer</b> "<b>submodules/system_0_rsp_xbar_demux_005</b>"
+2012.10.15.16:11:46 [Debug] system_0: "<b>system_0</b>" reuses <b>altera_merlin_demultiplexer</b> "<b>submodules/system_0_rsp_xbar_demux_005</b>"
+2012.10.15.16:11:46 [Debug] system_0: "<b>system_0</b>" reuses <b>altera_merlin_demultiplexer</b> "<b>submodules/system_0_rsp_xbar_demux_005</b>"
+2012.10.15.16:11:46 [Debug] system_0: "<b>system_0</b>" reuses <b>altera_merlin_demultiplexer</b> "<b>submodules/system_0_rsp_xbar_demux_005</b>"
+2012.10.15.16:11:46 [Debug] system_0: "<b>system_0</b>" reuses <b>altera_merlin_demultiplexer</b> "<b>submodules/system_0_rsp_xbar_demux_005</b>"
+2012.10.15.16:11:46 [Debug] system_0: "<b>system_0</b>" reuses <b>altera_merlin_demultiplexer</b> "<b>submodules/system_0_rsp_xbar_demux_005</b>"
+2012.10.15.16:11:46 [Debug] system_0: "<b>system_0</b>" reuses <b>altera_merlin_demultiplexer</b> "<b>submodules/system_0_rsp_xbar_demux_005</b>"
+2012.10.15.16:11:46 [Debug] system_0: "<b>system_0</b>" reuses <b>altera_merlin_demultiplexer</b> "<b>submodules/system_0_rsp_xbar_demux_005</b>"
+2012.10.15.16:11:46 [Debug] system_0: "<b>system_0</b>" reuses <b>altera_merlin_multiplexer</b> "<b>submodules/system_0_rsp_xbar_mux</b>"
+2012.10.15.16:11:46 [Debug] system_0: "<b>system_0</b>" reuses <b>altera_merlin_multiplexer</b> "<b>submodules/system_0_rsp_xbar_mux_001</b>"
+2012.10.15.16:11:46 [Debug] system_0: "<b>system_0</b>" reuses <b>altera_merlin_width_adapter</b> "<b>submodules/altera_merlin_width_adapter</b>"
+2012.10.15.16:11:46 [Debug] system_0: "<b>system_0</b>" reuses <b>altera_merlin_width_adapter</b> "<b>submodules/altera_merlin_width_adapter</b>"
+2012.10.15.16:11:46 [Debug] system_0: "<b>system_0</b>" reuses <b>altera_merlin_width_adapter</b> "<b>submodules/altera_merlin_width_adapter</b>"
+2012.10.15.16:11:46 [Debug] system_0: "<b>system_0</b>" reuses <b>altera_merlin_width_adapter</b> "<b>submodules/altera_merlin_width_adapter</b>"
+2012.10.15.16:11:46 [Debug] system_0: "<b>system_0</b>" reuses <b>altera_merlin_width_adapter</b> "<b>submodules/altera_merlin_width_adapter</b>"
+2012.10.15.16:11:46 [Debug] system_0: "<b>system_0</b>" reuses <b>altera_merlin_width_adapter</b> "<b>submodules/altera_merlin_width_adapter</b>"
+2012.10.15.16:11:46 [Debug] system_0: "<b>system_0</b>" reuses <b>altera_irq_mapper</b> "<b>submodules/system_0_irq_mapper</b>"
+2012.10.15.16:11:47 [Debug] system_0: queue size: 137 starting:altera_avalon_new_sdram_controller "submodules/system_0_sdram_0"
+2012.10.15.16:11:47 [Info] Starting classic module elaboration.
+2012.10.15.16:11:49 [Progress] "c:/altera/11.1/quartus/bin/jre/bin/java.exe" -Xmx512M -classpath "c:/altera/11.1/quartus/sopc_builder/bin/sopc_builder.jar;c:/altera/11.1/quartus/sopc_builder/bin/PinAssigner.jar;c:/altera/11.1/quartus/sopc_builder/bin/sopc_wizard.jar;c:/altera/11.1/quartus/sopc_builder/bin/jptf.jar" sopc_builder.sopc_builder  -d"c:/altera/11.1/quartus/sopc_builder" -notalkback=1 -projectnameyysystem.qpf -projectpathC:/DOCUME~1/ADMINI~1/LOCALS~1/Temp/alt5628_2596242136834956861.dir/0004_sopclgen  --no_splash --refresh C:/DOCUME~1/ADMINI~1/LOCALS~1/Temp/alt5628_2596242136834956861.dir/0004_sopclgen/yysystem.v --quartus_dir="c:/altera/11.1/quartus" --sopc_perl="c:/altera/11.1/quartus/bin/perl" --sopc_lib_path="++c:/altera/11.1/quartus/../ip/altera/sopc_builder_ip+c:/altera/11.1/quartus/../ip/altera/nios2_ip"
+2012.10.15.16:11:51 [Info] Finished elaborating classic module.
+2012.10.15.16:11:51 [Progress] Executing: C:/altera/11.1/quartus//sopc_builder/bin/sopc_builder --classic --generate C:/DOCUME~1/ADMINI~1/LOCALS~1/Temp/alt5628_2596242136834956861.dir/0004_sopclgen/yysystem.ptf
+2012.10.15.16:11:51 [Info] Running sopc_builder...
+2012.10.15.16:11:54 [Progress] "c:/altera/11.1/quartus/bin/jre/bin/java.exe" -Xmx512M -classpath "c:/altera/11.1/quartus/sopc_builder/bin/sopc_builder.jar;c:/altera/11.1/quartus/sopc_builder/bin/PinAssigner.jar;c:/altera/11.1/quartus/sopc_builder/bin/sopc_wizard.jar;c:/altera/11.1/quartus/sopc_builder/bin/jptf.jar" sopc_builder.sopc_builder  -d"c:/altera/11.1/quartus/sopc_builder" -notalkback=1 -projectnameyysystem.qpf -projectpathC:/DOCUME~1/ADMINI~1/LOCALS~1/Temp/alt5628_2596242136834956861.dir/0004_sopclgen  --generate C:/DOCUME~1/ADMINI~1/LOCALS~1/Temp/alt5628_2596242136834956861.dir/0004_sopclgen/yysystem.v --quartus_dir="c:/altera/11.1/quartus" --sopc_perl="c:/altera/11.1/quartus/bin/perl" --sopc_lib_path="++c:/altera/11.1/quartus/../ip/altera/sopc_builder_ip+c:/altera/11.1/quartus/../ip/altera/nios2_ip"
+2012.10.15.16:11:56 [Progress] No .sopc_builder configuration file(!)
+2012.10.15.16:11:56 [Progress] .
+2012.10.15.16:11:57 [Progress] .
+2012.10.15.16:11:57 [Progress] # 2012.10.15 16:11:57 (*) Running Test Generator Program for system_0_sdram_0
+2012.10.15.16:11:59 [Progress] # 2012.10.15 16:11:59 (*) Success: sopc_builder finished.
+2012.10.15.16:12:00 [Info] sdram_0: "<b>system_0</b>" instantiated <b>altera_avalon_new_sdram_controller</b> "<b>sdram_0</b>"
+2012.10.15.16:12:00 [Debug] system_0: queue size: 136 starting:altera_avalon_epcs_flash_controller "submodules/system_0_epcs_controller"
+2012.10.15.16:12:00 [Info] Starting classic module elaboration.
+2012.10.15.16:12:02 [Progress] "c:/altera/11.1/quartus/bin/jre/bin/java.exe" -Xmx512M -classpath "c:/altera/11.1/quartus/sopc_builder/bin/sopc_builder.jar;c:/altera/11.1/quartus/sopc_builder/bin/PinAssigner.jar;c:/altera/11.1/quartus/sopc_builder/bin/sopc_wizard.jar;c:/altera/11.1/quartus/sopc_builder/bin/jptf.jar" sopc_builder.sopc_builder  -d"c:/altera/11.1/quartus/sopc_builder" -notalkback=1 -projectnameyysystem.qpf -projectpathC:/DOCUME~1/ADMINI~1/LOCALS~1/Temp/alt5628_2596242136834956861.dir/0005_sopclgen  --no_splash --refresh C:/DOCUME~1/ADMINI~1/LOCALS~1/Temp/alt5628_2596242136834956861.dir/0005_sopclgen/yysystem.v --quartus_dir="c:/altera/11.1/quartus" --sopc_perl="c:/altera/11.1/quartus/bin/perl" --sopc_lib_path="++c:/altera/11.1/quartus/../ip/altera/sopc_builder_ip+c:/altera/11.1/quartus/../ip/altera/nios2_ip"
+2012.10.15.16:12:06 [Info] Finished elaborating classic module.
+2012.10.15.16:12:06 [Progress] Executing: C:/altera/11.1/quartus//sopc_builder/bin/sopc_builder --classic --generate C:/DOCUME~1/ADMINI~1/LOCALS~1/Temp/alt5628_2596242136834956861.dir/0005_sopclgen/yysystem.ptf
+2012.10.15.16:12:06 [Info] Running sopc_builder...
+2012.10.15.16:12:08 [Progress] "c:/altera/11.1/quartus/bin/jre/bin/java.exe" -Xmx512M -classpath "c:/altera/11.1/quartus/sopc_builder/bin/sopc_builder.jar;c:/altera/11.1/quartus/sopc_builder/bin/PinAssigner.jar;c:/altera/11.1/quartus/sopc_builder/bin/sopc_wizard.jar;c:/altera/11.1/quartus/sopc_builder/bin/jptf.jar" sopc_builder.sopc_builder  -d"c:/altera/11.1/quartus/sopc_builder" -notalkback=1 -projectnameyysystem.qpf -projectpathC:/DOCUME~1/ADMINI~1/LOCALS~1/Temp/alt5628_2596242136834956861.dir/0005_sopclgen  --generate C:/DOCUME~1/ADMINI~1/LOCALS~1/Temp/alt5628_2596242136834956861.dir/0005_sopclgen/yysystem.v --quartus_dir="c:/altera/11.1/quartus" --sopc_perl="c:/altera/11.1/quartus/bin/perl" --sopc_lib_path="++c:/altera/11.1/quartus/../ip/altera/sopc_builder_ip+c:/altera/11.1/quartus/../ip/altera/nios2_ip"
+2012.10.15.16:12:10 [Progress] No .sopc_builder configuration file(!)
+2012.10.15.16:12:10 [Progress] .
+2012.10.15.16:12:12 [Progress] # 2012.10.15 16:12:12 (*) Success: sopc_builder finished.
+2012.10.15.16:12:13 [Info] epcs_controller: "<b>system_0</b>" instantiated <b>altera_avalon_epcs_flash_controller</b> "<b>epcs_controller</b>"
+2012.10.15.16:12:13 [Debug] system_0: queue size: 135 starting:altera_avalon_jtag_uart "submodules/system_0_jtag_uart_0"
+2012.10.15.16:12:13 [Info] Starting classic module elaboration.
+2012.10.15.16:12:15 [Progress] "c:/altera/11.1/quartus/bin/jre/bin/java.exe" -Xmx512M -classpath "c:/altera/11.1/quartus/sopc_builder/bin/sopc_builder.jar;c:/altera/11.1/quartus/sopc_builder/bin/PinAssigner.jar;c:/altera/11.1/quartus/sopc_builder/bin/sopc_wizard.jar;c:/altera/11.1/quartus/sopc_builder/bin/jptf.jar" sopc_builder.sopc_builder  -d"c:/altera/11.1/quartus/sopc_builder" -notalkback=1 -projectnameyysystem.qpf -projectpathC:/DOCUME~1/ADMINI~1/LOCALS~1/Temp/alt5628_2596242136834956861.dir/0006_sopclgen  --no_splash --refresh C:/DOCUME~1/ADMINI~1/LOCALS~1/Temp/alt5628_2596242136834956861.dir/0006_sopclgen/yysystem.v --quartus_dir="c:/altera/11.1/quartus" --sopc_perl="c:/altera/11.1/quartus/bin/perl" --sopc_lib_path="++c:/altera/11.1/quartus/../ip/altera/sopc_builder_ip+c:/altera/11.1/quartus/../ip/altera/nios2_ip"
+2012.10.15.16:12:17 [Info] Finished elaborating classic module.
+2012.10.15.16:12:17 [Progress] Executing: C:/altera/11.1/quartus//sopc_builder/bin/sopc_builder --classic --generate C:/DOCUME~1/ADMINI~1/LOCALS~1/Temp/alt5628_2596242136834956861.dir/0006_sopclgen/yysystem.ptf
+2012.10.15.16:12:17 [Info] Running sopc_builder...
+2012.10.15.16:12:19 [Progress] "c:/altera/11.1/quartus/bin/jre/bin/java.exe" -Xmx512M -classpath "c:/altera/11.1/quartus/sopc_builder/bin/sopc_builder.jar;c:/altera/11.1/quartus/sopc_builder/bin/PinAssigner.jar;c:/altera/11.1/quartus/sopc_builder/bin/sopc_wizard.jar;c:/altera/11.1/quartus/sopc_builder/bin/jptf.jar" sopc_builder.sopc_builder  -d"c:/altera/11.1/quartus/sopc_builder" -notalkback=1 -projectnameyysystem.qpf -projectpathC:/DOCUME~1/ADMINI~1/LOCALS~1/Temp/alt5628_2596242136834956861.dir/0006_sopclgen  --generate C:/DOCUME~1/ADMINI~1/LOCALS~1/Temp/alt5628_2596242136834956861.dir/0006_sopclgen/yysystem.v --quartus_dir="c:/altera/11.1/quartus" --sopc_perl="c:/altera/11.1/quartus/bin/perl" --sopc_lib_path="++c:/altera/11.1/quartus/../ip/altera/sopc_builder_ip+c:/altera/11.1/quartus/../ip/altera/nios2_ip"
+2012.10.15.16:12:21 [Progress] No .sopc_builder configuration file(!)
+2012.10.15.16:12:21 [Progress] .
+2012.10.15.16:12:23 [Progress] # 2012.10.15 16:12:23 (*) Success: sopc_builder finished.
+2012.10.15.16:12:24 [Info] jtag_uart_0: "<b>system_0</b>" instantiated <b>altera_avalon_jtag_uart</b> "<b>jtag_uart_0</b>"
+2012.10.15.16:12:24 [Debug] system_0: queue size: 134 starting:altera_avalon_uart "submodules/system_0_uart_0"
+2012.10.15.16:12:24 [Info] Starting classic module elaboration.
+2012.10.15.16:12:26 [Progress] "c:/altera/11.1/quartus/bin/jre/bin/java.exe" -Xmx512M -classpath "c:/altera/11.1/quartus/sopc_builder/bin/sopc_builder.jar;c:/altera/11.1/quartus/sopc_builder/bin/PinAssigner.jar;c:/altera/11.1/quartus/sopc_builder/bin/sopc_wizard.jar;c:/altera/11.1/quartus/sopc_builder/bin/jptf.jar" sopc_builder.sopc_builder  -d"c:/altera/11.1/quartus/sopc_builder" -notalkback=1 -projectnameyysystem.qpf -projectpathC:/DOCUME~1/ADMINI~1/LOCALS~1/Temp/alt5628_2596242136834956861.dir/0007_sopclgen  --no_splash --refresh C:/DOCUME~1/ADMINI~1/LOCALS~1/Temp/alt5628_2596242136834956861.dir/0007_sopclgen/yysystem.v --quartus_dir="c:/altera/11.1/quartus" --sopc_perl="c:/altera/11.1/quartus/bin/perl" --sopc_lib_path="++c:/altera/11.1/quartus/../ip/altera/sopc_builder_ip+c:/altera/11.1/quartus/../ip/altera/nios2_ip"
+2012.10.15.16:12:29 [Info] Finished elaborating classic module.
+2012.10.15.16:12:29 [Progress] Executing: C:/altera/11.1/quartus//sopc_builder/bin/sopc_builder --classic --generate C:/DOCUME~1/ADMINI~1/LOCALS~1/Temp/alt5628_2596242136834956861.dir/0007_sopclgen/yysystem.ptf
+2012.10.15.16:12:29 [Info] Running sopc_builder...
+2012.10.15.16:12:31 [Progress] "c:/altera/11.1/quartus/bin/jre/bin/java.exe" -Xmx512M -classpath "c:/altera/11.1/quartus/sopc_builder/bin/sopc_builder.jar;c:/altera/11.1/quartus/sopc_builder/bin/PinAssigner.jar;c:/altera/11.1/quartus/sopc_builder/bin/sopc_wizard.jar;c:/altera/11.1/quartus/sopc_builder/bin/jptf.jar" sopc_builder.sopc_builder  -d"c:/altera/11.1/quartus/sopc_builder" -notalkback=1 -projectnameyysystem.qpf -projectpathC:/DOCUME~1/ADMINI~1/LOCALS~1/Temp/alt5628_2596242136834956861.dir/0007_sopclgen  --generate C:/DOCUME~1/ADMINI~1/LOCALS~1/Temp/alt5628_2596242136834956861.dir/0007_sopclgen/yysystem.v --quartus_dir="c:/altera/11.1/quartus" --sopc_perl="c:/altera/11.1/quartus/bin/perl" --sopc_lib_path="++c:/altera/11.1/quartus/../ip/altera/sopc_builder_ip+c:/altera/11.1/quartus/../ip/altera/nios2_ip"
+2012.10.15.16:12:33 [Progress] No .sopc_builder configuration file(!)
+2012.10.15.16:12:33 [Progress] .
+2012.10.15.16:12:35 [Progress] # 2012.10.15 16:12:35 (*) Success: sopc_builder finished.
+2012.10.15.16:12:36 [Info] uart_0: "<b>system_0</b>" instantiated <b>altera_avalon_uart</b> "<b>uart_0</b>"
+2012.10.15.16:12:36 [Debug] system_0: queue size: 133 starting:altera_avalon_timer "submodules/system_0_timer_0"
+2012.10.15.16:12:36 [Info] Starting classic module elaboration.
+2012.10.15.16:12:38 [Progress] "c:/altera/11.1/quartus/bin/jre/bin/java.exe" -Xmx512M -classpath "c:/altera/11.1/quartus/sopc_builder/bin/sopc_builder.jar;c:/altera/11.1/quartus/sopc_builder/bin/PinAssigner.jar;c:/altera/11.1/quartus/sopc_builder/bin/sopc_wizard.jar;c:/altera/11.1/quartus/sopc_builder/bin/jptf.jar" sopc_builder.sopc_builder  -d"c:/altera/11.1/quartus/sopc_builder" -notalkback=1 -projectnameyysystem.qpf -projectpathC:/DOCUME~1/ADMINI~1/LOCALS~1/Temp/alt5628_2596242136834956861.dir/0008_sopclgen  --no_splash --refresh C:/DOCUME~1/ADMINI~1/LOCALS~1/Temp/alt5628_2596242136834956861.dir/0008_sopclgen/yysystem.v --quartus_dir="c:/altera/11.1/quartus" --sopc_perl="c:/altera/11.1/quartus/bin/perl" --sopc_lib_path="++c:/altera/11.1/quartus/../ip/altera/sopc_builder_ip+c:/altera/11.1/quartus/../ip/altera/nios2_ip"
+2012.10.15.16:12:41 [Info] Finished elaborating classic module.
+2012.10.15.16:12:41 [Progress] Executing: C:/altera/11.1/quartus//sopc_builder/bin/sopc_builder --classic --generate C:/DOCUME~1/ADMINI~1/LOCALS~1/Temp/alt5628_2596242136834956861.dir/0008_sopclgen/yysystem.ptf
+2012.10.15.16:12:41 [Info] Running sopc_builder...
+2012.10.15.16:12:43 [Progress] "c:/altera/11.1/quartus/bin/jre/bin/java.exe" -Xmx512M -classpath "c:/altera/11.1/quartus/sopc_builder/bin/sopc_builder.jar;c:/altera/11.1/quartus/sopc_builder/bin/PinAssigner.jar;c:/altera/11.1/quartus/sopc_builder/bin/sopc_wizard.jar;c:/altera/11.1/quartus/sopc_builder/bin/jptf.jar" sopc_builder.sopc_builder  -d"c:/altera/11.1/quartus/sopc_builder" -notalkback=1 -projectnameyysystem.qpf -projectpathC:/DOCUME~1/ADMINI~1/LOCALS~1/Temp/alt5628_2596242136834956861.dir/0008_sopclgen  --generate C:/DOCUME~1/ADMINI~1/LOCALS~1/Temp/alt5628_2596242136834956861.dir/0008_sopclgen/yysystem.v --quartus_dir="c:/altera/11.1/quartus" --sopc_perl="c:/altera/11.1/quartus/bin/perl" --sopc_lib_path="++c:/altera/11.1/quartus/../ip/altera/sopc_builder_ip+c:/altera/11.1/quartus/../ip/altera/nios2_ip"
+2012.10.15.16:12:45 [Progress] No .sopc_builder configuration file(!)
+2012.10.15.16:12:45 [Progress] .
+2012.10.15.16:12:47 [Progress] # 2012.10.15 16:12:47 (*) Success: sopc_builder finished.
+2012.10.15.16:12:48 [Info] timer_0: "<b>system_0</b>" instantiated <b>altera_avalon_timer</b> "<b>timer_0</b>"
+2012.10.15.16:12:48 [Debug] system_0: queue size: 131 starting:altera_avalon_pio "submodules/system_0_led_red"
+2012.10.15.16:12:48 [Info] Starting classic module elaboration.
+2012.10.15.16:12:50 [Progress] "c:/altera/11.1/quartus/bin/jre/bin/java.exe" -Xmx512M -classpath "c:/altera/11.1/quartus/sopc_builder/bin/sopc_builder.jar;c:/altera/11.1/quartus/sopc_builder/bin/PinAssigner.jar;c:/altera/11.1/quartus/sopc_builder/bin/sopc_wizard.jar;c:/altera/11.1/quartus/sopc_builder/bin/jptf.jar" sopc_builder.sopc_builder  -d"c:/altera/11.1/quartus/sopc_builder" -notalkback=1 -projectnameyysystem.qpf -projectpathC:/DOCUME~1/ADMINI~1/LOCALS~1/Temp/alt5628_2596242136834956861.dir/0009_sopclgen  --no_splash --refresh C:/DOCUME~1/ADMINI~1/LOCALS~1/Temp/alt5628_2596242136834956861.dir/0009_sopclgen/yysystem.v --quartus_dir="c:/altera/11.1/quartus" --sopc_perl="c:/altera/11.1/quartus/bin/perl" --sopc_lib_path="++c:/altera/11.1/quartus/../ip/altera/sopc_builder_ip+c:/altera/11.1/quartus/../ip/altera/nios2_ip"
+2012.10.15.16:12:52 [Info] Finished elaborating classic module.
+2012.10.15.16:12:52 [Progress] Executing: C:/altera/11.1/quartus//sopc_builder/bin/sopc_builder --classic --generate C:/DOCUME~1/ADMINI~1/LOCALS~1/Temp/alt5628_2596242136834956861.dir/0009_sopclgen/yysystem.ptf
+2012.10.15.16:12:52 [Info] Running sopc_builder...
+2012.10.15.16:12:55 [Progress] "c:/altera/11.1/quartus/bin/jre/bin/java.exe" -Xmx512M -classpath "c:/altera/11.1/quartus/sopc_builder/bin/sopc_builder.jar;c:/altera/11.1/quartus/sopc_builder/bin/PinAssigner.jar;c:/altera/11.1/quartus/sopc_builder/bin/sopc_wizard.jar;c:/altera/11.1/quartus/sopc_builder/bin/jptf.jar" sopc_builder.sopc_builder  -d"c:/altera/11.1/quartus/sopc_builder" -notalkback=1 -projectnameyysystem.qpf -projectpathC:/DOCUME~1/ADMINI~1/LOCALS~1/Temp/alt5628_2596242136834956861.dir/0009_sopclgen  --generate C:/DOCUME~1/ADMINI~1/LOCALS~1/Temp/alt5628_2596242136834956861.dir/0009_sopclgen/yysystem.v --quartus_dir="c:/altera/11.1/quartus" --sopc_perl="c:/altera/11.1/quartus/bin/perl" --sopc_lib_path="++c:/altera/11.1/quartus/../ip/altera/sopc_builder_ip+c:/altera/11.1/quartus/../ip/altera/nios2_ip"
+2012.10.15.16:12:57 [Progress] No .sopc_builder configuration file(!)
+2012.10.15.16:12:57 [Progress] .
+2012.10.15.16:12:59 [Progress] # 2012.10.15 16:12:59 (*) Success: sopc_builder finished.
+2012.10.15.16:12:59 [Info] led_red: "<b>system_0</b>" instantiated <b>altera_avalon_pio</b> "<b>led_red</b>"
+2012.10.15.16:12:59 [Debug] system_0: queue size: 130 starting:altera_avalon_pio "submodules/system_0_led_green"
+2012.10.15.16:12:59 [Info] Starting classic module elaboration.
+2012.10.15.16:13:02 [Progress] "c:/altera/11.1/quartus/bin/jre/bin/java.exe" -Xmx512M -classpath "c:/altera/11.1/quartus/sopc_builder/bin/sopc_builder.jar;c:/altera/11.1/quartus/sopc_builder/bin/PinAssigner.jar;c:/altera/11.1/quartus/sopc_builder/bin/sopc_wizard.jar;c:/altera/11.1/quartus/sopc_builder/bin/jptf.jar" sopc_builder.sopc_builder  -d"c:/altera/11.1/quartus/sopc_builder" -notalkback=1 -projectnameyysystem.qpf -projectpathC:/DOCUME~1/ADMINI~1/LOCALS~1/Temp/alt5628_2596242136834956861.dir/0010_sopclgen  --no_splash --refresh C:/DOCUME~1/ADMINI~1/LOCALS~1/Temp/alt5628_2596242136834956861.dir/0010_sopclgen/yysystem.v --quartus_dir="c:/altera/11.1/quartus" --sopc_perl="c:/altera/11.1/quartus/bin/perl" --sopc_lib_path="++c:/altera/11.1/quartus/../ip/altera/sopc_builder_ip+c:/altera/11.1/quartus/../ip/altera/nios2_ip"
+2012.10.15.16:13:04 [Info] Finished elaborating classic module.
+2012.10.15.16:13:04 [Progress] Executing: C:/altera/11.1/quartus//sopc_builder/bin/sopc_builder --classic --generate C:/DOCUME~1/ADMINI~1/LOCALS~1/Temp/alt5628_2596242136834956861.dir/0010_sopclgen/yysystem.ptf
+2012.10.15.16:13:04 [Info] Running sopc_builder...
+2012.10.15.16:13:06 [Progress] "c:/altera/11.1/quartus/bin/jre/bin/java.exe" -Xmx512M -classpath "c:/altera/11.1/quartus/sopc_builder/bin/sopc_builder.jar;c:/altera/11.1/quartus/sopc_builder/bin/PinAssigner.jar;c:/altera/11.1/quartus/sopc_builder/bin/sopc_wizard.jar;c:/altera/11.1/quartus/sopc_builder/bin/jptf.jar" sopc_builder.sopc_builder  -d"c:/altera/11.1/quartus/sopc_builder" -notalkback=1 -projectnameyysystem.qpf -projectpathC:/DOCUME~1/ADMINI~1/LOCALS~1/Temp/alt5628_2596242136834956861.dir/0010_sopclgen  --generate C:/DOCUME~1/ADMINI~1/LOCALS~1/Temp/alt5628_2596242136834956861.dir/0010_sopclgen/yysystem.v --quartus_dir="c:/altera/11.1/quartus" --sopc_perl="c:/altera/11.1/quartus/bin/perl" --sopc_lib_path="++c:/altera/11.1/quartus/../ip/altera/sopc_builder_ip+c:/altera/11.1/quartus/../ip/altera/nios2_ip"
+2012.10.15.16:13:08 [Progress] No .sopc_builder configuration file(!)
+2012.10.15.16:13:08 [Progress] .
+2012.10.15.16:13:09 [Progress] # 2012.10.15 16:13:09 (*) Success: sopc_builder finished.
+2012.10.15.16:13:10 [Info] led_green: "<b>system_0</b>" instantiated <b>altera_avalon_pio</b> "<b>led_green</b>"
+2012.10.15.16:13:10 [Debug] system_0: queue size: 129 starting:altera_avalon_pio "submodules/system_0_button_pio"
+2012.10.15.16:13:10 [Info] Starting classic module elaboration.
+2012.10.15.16:13:12 [Progress] "c:/altera/11.1/quartus/bin/jre/bin/java.exe" -Xmx512M -classpath "c:/altera/11.1/quartus/sopc_builder/bin/sopc_builder.jar;c:/altera/11.1/quartus/sopc_builder/bin/PinAssigner.jar;c:/altera/11.1/quartus/sopc_builder/bin/sopc_wizard.jar;c:/altera/11.1/quartus/sopc_builder/bin/jptf.jar" sopc_builder.sopc_builder  -d"c:/altera/11.1/quartus/sopc_builder" -notalkback=1 -projectnameyysystem.qpf -projectpathC:/DOCUME~1/ADMINI~1/LOCALS~1/Temp/alt5628_2596242136834956861.dir/0011_sopclgen  --no_splash --refresh C:/DOCUME~1/ADMINI~1/LOCALS~1/Temp/alt5628_2596242136834956861.dir/0011_sopclgen/yysystem.v --quartus_dir="c:/altera/11.1/quartus" --sopc_perl="c:/altera/11.1/quartus/bin/perl" --sopc_lib_path="++c:/altera/11.1/quartus/../ip/altera/sopc_builder_ip+c:/altera/11.1/quartus/../ip/altera/nios2_ip"
+2012.10.15.16:13:15 [Info] Finished elaborating classic module.
+2012.10.15.16:13:15 [Progress] Executing: C:/altera/11.1/quartus//sopc_builder/bin/sopc_builder --classic --generate C:/DOCUME~1/ADMINI~1/LOCALS~1/Temp/alt5628_2596242136834956861.dir/0011_sopclgen/yysystem.ptf
+2012.10.15.16:13:15 [Info] Running sopc_builder...
+2012.10.15.16:13:17 [Progress] "c:/altera/11.1/quartus/bin/jre/bin/java.exe" -Xmx512M -classpath "c:/altera/11.1/quartus/sopc_builder/bin/sopc_builder.jar;c:/altera/11.1/quartus/sopc_builder/bin/PinAssigner.jar;c:/altera/11.1/quartus/sopc_builder/bin/sopc_wizard.jar;c:/altera/11.1/quartus/sopc_builder/bin/jptf.jar" sopc_builder.sopc_builder  -d"c:/altera/11.1/quartus/sopc_builder" -notalkback=1 -projectnameyysystem.qpf -projectpathC:/DOCUME~1/ADMINI~1/LOCALS~1/Temp/alt5628_2596242136834956861.dir/0011_sopclgen  --generate C:/DOCUME~1/ADMINI~1/LOCALS~1/Temp/alt5628_2596242136834956861.dir/0011_sopclgen/yysystem.v --quartus_dir="c:/altera/11.1/quartus" --sopc_perl="c:/altera/11.1/quartus/bin/perl" --sopc_lib_path="++c:/altera/11.1/quartus/../ip/altera/sopc_builder_ip+c:/altera/11.1/quartus/../ip/altera/nios2_ip"
+2012.10.15.16:13:19 [Progress] No .sopc_builder configuration file(!)
+2012.10.15.16:13:19 [Progress] .
+2012.10.15.16:13:20 [Progress] # 2012.10.15 16:13:20 (*) Success: sopc_builder finished.
+2012.10.15.16:13:21 [Info] button_pio: "<b>system_0</b>" instantiated <b>altera_avalon_pio</b> "<b>button_pio</b>"
+2012.10.15.16:13:21 [Debug] system_0: queue size: 128 starting:altera_avalon_pio "submodules/system_0_switch_pio"
+2012.10.15.16:13:21 [Info] Starting classic module elaboration.
+2012.10.15.16:13:23 [Progress] "c:/altera/11.1/quartus/bin/jre/bin/java.exe" -Xmx512M -classpath "c:/altera/11.1/quartus/sopc_builder/bin/sopc_builder.jar;c:/altera/11.1/quartus/sopc_builder/bin/PinAssigner.jar;c:/altera/11.1/quartus/sopc_builder/bin/sopc_wizard.jar;c:/altera/11.1/quartus/sopc_builder/bin/jptf.jar" sopc_builder.sopc_builder  -d"c:/altera/11.1/quartus/sopc_builder" -notalkback=1 -projectnameyysystem.qpf -projectpathC:/DOCUME~1/ADMINI~1/LOCALS~1/Temp/alt5628_2596242136834956861.dir/0012_sopclgen  --no_splash --refresh C:/DOCUME~1/ADMINI~1/LOCALS~1/Temp/alt5628_2596242136834956861.dir/0012_sopclgen/yysystem.v --quartus_dir="c:/altera/11.1/quartus" --sopc_perl="c:/altera/11.1/quartus/bin/perl" --sopc_lib_path="++c:/altera/11.1/quartus/../ip/altera/sopc_builder_ip+c:/altera/11.1/quartus/../ip/altera/nios2_ip"
+2012.10.15.16:13:25 [Info] Finished elaborating classic module.
+2012.10.15.16:13:25 [Progress] Executing: C:/altera/11.1/quartus//sopc_builder/bin/sopc_builder --classic --generate C:/DOCUME~1/ADMINI~1/LOCALS~1/Temp/alt5628_2596242136834956861.dir/0012_sopclgen/yysystem.ptf
+2012.10.15.16:13:25 [Info] Running sopc_builder...
+2012.10.15.16:13:27 [Progress] "c:/altera/11.1/quartus/bin/jre/bin/java.exe" -Xmx512M -classpath "c:/altera/11.1/quartus/sopc_builder/bin/sopc_builder.jar;c:/altera/11.1/quartus/sopc_builder/bin/PinAssigner.jar;c:/altera/11.1/quartus/sopc_builder/bin/sopc_wizard.jar;c:/altera/11.1/quartus/sopc_builder/bin/jptf.jar" sopc_builder.sopc_builder  -d"c:/altera/11.1/quartus/sopc_builder" -notalkback=1 -projectnameyysystem.qpf -projectpathC:/DOCUME~1/ADMINI~1/LOCALS~1/Temp/alt5628_2596242136834956861.dir/0012_sopclgen  --generate C:/DOCUME~1/ADMINI~1/LOCALS~1/Temp/alt5628_2596242136834956861.dir/0012_sopclgen/yysystem.v --quartus_dir="c:/altera/11.1/quartus" --sopc_perl="c:/altera/11.1/quartus/bin/perl" --sopc_lib_path="++c:/altera/11.1/quartus/../ip/altera/sopc_builder_ip+c:/altera/11.1/quartus/../ip/altera/nios2_ip"
+2012.10.15.16:13:30 [Progress] No .sopc_builder configuration file(!)
+2012.10.15.16:13:30 [Progress] .
+2012.10.15.16:13:31 [Progress] # 2012.10.15 16:13:31 (*) Success: sopc_builder finished.
+2012.10.15.16:13:32 [Info] switch_pio: "<b>system_0</b>" instantiated <b>altera_avalon_pio</b> "<b>switch_pio</b>"
+2012.10.15.16:13:32 [Debug] system_0: queue size: 127 starting:altera_avalon_pio "submodules/system_0_SD_DAT"
+2012.10.15.16:13:32 [Info] Starting classic module elaboration.
+2012.10.15.16:13:35 [Progress] "c:/altera/11.1/quartus/bin/jre/bin/java.exe" -Xmx512M -classpath "c:/altera/11.1/quartus/sopc_builder/bin/sopc_builder.jar;c:/altera/11.1/quartus/sopc_builder/bin/PinAssigner.jar;c:/altera/11.1/quartus/sopc_builder/bin/sopc_wizard.jar;c:/altera/11.1/quartus/sopc_builder/bin/jptf.jar" sopc_builder.sopc_builder  -d"c:/altera/11.1/quartus/sopc_builder" -notalkback=1 -projectnameyysystem.qpf -projectpathC:/DOCUME~1/ADMINI~1/LOCALS~1/Temp/alt5628_2596242136834956861.dir/0013_sopclgen  --no_splash --refresh C:/DOCUME~1/ADMINI~1/LOCALS~1/Temp/alt5628_2596242136834956861.dir/0013_sopclgen/yysystem.v --quartus_dir="c:/altera/11.1/quartus" --sopc_perl="c:/altera/11.1/quartus/bin/perl" --sopc_lib_path="++c:/altera/11.1/quartus/../ip/altera/sopc_builder_ip+c:/altera/11.1/quartus/../ip/altera/nios2_ip"
+2012.10.15.16:13:37 [Info] Finished elaborating classic module.
+2012.10.15.16:13:37 [Progress] Executing: C:/altera/11.1/quartus//sopc_builder/bin/sopc_builder --classic --generate C:/DOCUME~1/ADMINI~1/LOCALS~1/Temp/alt5628_2596242136834956861.dir/0013_sopclgen/yysystem.ptf
+2012.10.15.16:13:37 [Info] Running sopc_builder...
+2012.10.15.16:13:39 [Progress] "c:/altera/11.1/quartus/bin/jre/bin/java.exe" -Xmx512M -classpath "c:/altera/11.1/quartus/sopc_builder/bin/sopc_builder.jar;c:/altera/11.1/quartus/sopc_builder/bin/PinAssigner.jar;c:/altera/11.1/quartus/sopc_builder/bin/sopc_wizard.jar;c:/altera/11.1/quartus/sopc_builder/bin/jptf.jar" sopc_builder.sopc_builder  -d"c:/altera/11.1/quartus/sopc_builder" -notalkback=1 -projectnameyysystem.qpf -projectpathC:/DOCUME~1/ADMINI~1/LOCALS~1/Temp/alt5628_2596242136834956861.dir/0013_sopclgen  --generate C:/DOCUME~1/ADMINI~1/LOCALS~1/Temp/alt5628_2596242136834956861.dir/0013_sopclgen/yysystem.v --quartus_dir="c:/altera/11.1/quartus" --sopc_perl="c:/altera/11.1/quartus/bin/perl" --sopc_lib_path="++c:/altera/11.1/quartus/../ip/altera/sopc_builder_ip+c:/altera/11.1/quartus/../ip/altera/nios2_ip"
+2012.10.15.16:13:41 [Progress] No .sopc_builder configuration file(!)
+2012.10.15.16:13:41 [Progress] .
+2012.10.15.16:13:43 [Progress] # 2012.10.15 16:13:42 (*) Success: sopc_builder finished.
+2012.10.15.16:13:43 [Info] SD_DAT: "<b>system_0</b>" instantiated <b>altera_avalon_pio</b> "<b>SD_DAT</b>"
+2012.10.15.16:13:43 [Debug] system_0: queue size: 125 starting:altera_avalon_pio "submodules/system_0_SD_CLK"
+2012.10.15.16:13:43 [Info] Starting classic module elaboration.
+2012.10.15.16:13:46 [Progress] "c:/altera/11.1/quartus/bin/jre/bin/java.exe" -Xmx512M -classpath "c:/altera/11.1/quartus/sopc_builder/bin/sopc_builder.jar;c:/altera/11.1/quartus/sopc_builder/bin/PinAssigner.jar;c:/altera/11.1/quartus/sopc_builder/bin/sopc_wizard.jar;c:/altera/11.1/quartus/sopc_builder/bin/jptf.jar" sopc_builder.sopc_builder  -d"c:/altera/11.1/quartus/sopc_builder" -notalkback=1 -projectnameyysystem.qpf -projectpathC:/DOCUME~1/ADMINI~1/LOCALS~1/Temp/alt5628_2596242136834956861.dir/0014_sopclgen  --no_splash --refresh C:/DOCUME~1/ADMINI~1/LOCALS~1/Temp/alt5628_2596242136834956861.dir/0014_sopclgen/yysystem.v --quartus_dir="c:/altera/11.1/quartus" --sopc_perl="c:/altera/11.1/quartus/bin/perl" --sopc_lib_path="++c:/altera/11.1/quartus/../ip/altera/sopc_builder_ip+c:/altera/11.1/quartus/../ip/altera/nios2_ip"
+2012.10.15.16:13:48 [Info] Finished elaborating classic module.
+2012.10.15.16:13:48 [Progress] Executing: C:/altera/11.1/quartus//sopc_builder/bin/sopc_builder --classic --generate C:/DOCUME~1/ADMINI~1/LOCALS~1/Temp/alt5628_2596242136834956861.dir/0014_sopclgen/yysystem.ptf
+2012.10.15.16:13:48 [Info] Running sopc_builder...
+2012.10.15.16:13:50 [Progress] "c:/altera/11.1/quartus/bin/jre/bin/java.exe" -Xmx512M -classpath "c:/altera/11.1/quartus/sopc_builder/bin/sopc_builder.jar;c:/altera/11.1/quartus/sopc_builder/bin/PinAssigner.jar;c:/altera/11.1/quartus/sopc_builder/bin/sopc_wizard.jar;c:/altera/11.1/quartus/sopc_builder/bin/jptf.jar" sopc_builder.sopc_builder  -d"c:/altera/11.1/quartus/sopc_builder" -notalkback=1 -projectnameyysystem.qpf -projectpathC:/DOCUME~1/ADMINI~1/LOCALS~1/Temp/alt5628_2596242136834956861.dir/0014_sopclgen  --generate C:/DOCUME~1/ADMINI~1/LOCALS~1/Temp/alt5628_2596242136834956861.dir/0014_sopclgen/yysystem.v --quartus_dir="c:/altera/11.1/quartus" --sopc_perl="c:/altera/11.1/quartus/bin/perl" --sopc_lib_path="++c:/altera/11.1/quartus/../ip/altera/sopc_builder_ip+c:/altera/11.1/quartus/../ip/altera/nios2_ip"
+2012.10.15.16:13:52 [Progress] No .sopc_builder configuration file(!)
+2012.10.15.16:13:52 [Progress] .
+2012.10.15.16:13:54 [Progress] # 2012.10.15 16:13:54 (*) Success: sopc_builder finished.
+2012.10.15.16:13:54 [Info] SD_CLK: "<b>system_0</b>" instantiated <b>altera_avalon_pio</b> "<b>SD_CLK</b>"
+2012.10.15.16:13:54 [Debug] system_0: queue size: 124 starting:altera_tristate_conduit_bridge "submodules/system_0_tri_state_bridge_0_bridge_0"
+2012.10.15.16:13:54 [Info] tri_state_bridge_0_bridge_0: "<b>system_0</b>" instantiated <b>altera_tristate_conduit_bridge</b> "<b>tri_state_bridge_0_bridge_0</b>"
+2012.10.15.16:13:54 [Debug] system_0: queue size: 123 starting:altera_tristate_conduit_pin_sharer "submodules/system_0_tri_state_bridge_0_pinSharer_0"
+2012.10.15.16:13:54 [Info] tri_state_bridge_0_pinSharer_0: Running transform <b>AvalonTransform</b>
+2012.10.15.16:13:54 [Debug] Transform: PipelineBridgeSwap
+2012.10.15.16:13:54 [Info] pipeline_bridge_swap_transform: After transform: <b>4</b> modules, <b>7</b> connections
+2012.10.15.16:13:54 [Debug] Transform: ClockCrossingBridgeSwap
+2012.10.15.16:13:54 [Debug] Transform: QsysBetaIPSwap
+2012.10.15.16:13:54 [Debug] Transform: CustomInstructionTransform
+2012.10.15.16:13:54 [Info] No custom instruction connections, skipping transform 
+2012.10.15.16:13:54 [Debug] Transform: TristateConduitUpgradeTransform
+2012.10.15.16:13:54 [Debug] Transform: TranslatorTransform
+2012.10.15.16:13:54 [Info] No Avalon connections, skipping transform 
+2012.10.15.16:13:54 [Debug] Transform: DomainTransform
+2012.10.15.16:13:54 [Debug] Transform: RouterTransform
+2012.10.15.16:13:54 [Debug] Transform: TrafficLimiterTransform
+2012.10.15.16:13:54 [Debug] Transform: BurstTransform
+2012.10.15.16:13:54 [Debug] Transform: ResetAdaptation
+2012.10.15.16:13:54 [Debug] Transform: NetworkToSwitchTransform
+2012.10.15.16:13:54 [Debug] Transform: WidthTransform
+2012.10.15.16:13:54 [Debug] Transform: RouterTableTransform
+2012.10.15.16:13:54 [Debug] Transform: ClockCrossingTransform
+2012.10.15.16:13:54 [Debug] Transform: TrafficLimiterUpdateTransform
+2012.10.15.16:13:54 [Debug] Transform: InterruptMapperTransform
+2012.10.15.16:13:54 [Debug] Transform: InterruptSyncTransform
+2012.10.15.16:13:54 [Debug] Transform: InterruptFanoutTransform
+2012.10.15.16:13:54 [Info] tri_state_bridge_0_pinSharer_0: Running transform <b>AvalonTransform</b> took 0.109s
+2012.10.15.16:13:54 [Debug] tri_state_bridge_0_pinSharer_0: "<b>tri_state_bridge_0_pinSharer_0</b>" reuses <b>altera_tristate_conduit_pin_sharer_core</b> "<b>submodules/system_0_tri_state_bridge_0_pinSharer_0_pin_sharer</b>"
+2012.10.15.16:13:54 [Debug] tri_state_bridge_0_pinSharer_0: "<b>tri_state_bridge_0_pinSharer_0</b>" reuses <b>altera_merlin_std_arbitrator</b> "<b>submodules/system_0_tri_state_bridge_0_pinSharer_0_arbiter</b>"
+2012.10.15.16:13:54 [Info] tri_state_bridge_0_pinSharer_0: "<b>system_0</b>" instantiated <b>altera_tristate_conduit_pin_sharer</b> "<b>tri_state_bridge_0_pinSharer_0</b>"
+2012.10.15.16:13:54 [Debug] system_0: queue size: 124 starting:altera_generic_tristate_controller "submodules/system_0_cfi_flash_0"
+2012.10.15.16:13:54 [Info] cfi_flash_0: Running transform <b>AvalonTransform</b>
+2012.10.15.16:13:54 [Debug] Transform: PipelineBridgeSwap
+2012.10.15.16:13:54 [Info] pipeline_bridge_swap_transform: After transform: <b>5</b> modules, <b>10</b> connections
+2012.10.15.16:13:54 [Debug] Transform: ClockCrossingBridgeSwap
+2012.10.15.16:13:54 [Debug] Transform: QsysBetaIPSwap
+2012.10.15.16:13:54 [Debug] Transform: CustomInstructionTransform
+2012.10.15.16:13:54 [Info] No custom instruction connections, skipping transform 
+2012.10.15.16:13:54 [Debug] Transform: TristateConduitUpgradeTransform
+2012.10.15.16:13:54 [Debug] Transform: TranslatorTransform
+2012.10.15.16:13:54 [Debug] Transform merlin_translator_transform not run on matched interfaces tdt.avalon_universal_master_0 and slave_translator.avalon_universal_slave_0
+2012.10.15.16:13:54 [Debug] Transform merlin_translator_transform not run on matched interfaces slave_translator.avalon_anti_slave_0 and tda.avalon_slave_0
+2012.10.15.16:13:54 [Debug] Transform: DomainTransform
+2012.10.15.16:13:54 [Debug] Transform merlin_domain_transform not run on matched interfaces tdt.avalon_universal_master_0 and slave_translator.avalon_universal_slave_0
+2012.10.15.16:13:54 [Debug] Transform merlin_domain_transform not run on matched interfaces slave_translator.avalon_anti_slave_0 and tda.avalon_slave_0
+2012.10.15.16:13:54 [Debug] Transform: RouterTransform
+2012.10.15.16:13:54 [Debug] Transform: TrafficLimiterTransform
+2012.10.15.16:13:54 [Debug] Transform: BurstTransform
+2012.10.15.16:13:54 [Debug] Transform: ResetAdaptation
+2012.10.15.16:13:54 [Debug] Transform: NetworkToSwitchTransform
+2012.10.15.16:13:54 [Debug] Transform: WidthTransform
+2012.10.15.16:13:54 [Debug] Transform: RouterTableTransform
+2012.10.15.16:13:54 [Debug] Transform: ClockCrossingTransform
+2012.10.15.16:13:54 [Debug] Transform: TrafficLimiterUpdateTransform
+2012.10.15.16:13:54 [Debug] Transform: InterruptMapperTransform
+2012.10.15.16:13:54 [Debug] Transform: InterruptSyncTransform
+2012.10.15.16:13:54 [Debug] Transform: InterruptFanoutTransform
+2012.10.15.16:13:54 [Info] cfi_flash_0: Running transform <b>AvalonTransform</b> took 0.109s
+2012.10.15.16:13:54 [Debug] cfi_flash_0: "<b>cfi_flash_0</b>" reuses <b>altera_tristate_controller_translator</b> "<b>submodules/altera_tristate_controller_translator</b>"
+2012.10.15.16:13:54 [Debug] cfi_flash_0: "<b>cfi_flash_0</b>" reuses <b>altera_merlin_slave_translator</b> "<b>submodules/altera_merlin_slave_translator</b>"
+2012.10.15.16:13:54 [Debug] cfi_flash_0: "<b>cfi_flash_0</b>" reuses <b>altera_tristate_controller_aggregator</b> "<b>submodules/altera_tristate_controller_aggregator</b>"
+2012.10.15.16:13:54 [Info] cfi_flash_0: "<b>system_0</b>" instantiated <b>altera_generic_tristate_controller</b> "<b>cfi_flash_0</b>"
+2012.10.15.16:13:54 [Debug] system_0: queue size: 126 starting:seg7_lut_8 "submodules/SEG7_LUT_8"
+2012.10.15.16:10:25 [Debug] set ALTERA_HW_TCL_KEEP_TEMP_FILES=1 to retain temp files
+2012.10.15.16:10:25 [Debug] Command: C:/altera/11.1/quartus/bin/quartus_map.exe not_a_project --generate_hdl_interface=E:/TASKs/DE1/test/DE1_SD_Card_Audio_Test_1/ip/SEG7_LUT_8/hdl/SEG7_LUT_8.v --source=E:/TASKs/DE1/test/DE1_SD_Card_Audio_Test_1/ip/SEG7_LUT_8/hdl/SEG7_LUT.v --source=E:/TASKs/DE1/test/DE1_SD_Card_Audio_Test_1/ip/SEG7_LUT_8/hdl/SEG7_LUT_8.v --set=HDL_INTERFACE_OUTPUT_PATH=C:/DOCUME~1/ADMINI~1/LOCALS~1/Temp/alt5628_2596242136834956861.dir/0001_sopcqmap/
+2012.10.15.16:10:42 [Debug] Command took 16.703s
+2012.10.15.16:13:54 [Info] SEG7_Display: "<b>system_0</b>" instantiated <b>seg7_lut_8</b> "<b>SEG7_Display</b>"
+2012.10.15.16:13:54 [Debug] system_0: queue size: 125 starting:audio_dac_fifo "submodules/AUDIO_DAC_FIFO"
+2012.10.15.16:10:42 [Debug] set ALTERA_HW_TCL_KEEP_TEMP_FILES=1 to retain temp files
+2012.10.15.16:10:42 [Debug] Command: C:/altera/11.1/quartus/bin/quartus_map.exe not_a_project --generate_hdl_interface=E:/TASKs/DE1/test/DE1_SD_Card_Audio_Test_1/ip/Audio_DAC_FIFO/hdl/AUDIO_DAC_FIFO.v --source=E:/TASKs/DE1/test/DE1_SD_Card_Audio_Test_1/ip/Audio_DAC_FIFO/hdl/FIFO_16_256.v --source=E:/TASKs/DE1/test/DE1_SD_Card_Audio_Test_1/ip/Audio_DAC_FIFO/hdl/AUDIO_DAC_FIFO.v --set=HDL_INTERFACE_OUTPUT_PATH=C:/DOCUME~1/ADMINI~1/LOCALS~1/Temp/alt5628_2596242136834956861.dir/0002_sopcqmap/
+2012.10.15.16:10:52 [Debug] Command took 9.906s
+2012.10.15.16:13:54 [Debug] set ALTERA_HW_TCL_KEEP_TEMP_FILES=1 to retain temp files
+2012.10.15.16:13:54 [Debug] Command: C:/altera/11.1/quartus/bin/quartus_map.exe not_a_project --generate_hdl_interface=E:\TASKs\DE1\test\DE1_SD_Card_Audio_Test_1\ip\Audio_DAC_FIFO\hdl\AUDIO_DAC_FIFO.v --source=E:/TASKs/DE1/test/DE1_SD_Card_Audio_Test_1/ip/Audio_DAC_FIFO/hdl/FIFO_16_256.v --source=E:/TASKs/DE1/test/DE1_SD_Card_Audio_Test_1/ip/Audio_DAC_FIFO/hdl/AUDIO_DAC_FIFO.v --set=HDL_INTERFACE_OUTPUT_PATH=C:/DOCUME~1/ADMINI~1/LOCALS~1/Temp/alt5628_2596242136834956861.dir/0016_sopcqmap/ --set=HDL_INTERFACE_INSTANCE_NAME=inst --set=HDL_INTERFACE_INSTANCE_ENTITY=AUDIO_DAC_FIFO "--set=HDL_INTERFACE_INSTANCE_PARAMETERS=REF_CLK=D\"18432000\";SAMPLE_RATE=D\"48000\";DATA_WIDTH=D\"16\";CHANNEL_NUM=D\"2\";"
+2012.10.15.16:14:04 [Debug] Command took 9.953s
+2012.10.15.16:14:04 [Info] Audio_0: "<b>system_0</b>" instantiated <b>audio_dac_fifo</b> "<b>Audio_0</b>"
+2012.10.15.16:14:04 [Debug] system_0: queue size: 124 starting:sram_16bit_512k "submodules/SRAM_16Bit_512K"
+2012.10.15.16:10:52 [Debug] set ALTERA_HW_TCL_KEEP_TEMP_FILES=1 to retain temp files
+2012.10.15.16:10:52 [Debug] Command: C:/altera/11.1/quartus/bin/quartus_map.exe not_a_project --generate_hdl_interface=E:/TASKs/DE1/test/DE1_SD_Card_Audio_Test_1/ip/SRAM_16Bit_512K/hdl/SRAM_16Bit_512K.v --source=E:/TASKs/DE1/test/DE1_SD_Card_Audio_Test_1/ip/SRAM_16Bit_512K/hdl/SRAM_16Bit_512K.v --set=HDL_INTERFACE_OUTPUT_PATH=C:/DOCUME~1/ADMINI~1/LOCALS~1/Temp/alt5628_2596242136834956861.dir/0003_sopcqmap/
+2012.10.15.16:11:00 [Debug] Command took 8.422s
+2012.10.15.16:14:04 [Info] sram_16bit_512k_0: "<b>system_0</b>" instantiated <b>sram_16bit_512k</b> "<b>sram_16bit_512k_0</b>"
+2012.10.15.16:14:04 [Debug] system_0: queue size: 123 starting:altera_nios2_qsys "submodules/system_0_nios2_qsys_0"
+2012.10.15.16:14:05 [Info] nios2_qsys_0: Starting RTL generation for module 'system_0_nios2_qsys_0'
+2012.10.15.16:14:05 [Info] nios2_qsys_0:   Generation command is [exec C:/altera/11.1/quartus/../ip/altera/nios2_ip/altera_nios2/eperl.exe -I C:/altera/11.1/quartus/common/ip/altera/common/perl/5.8.3 -I C:/altera/11.1/quartus/sopc_builder/bin/europa -I C:/altera/11.1/quartus/sopc_builder/bin/perl_lib -I C:/altera/11.1/quartus/sopc_builder/bin -I C:/altera/11.1/quartus/../ip/altera/nios2_ip/altera_nios2/cpu_lib -I C:/altera/11.1/quartus/../ip/altera/nios2_ip/altera_nios2/nios_lib -I C:/altera/11.1/quartus/../ip/altera/nios2_ip/altera_nios2 -I C:/altera/11.1/quartus/../ip/altera/nios2_ip/altera_nios2 -- C:/altera/11.1/quartus/../ip/altera/nios2_ip/altera_nios2/generate_rtl.epl --name=system_0_nios2_qsys_0 --dir=C:/DOCUME~1/ADMINI~1/LOCALS~1/Temp/alt5628_2596242136834956861.dir/0017_nios2_qsys_0_gen/ --quartus_dir=C:/altera/11.1/quartus --verilog --config=C:/DOCUME~1/ADMINI~1/LOCALS~1/Temp/alt5628_2596242136834956861.dir/0017_nios2_qsys_0_gen//system_0_nios2_qsys_0_processor_configuration.pl  --do_build_sim=0    --bogus  ]
+2012.10.15.16:14:27 [Info] nios2_qsys_0: # 2012.10.15 16:14:06 (*) Starting Nios II generation
+2012.10.15.16:14:27 [Info] nios2_qsys_0: # 2012.10.15 16:14:06 (*)   Checking for encrypted license (non-evaluation).
+2012.10.15.16:14:27 [Info] nios2_qsys_0: # 2012.10.15 16:14:13 (*)   Encrypted license found.  SOF will not be time-limited.
+2012.10.15.16:14:27 [Info] nios2_qsys_0: # 2012.10.15 16:14:13 (*)   Elaborating CPU configuration settings
+2012.10.15.16:14:27 [Info] nios2_qsys_0: # 2012.10.15 16:14:13 (*)   Creating all objects for CPU
+2012.10.15.16:14:27 [Info] nios2_qsys_0: # 2012.10.15 16:14:13 (*)     Testbench
+2012.10.15.16:14:27 [Info] nios2_qsys_0: # 2012.10.15 16:14:13 (*)     Instruction decoding
+2012.10.15.16:14:27 [Info] nios2_qsys_0: # 2012.10.15 16:14:13 (*)       Instruction fields
+2012.10.15.16:14:27 [Info] nios2_qsys_0: # 2012.10.15 16:14:14 (*)       Instruction decodes
+2012.10.15.16:14:27 [Info] nios2_qsys_0: # 2012.10.15 16:14:15 (*)       Signals for RTL simulation waveforms
+2012.10.15.16:14:27 [Info] nios2_qsys_0: # 2012.10.15 16:14:15 (*)       Instruction controls
+2012.10.15.16:14:27 [Info] nios2_qsys_0: # 2012.10.15 16:14:15 (*)     Pipeline frontend
+2012.10.15.16:14:27 [Info] nios2_qsys_0: # 2012.10.15 16:14:15 (*)     Pipeline backend
+2012.10.15.16:14:27 [Info] nios2_qsys_0: # 2012.10.15 16:14:20 (*)   Generating RTL from CPU objects
+2012.10.15.16:14:27 [Info] nios2_qsys_0: # 2012.10.15 16:14:24 (*)   Creating encrypted RTL
+2012.10.15.16:14:27 [Info] nios2_qsys_0: # 2012.10.15 16:14:27 (*) Done Nios II generation
+2012.10.15.16:14:27 [Info] nios2_qsys_0: Done RTL generation for module 'system_0_nios2_qsys_0'
+2012.10.15.16:14:27 [Info] nios2_qsys_0: "<b>system_0</b>" instantiated <b>altera_nios2_qsys</b> "<b>nios2_qsys_0</b>"
+2012.10.15.16:14:27 [Debug] system_0: queue size: 122 starting:altera_merlin_master_translator "submodules/altera_merlin_master_translator"
+2012.10.15.16:14:27 [Info] nios2_qsys_0_instruction_master_translator: "<b>system_0</b>" instantiated <b>altera_merlin_master_translator</b> "<b>nios2_qsys_0_instruction_master_translator</b>"
+2012.10.15.16:14:27 [Debug] system_0: queue size: 120 starting:altera_merlin_slave_translator "submodules/altera_merlin_slave_translator"
+2012.10.15.16:14:27 [Info] nios2_qsys_0_jtag_debug_module_translator: "<b>system_0</b>" instantiated <b>altera_merlin_slave_translator</b> "<b>nios2_qsys_0_jtag_debug_module_translator</b>"
+2012.10.15.16:14:27 [Debug] system_0: queue size: 102 starting:altera_merlin_slave_agent "submodules/altera_merlin_slave_agent"
+2012.10.15.16:14:27 [Info] SD_CMD_s1_translator_avalon_universal_slave_0_agent: "<b>system_0</b>" instantiated <b>altera_merlin_slave_agent</b> "<b>SD_CMD_s1_translator_avalon_universal_slave_0_agent</b>"
+2012.10.15.16:14:27 [Debug] system_0: queue size: 101 starting:altera_avalon_sc_fifo "submodules/altera_avalon_sc_fifo"
+2012.10.15.16:14:27 [Info] SD_CMD_s1_translator_avalon_universal_slave_0_agent_rsp_fifo: "<b>system_0</b>" instantiated <b>altera_avalon_sc_fifo</b> "<b>SD_CMD_s1_translator_avalon_universal_slave_0_agent_rsp_fifo</b>"
+2012.10.15.16:14:27 [Debug] system_0: queue size: 76 starting:altera_merlin_master_agent "submodules/altera_merlin_master_agent"
+2012.10.15.16:14:27 [Info] nios2_qsys_0_instruction_master_translator_avalon_universal_master_0_agent: "<b>system_0</b>" instantiated <b>altera_merlin_master_agent</b> "<b>nios2_qsys_0_instruction_master_translator_avalon_universal_master_0_agent</b>"
+2012.10.15.16:14:27 [Debug] system_0: queue size: 64 starting:altera_merlin_router "submodules/system_0_addr_router"
+2012.10.15.16:14:27 [Info] addr_router: "<b>system_0</b>" instantiated <b>altera_merlin_router</b> "<b>addr_router</b>"
+2012.10.15.16:14:27 [Debug] system_0: queue size: 63 starting:altera_merlin_router "submodules/system_0_addr_router_001"
+2012.10.15.16:14:27 [Info] addr_router_001: "<b>system_0</b>" instantiated <b>altera_merlin_router</b> "<b>addr_router_001</b>"
+2012.10.15.16:14:27 [Debug] system_0: queue size: 62 starting:altera_merlin_router "submodules/system_0_id_router"
+2012.10.15.16:14:27 [Info] id_router: "<b>system_0</b>" instantiated <b>altera_merlin_router</b> "<b>id_router</b>"
+2012.10.15.16:14:27 [Debug] system_0: queue size: 61 starting:altera_merlin_router "submodules/system_0_id_router_001"
+2012.10.15.16:14:27 [Info] id_router_001: "<b>system_0</b>" instantiated <b>altera_merlin_router</b> "<b>id_router_001</b>"
+2012.10.15.16:14:27 [Debug] system_0: queue size: 59 starting:altera_merlin_router "submodules/system_0_id_router_003"
+2012.10.15.16:14:27 [Info] id_router_003: "<b>system_0</b>" instantiated <b>altera_merlin_router</b> "<b>id_router_003</b>"
+2012.10.15.16:14:27 [Debug] system_0: queue size: 57 starting:altera_merlin_router "submodules/system_0_id_router_005"
+2012.10.15.16:14:27 [Info] id_router_005: "<b>system_0</b>" instantiated <b>altera_merlin_router</b> "<b>id_router_005</b>"
+2012.10.15.16:14:27 [Debug] system_0: queue size: 44 starting:altera_merlin_traffic_limiter "submodules/altera_merlin_traffic_limiter"
+2012.10.15.16:14:27 [Info] limiter: "<b>system_0</b>" instantiated <b>altera_merlin_traffic_limiter</b> "<b>limiter</b>"
+2012.10.15.16:14:27 [Debug] system_0: queue size: 42 starting:altera_merlin_burst_adapter "submodules/altera_merlin_burst_adapter"
+2012.10.15.16:14:27 [Info] burst_adapter: "<b>system_0</b>" instantiated <b>altera_merlin_burst_adapter</b> "<b>burst_adapter</b>"
+2012.10.15.16:14:27 [Debug] system_0: queue size: 39 starting:altera_reset_controller "submodules/altera_reset_controller"
+2012.10.15.16:14:27 [Info] rst_controller: "<b>system_0</b>" instantiated <b>altera_reset_controller</b> "<b>rst_controller</b>"
+2012.10.15.16:14:27 [Debug] system_0: queue size: 38 starting:altera_merlin_demultiplexer "submodules/system_0_cmd_xbar_demux"
+2012.10.15.16:14:27 [Info] cmd_xbar_demux: "<b>system_0</b>" instantiated <b>altera_merlin_demultiplexer</b> "<b>cmd_xbar_demux</b>"
+2012.10.15.16:14:27 [Debug] system_0: queue size: 37 starting:altera_merlin_demultiplexer "submodules/system_0_cmd_xbar_demux_001"
+2012.10.15.16:14:27 [Info] cmd_xbar_demux_001: "<b>system_0</b>" instantiated <b>altera_merlin_demultiplexer</b> "<b>cmd_xbar_demux_001</b>"
+2012.10.15.16:14:27 [Debug] system_0: queue size: 36 starting:altera_merlin_multiplexer "submodules/system_0_cmd_xbar_mux"
+2012.10.15.16:14:27 [Info] cmd_xbar_mux: "<b>system_0</b>" instantiated <b>altera_merlin_multiplexer</b> "<b>cmd_xbar_mux</b>"
+2012.10.15.16:14:27 [Debug] system_0: queue size: 31 starting:altera_merlin_demultiplexer "submodules/system_0_rsp_xbar_demux"
+2012.10.15.16:14:27 [Info] rsp_xbar_demux: "<b>system_0</b>" instantiated <b>altera_merlin_demultiplexer</b> "<b>rsp_xbar_demux</b>"
+2012.10.15.16:14:27 [Debug] system_0: queue size: 26 starting:altera_merlin_demultiplexer "submodules/system_0_rsp_xbar_demux_005"
+2012.10.15.16:14:27 [Info] rsp_xbar_demux_005: "<b>system_0</b>" instantiated <b>altera_merlin_demultiplexer</b> "<b>rsp_xbar_demux_005</b>"
+2012.10.15.16:14:27 [Debug] system_0: queue size: 13 starting:altera_merlin_multiplexer "submodules/system_0_rsp_xbar_mux"
+2012.10.15.16:14:28 [Info] rsp_xbar_mux: "<b>system_0</b>" instantiated <b>altera_merlin_multiplexer</b> "<b>rsp_xbar_mux</b>"
+2012.10.15.16:14:28 [Info] Reusing file <b>E:/TASKs/DE1/test/DE1_SD_Card_Audio_Test_1/system_0/synthesis/submodules/altera_merlin_arbitrator.sv</b>
+2012.10.15.16:14:28 [Debug] system_0: queue size: 12 starting:altera_merlin_multiplexer "submodules/system_0_rsp_xbar_mux_001"
+2012.10.15.16:14:28 [Info] rsp_xbar_mux_001: "<b>system_0</b>" instantiated <b>altera_merlin_multiplexer</b> "<b>rsp_xbar_mux_001</b>"
+2012.10.15.16:14:28 [Info] Reusing file <b>E:/TASKs/DE1/test/DE1_SD_Card_Audio_Test_1/system_0/synthesis/submodules/altera_merlin_arbitrator.sv</b>
+2012.10.15.16:14:28 [Debug] system_0: queue size: 11 starting:altera_merlin_width_adapter "submodules/altera_merlin_width_adapter"
+2012.10.15.16:14:28 [Info] width_adapter: "<b>system_0</b>" instantiated <b>altera_merlin_width_adapter</b> "<b>width_adapter</b>"
+2012.10.15.16:14:28 [Info] Reusing file <b>E:/TASKs/DE1/test/DE1_SD_Card_Audio_Test_1/system_0/synthesis/submodules/altera_merlin_burst_uncompressor.sv</b>
+2012.10.15.16:14:28 [Debug] system_0: queue size: 5 starting:altera_irq_mapper "submodules/system_0_irq_mapper"
+2012.10.15.16:14:28 [Info] irq_mapper: "<b>system_0</b>" instantiated <b>altera_irq_mapper</b> "<b>irq_mapper</b>"
+2012.10.15.16:14:28 [Debug] system_0: queue size: 4 starting:altera_tristate_conduit_pin_sharer_core "submodules/system_0_tri_state_bridge_0_pinSharer_0_pin_sharer"
+2012.10.15.16:14:28 [Info] pin_sharer: "<b>tri_state_bridge_0_pinSharer_0</b>" instantiated <b>altera_tristate_conduit_pin_sharer_core</b> "<b>pin_sharer</b>"
+2012.10.15.16:14:28 [Debug] system_0: queue size: 3 starting:altera_merlin_std_arbitrator "submodules/system_0_tri_state_bridge_0_pinSharer_0_arbiter"
+2012.10.15.16:14:28 [Info] arbiter: "<b>tri_state_bridge_0_pinSharer_0</b>" instantiated <b>altera_merlin_std_arbitrator</b> "<b>arbiter</b>"
+2012.10.15.16:14:28 [Debug] system_0: queue size: 2 starting:altera_tristate_controller_translator "submodules/altera_tristate_controller_translator"
+2012.10.15.16:14:28 [Info] tdt: "<b>cfi_flash_0</b>" instantiated <b>altera_tristate_controller_translator</b> "<b>tdt</b>"
+2012.10.15.16:14:28 [Debug] system_0: queue size: 0 starting:altera_tristate_controller_aggregator "submodules/altera_tristate_controller_aggregator"
+2012.10.15.16:14:28 [Info] tda: "<b>cfi_flash_0</b>" instantiated <b>altera_tristate_controller_aggregator</b> "<b>tda</b>"
+2012.10.15.16:14:28 [Info] system_0: Done <b>system_0</b>" with 46 modules, 201 files, 3746278 bytes
+</div>
+  <div style="width:100% ; background:#eee ; height:10px"> </div>
+ </body>
+</html>
