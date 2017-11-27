@@ -1,0 +1,61 @@
+﻿C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets(387,5): warning MSB8028: The intermediate directory (C:\Users\Rafael\Downloads\Sparky-core\bin\Release\Intermediates\) contains files shared from another project (Sparky-core (Develop).vcxproj).  This can lead to incorrect clean and rebuild behavior.
+cl : Command line warning D9002: ignoring unknown option '/arch:SSE2'
+  Game.cpp
+c:\users\rafael\downloads\sparky-core\sparky-core (develop)\src\maths\Maths_func.h(16): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.15063.0\shared\minwindef.h(130): warning C4005: 'APIENTRY': macro redefinition
+  C:\Users\Rafael\Downloads\Sparky-core\Dependencias\GLFW\include\GLFW/glfw3.h(98): note: see previous definition of 'APIENTRY'
+C:\Users\Rafael\Downloads\Sparky-core\Sparky-core (Develop)\src\utils/Log.h(183): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\Rafael\Downloads\Sparky-core\Sparky-core (Develop)\src\utils/Log.h(195): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\Rafael\Downloads\Sparky-core\Sparky-core (Develop)\src\utils/Log.h(207): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\Rafael\Downloads\Sparky-core\Sparky-core (Develop)\src\utils/Log.h(219): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+c:\users\rafael\downloads\sparky-core\sparky-core (develop)\src\graphics\../utils/ColorFormat.h(12): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+c:\users\rafael\downloads\sparky-core\sparky-core (develop)\src\graphics\../utils/ColorFormat.h(13): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+c:\users\rafael\downloads\sparky-core\sparky-core (develop)\src\graphics\../utils/ColorFormat.h(14): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+c:\users\rafael\downloads\sparky-core\sparky-core (develop)\src\graphics\../utils/ColorFormat.h(15): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+src\Game.cpp(55): warning C4244: '=': conversion from '__int64' to 'unsigned int', possible loss of data
+C:\Users\Rafael\Downloads\Sparky-core\Sparky-core (Develop)\src\utils/Log.h(124): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  C:\Users\Rafael\Downloads\Sparky-core\Sparky-core (Develop)\src\utils/Log.h(138): note: see reference to function template instantiation 'void Sparky::Internal::print_log_internal<_Ty,_Ty>(char *,int &,First &&,_Ty &&)' being compiled
+          with
+          [
+              _Ty=const char *,
+              First=const char *
+          ]
+  src\Game.cpp(55): note: see reference to function template instantiation 'void Sparky::Internal::log_message<const char*,const char*>(int,bool,const char *,const char *)' being compiled
+C:\Users\Rafael\Downloads\Sparky-core\Sparky-core (Develop)\src\utils/Log.h(115): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  C:\Users\Rafael\Downloads\Sparky-core\Sparky-core (Develop)\src\utils/Log.h(138): note: see reference to function template instantiation 'void Sparky::Internal::print_log_internal<_Ty>(char *,int &,First &&)' being compiled
+          with
+          [
+              _Ty=const char *,
+              First=const char *
+          ]
+  src\Game.cpp(55): note: see reference to function template instantiation 'void Sparky::Internal::log_message<const char*>(int,bool,const char *)' being compiled
+MSVCRT.lib(initializers.obj) : warning LNK4098: defaultlib 'libcmt.lib' conflicts with use of other libs; use /NODEFAULTLIB:library
+  Generating code
+  151 of 2885 functions ( 5.2%) were compiled, the rest were copied from previous compilation.
+    16 functions were new in current compilation
+    42 functions had inline decision re-evaluated but remain unchanged
+  Finished generating code
+libvorbis.lib(vorbisfile.obj) : warning LNK4099: PDB 'libvorbis.pdb' was not found with 'libvorbis.lib(vorbisfile.obj)' or at 'C:\Users\Rafael\Downloads\Sparky-core\bin\Release\libvorbis.pdb'; linking object as if no debug info
+libvorbis.lib(block.obj) : warning LNK4099: PDB 'libvorbis.pdb' was not found with 'libvorbis.lib(block.obj)' or at 'C:\Users\Rafael\Downloads\Sparky-core\bin\Release\libvorbis.pdb'; linking object as if no debug info
+libvorbis.lib(analysis.obj) : warning LNK4099: PDB 'libvorbis.pdb' was not found with 'libvorbis.lib(analysis.obj)' or at 'C:\Users\Rafael\Downloads\Sparky-core\bin\Release\libvorbis.pdb'; linking object as if no debug info
+libvorbis.lib(info.obj) : warning LNK4099: PDB 'libvorbis.pdb' was not found with 'libvorbis.lib(info.obj)' or at 'C:\Users\Rafael\Downloads\Sparky-core\bin\Release\libvorbis.pdb'; linking object as if no debug info
+libvorbis.lib(synthesis.obj) : warning LNK4099: PDB 'libvorbis.pdb' was not found with 'libvorbis.lib(synthesis.obj)' or at 'C:\Users\Rafael\Downloads\Sparky-core\bin\Release\libvorbis.pdb'; linking object as if no debug info
+libvorbis.lib(bitrate.obj) : warning LNK4099: PDB 'libvorbis.pdb' was not found with 'libvorbis.lib(bitrate.obj)' or at 'C:\Users\Rafael\Downloads\Sparky-core\bin\Release\libvorbis.pdb'; linking object as if no debug info
+libvorbis.lib(lpc.obj) : warning LNK4099: PDB 'libvorbis.pdb' was not found with 'libvorbis.lib(lpc.obj)' or at 'C:\Users\Rafael\Downloads\Sparky-core\bin\Release\libvorbis.pdb'; linking object as if no debug info
+libvorbis.lib(sharedbook.obj) : warning LNK4099: PDB 'libvorbis.pdb' was not found with 'libvorbis.lib(sharedbook.obj)' or at 'C:\Users\Rafael\Downloads\Sparky-core\bin\Release\libvorbis.pdb'; linking object as if no debug info
+libvorbis.lib(registry.obj) : warning LNK4099: PDB 'libvorbis.pdb' was not found with 'libvorbis.lib(registry.obj)' or at 'C:\Users\Rafael\Downloads\Sparky-core\bin\Release\libvorbis.pdb'; linking object as if no debug info
+libvorbis.lib(envelope.obj) : warning LNK4099: PDB 'libvorbis.pdb' was not found with 'libvorbis.lib(envelope.obj)' or at 'C:\Users\Rafael\Downloads\Sparky-core\bin\Release\libvorbis.pdb'; linking object as if no debug info
+libvorbis.lib(psy.obj) : warning LNK4099: PDB 'libvorbis.pdb' was not found with 'libvorbis.lib(psy.obj)' or at 'C:\Users\Rafael\Downloads\Sparky-core\bin\Release\libvorbis.pdb'; linking object as if no debug info
+libvorbis.lib(mdct.obj) : warning LNK4099: PDB 'libvorbis.pdb' was not found with 'libvorbis.lib(mdct.obj)' or at 'C:\Users\Rafael\Downloads\Sparky-core\bin\Release\libvorbis.pdb'; linking object as if no debug info
+libvorbis.lib(smallft.obj) : warning LNK4099: PDB 'libvorbis.pdb' was not found with 'libvorbis.lib(smallft.obj)' or at 'C:\Users\Rafael\Downloads\Sparky-core\bin\Release\libvorbis.pdb'; linking object as if no debug info
+libvorbis.lib(window.obj) : warning LNK4099: PDB 'libvorbis.pdb' was not found with 'libvorbis.lib(window.obj)' or at 'C:\Users\Rafael\Downloads\Sparky-core\bin\Release\libvorbis.pdb'; linking object as if no debug info
+libvorbis.lib(codebook.obj) : warning LNK4099: PDB 'libvorbis.pdb' was not found with 'libvorbis.lib(codebook.obj)' or at 'C:\Users\Rafael\Downloads\Sparky-core\bin\Release\libvorbis.pdb'; linking object as if no debug info
+libvorbis.lib(floor0.obj) : warning LNK4099: PDB 'libvorbis.pdb' was not found with 'libvorbis.lib(floor0.obj)' or at 'C:\Users\Rafael\Downloads\Sparky-core\bin\Release\libvorbis.pdb'; linking object as if no debug info
+libvorbis.lib(mapping0.obj) : warning LNK4099: PDB 'libvorbis.pdb' was not found with 'libvorbis.lib(mapping0.obj)' or at 'C:\Users\Rafael\Downloads\Sparky-core\bin\Release\libvorbis.pdb'; linking object as if no debug info
+libvorbis.lib(res0.obj) : warning LNK4099: PDB 'libvorbis.pdb' was not found with 'libvorbis.lib(res0.obj)' or at 'C:\Users\Rafael\Downloads\Sparky-core\bin\Release\libvorbis.pdb'; linking object as if no debug info
+libvorbis.lib(floor1.obj) : warning LNK4099: PDB 'libvorbis.pdb' was not found with 'libvorbis.lib(floor1.obj)' or at 'C:\Users\Rafael\Downloads\Sparky-core\bin\Release\libvorbis.pdb'; linking object as if no debug info
+libvorbis.lib(lsp.obj) : warning LNK4099: PDB 'libvorbis.pdb' was not found with 'libvorbis.lib(lsp.obj)' or at 'C:\Users\Rafael\Downloads\Sparky-core\bin\Release\libvorbis.pdb'; linking object as if no debug info
+libogg.lib(framing.obj) : warning LNK4099: PDB 'libogg.pdb' was not found with 'libogg.lib(framing.obj)' or at 'C:\Users\Rafael\Downloads\Sparky-core\bin\Release\libogg.pdb'; linking object as if no debug info
+libogg.lib(bitwise.obj) : warning LNK4099: PDB 'libogg.pdb' was not found with 'libogg.lib(bitwise.obj)' or at 'C:\Users\Rafael\Downloads\Sparky-core\bin\Release\libogg.pdb'; linking object as if no debug info
+glew32s.lib(glew.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'glew32s.lib(glew.obj)' or at 'C:\Users\Rafael\Downloads\Sparky-core\bin\Release\vc120.pdb'; linking object as if no debug info
+  SandBox.vcxproj -> C:\Users\Rafael\Downloads\Sparky-core\bin\Release\SandBox.exe

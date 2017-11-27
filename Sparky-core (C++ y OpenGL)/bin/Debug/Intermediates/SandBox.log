@@ -1,0 +1,35 @@
+﻿C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets(387,5): warning MSB8028: The intermediate directory (C:\Users\Rafael\Downloads\Sparky-core\bin\Debug\Intermediates\) contains files shared from another project (Sparky-core (Develop).vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  Game.cpp
+c:\program files (x86)\windows kits\10\include\10.0.15063.0\shared\minwindef.h(130): warning C4005: 'APIENTRY': macro redefinition
+  c:\users\rafael\downloads\sparky-core\dependencias\glfw\include\glfw\glfw3.h(98): note: see previous definition of 'APIENTRY'
+  libvorbis.lib(vorbisfile.obj) : MSIL .netmodule or module compiled with /GL found; restarting link with /LTCG; add /LTCG to the link command line to improve linker performance
+LINK : warning LNK4075: ignoring '/INCREMENTAL' due to '/LTCG' specification
+MSVCRTD.lib(initializers.obj) : warning LNK4098: defaultlib 'msvcrt.lib' conflicts with use of other libs; use /NODEFAULTLIB:library
+MSVCRTD.lib(initializers.obj) : warning LNK4098: defaultlib 'libcmt.lib' conflicts with use of other libs; use /NODEFAULTLIB:library
+  Generating code
+  Finished generating code
+libvorbis.lib(vorbisfile.obj) : warning LNK4099: PDB 'libvorbis.pdb' was not found with 'libvorbis.lib(vorbisfile.obj)' or at 'C:\Users\Rafael\Downloads\Sparky-core\bin\Debug\libvorbis.pdb'; linking object as if no debug info
+libvorbis.lib(block.obj) : warning LNK4099: PDB 'libvorbis.pdb' was not found with 'libvorbis.lib(block.obj)' or at 'C:\Users\Rafael\Downloads\Sparky-core\bin\Debug\libvorbis.pdb'; linking object as if no debug info
+libvorbis.lib(analysis.obj) : warning LNK4099: PDB 'libvorbis.pdb' was not found with 'libvorbis.lib(analysis.obj)' or at 'C:\Users\Rafael\Downloads\Sparky-core\bin\Debug\libvorbis.pdb'; linking object as if no debug info
+libvorbis.lib(info.obj) : warning LNK4099: PDB 'libvorbis.pdb' was not found with 'libvorbis.lib(info.obj)' or at 'C:\Users\Rafael\Downloads\Sparky-core\bin\Debug\libvorbis.pdb'; linking object as if no debug info
+libvorbis.lib(synthesis.obj) : warning LNK4099: PDB 'libvorbis.pdb' was not found with 'libvorbis.lib(synthesis.obj)' or at 'C:\Users\Rafael\Downloads\Sparky-core\bin\Debug\libvorbis.pdb'; linking object as if no debug info
+libvorbis.lib(bitrate.obj) : warning LNK4099: PDB 'libvorbis.pdb' was not found with 'libvorbis.lib(bitrate.obj)' or at 'C:\Users\Rafael\Downloads\Sparky-core\bin\Debug\libvorbis.pdb'; linking object as if no debug info
+libvorbis.lib(lpc.obj) : warning LNK4099: PDB 'libvorbis.pdb' was not found with 'libvorbis.lib(lpc.obj)' or at 'C:\Users\Rafael\Downloads\Sparky-core\bin\Debug\libvorbis.pdb'; linking object as if no debug info
+libvorbis.lib(sharedbook.obj) : warning LNK4099: PDB 'libvorbis.pdb' was not found with 'libvorbis.lib(sharedbook.obj)' or at 'C:\Users\Rafael\Downloads\Sparky-core\bin\Debug\libvorbis.pdb'; linking object as if no debug info
+libvorbis.lib(registry.obj) : warning LNK4099: PDB 'libvorbis.pdb' was not found with 'libvorbis.lib(registry.obj)' or at 'C:\Users\Rafael\Downloads\Sparky-core\bin\Debug\libvorbis.pdb'; linking object as if no debug info
+libvorbis.lib(envelope.obj) : warning LNK4099: PDB 'libvorbis.pdb' was not found with 'libvorbis.lib(envelope.obj)' or at 'C:\Users\Rafael\Downloads\Sparky-core\bin\Debug\libvorbis.pdb'; linking object as if no debug info
+libvorbis.lib(psy.obj) : warning LNK4099: PDB 'libvorbis.pdb' was not found with 'libvorbis.lib(psy.obj)' or at 'C:\Users\Rafael\Downloads\Sparky-core\bin\Debug\libvorbis.pdb'; linking object as if no debug info
+libvorbis.lib(mdct.obj) : warning LNK4099: PDB 'libvorbis.pdb' was not found with 'libvorbis.lib(mdct.obj)' or at 'C:\Users\Rafael\Downloads\Sparky-core\bin\Debug\libvorbis.pdb'; linking object as if no debug info
+libvorbis.lib(smallft.obj) : warning LNK4099: PDB 'libvorbis.pdb' was not found with 'libvorbis.lib(smallft.obj)' or at 'C:\Users\Rafael\Downloads\Sparky-core\bin\Debug\libvorbis.pdb'; linking object as if no debug info
+libvorbis.lib(window.obj) : warning LNK4099: PDB 'libvorbis.pdb' was not found with 'libvorbis.lib(window.obj)' or at 'C:\Users\Rafael\Downloads\Sparky-core\bin\Debug\libvorbis.pdb'; linking object as if no debug info
+libvorbis.lib(codebook.obj) : warning LNK4099: PDB 'libvorbis.pdb' was not found with 'libvorbis.lib(codebook.obj)' or at 'C:\Users\Rafael\Downloads\Sparky-core\bin\Debug\libvorbis.pdb'; linking object as if no debug info
+libvorbis.lib(floor0.obj) : warning LNK4099: PDB 'libvorbis.pdb' was not found with 'libvorbis.lib(floor0.obj)' or at 'C:\Users\Rafael\Downloads\Sparky-core\bin\Debug\libvorbis.pdb'; linking object as if no debug info
+libvorbis.lib(mapping0.obj) : warning LNK4099: PDB 'libvorbis.pdb' was not found with 'libvorbis.lib(mapping0.obj)' or at 'C:\Users\Rafael\Downloads\Sparky-core\bin\Debug\libvorbis.pdb'; linking object as if no debug info
+libvorbis.lib(res0.obj) : warning LNK4099: PDB 'libvorbis.pdb' was not found with 'libvorbis.lib(res0.obj)' or at 'C:\Users\Rafael\Downloads\Sparky-core\bin\Debug\libvorbis.pdb'; linking object as if no debug info
+libvorbis.lib(floor1.obj) : warning LNK4099: PDB 'libvorbis.pdb' was not found with 'libvorbis.lib(floor1.obj)' or at 'C:\Users\Rafael\Downloads\Sparky-core\bin\Debug\libvorbis.pdb'; linking object as if no debug info
+libvorbis.lib(lsp.obj) : warning LNK4099: PDB 'libvorbis.pdb' was not found with 'libvorbis.lib(lsp.obj)' or at 'C:\Users\Rafael\Downloads\Sparky-core\bin\Debug\libvorbis.pdb'; linking object as if no debug info
+libogg.lib(framing.obj) : warning LNK4099: PDB 'libogg.pdb' was not found with 'libogg.lib(framing.obj)' or at 'C:\Users\Rafael\Downloads\Sparky-core\bin\Debug\libogg.pdb'; linking object as if no debug info
+libogg.lib(bitwise.obj) : warning LNK4099: PDB 'libogg.pdb' was not found with 'libogg.lib(bitwise.obj)' or at 'C:\Users\Rafael\Downloads\Sparky-core\bin\Debug\libogg.pdb'; linking object as if no debug info
+glew32s.lib(glew.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'glew32s.lib(glew.obj)' or at 'C:\Users\Rafael\Downloads\Sparky-core\bin\Debug\vc120.pdb'; linking object as if no debug info
+  SandBox.vcxproj -> C:\Users\Rafael\Downloads\Sparky-core\bin\Debug\SandBox.exe
+  SandBox.vcxproj -> C:\Users\Rafael\Downloads\Sparky-core\bin\Debug\SandBox.pdb (Partial PDB)

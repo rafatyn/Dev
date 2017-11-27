@@ -1,0 +1,32 @@
+#pragma once
+
+#include <string>
+#include <fstream>
+#include <utils/Log.h>
+
+namespace Sparky {
+	
+	static std::string read_file(const char *filename)
+	{
+		FILE* file = fopen(filename, "rt");
+
+		if (file == NULL) {
+			SPARKY_ERROR("[Utils] Cannot open file with name ", filename);
+			return std::string("");
+		}
+
+		fseek(file, 0, SEEK_END);
+		unsigned long length = ftell(file);
+		char *data = new char[length + 1];
+		memset(data, 0, length + 1);
+		fseek(file, 0, SEEK_SET);
+		fread(data, 1, length, file);
+		fclose(file);
+
+
+		std::string result(data);
+		delete[] data;
+
+		return result;
+	}
+}

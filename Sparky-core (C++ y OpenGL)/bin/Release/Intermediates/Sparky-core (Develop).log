@@ -1,0 +1,346 @@
+﻿C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets(387,5): warning MSB8028: The intermediate directory (C:\Users\Rafael\Downloads\Sparky-core\bin\Release\Intermediates\) contains files shared from another project (SandBox.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+cl : Command line warning D9002: ignoring unknown option '/arch:SSE2'
+  TileLayer.cpp
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\shared\minwindef.h(130): warning C4005: 'APIENTRY': macro redefinition
+  C:\Users\Rafael\Downloads\Sparky-core\Dependencias\GLFW\include\GLFW/glfw3.h(98): note: see previous definition of 'APIENTRY'
+C:\Users\Rafael\Downloads\Sparky-core\Sparky-core (Develop)\src\utils/Log.h(183): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\Rafael\Downloads\Sparky-core\Sparky-core (Develop)\src\utils/Log.h(195): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\Rafael\Downloads\Sparky-core\Sparky-core (Develop)\src\utils/Log.h(207): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\Rafael\Downloads\Sparky-core\Sparky-core (Develop)\src\utils/Log.h(219): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+c:\users\rafael\downloads\sparky-core\sparky-core (develop)\src\maths\Maths_func.h(16): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
+c:\users\rafael\downloads\sparky-core\sparky-core (develop)\src\graphics\../utils/ColorFormat.h(12): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+c:\users\rafael\downloads\sparky-core\sparky-core (develop)\src\graphics\../utils/ColorFormat.h(13): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+c:\users\rafael\downloads\sparky-core\sparky-core (develop)\src\graphics\../utils/ColorFormat.h(14): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+c:\users\rafael\downloads\sparky-core\sparky-core (develop)\src\graphics\../utils/ColorFormat.h(15): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+  BatchRenderer2D.cpp
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\shared\minwindef.h(130): warning C4005: 'APIENTRY': macro redefinition
+  C:\Users\Rafael\Downloads\Sparky-core\Dependencias\GLFW\include\GLFW/glfw3.h(98): note: see previous definition of 'APIENTRY'
+C:\Users\Rafael\Downloads\Sparky-core\Sparky-core (Develop)\src\utils/Log.h(183): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\Rafael\Downloads\Sparky-core\Sparky-core (Develop)\src\utils/Log.h(195): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\Rafael\Downloads\Sparky-core\Sparky-core (Develop)\src\utils/Log.h(207): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\Rafael\Downloads\Sparky-core\Sparky-core (Develop)\src\utils/Log.h(219): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+c:\users\rafael\downloads\sparky-core\sparky-core (develop)\src\maths\Maths_func.h(16): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
+c:\users\rafael\downloads\sparky-core\sparky-core (develop)\src\graphics\../utils/ColorFormat.h(12): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+c:\users\rafael\downloads\sparky-core\sparky-core (develop)\src\graphics\../utils/ColorFormat.h(13): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+c:\users\rafael\downloads\sparky-core\sparky-core (develop)\src\graphics\../utils/ColorFormat.h(14): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+c:\users\rafael\downloads\sparky-core\sparky-core (develop)\src\graphics\../utils/ColorFormat.h(15): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+  Font.cpp
+C:\Users\Rafael\Downloads\Sparky-core\Sparky-core (Develop)\src\utils/Log.h(183): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\Rafael\Downloads\Sparky-core\Sparky-core (Develop)\src\utils/Log.h(195): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\Rafael\Downloads\Sparky-core\Sparky-core (Develop)\src\utils/Log.h(207): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\Rafael\Downloads\Sparky-core\Sparky-core (Develop)\src\utils/Log.h(219): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+c:\users\rafael\downloads\sparky-core\sparky-core (develop)\src\maths\Maths_func.h(16): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
+src\graphics\Font.cpp(10): warning C4244: 'argument': conversion from 'unsigned int' to 'const float', possible loss of data
+C:\Users\Rafael\Downloads\Sparky-core\Sparky-core (Develop)\src\utils/Log.h(124): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  C:\Users\Rafael\Downloads\Sparky-core\Sparky-core (Develop)\src\utils/Log.h(138): note: see reference to function template instantiation 'void Sparky::Internal::print_log_internal<_Ty,_Ty>(char *,int &,First &&,_Ty &&)' being compiled
+          with
+          [
+              _Ty=const char *,
+              First=const char *
+          ]
+  src\graphics\Font.cpp(13): note: see reference to function template instantiation 'void Sparky::Internal::log_message<const char*,const char*>(int,bool,const char *,const char *)' being compiled
+C:\Users\Rafael\Downloads\Sparky-core\Sparky-core (Develop)\src\utils/Log.h(115): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  C:\Users\Rafael\Downloads\Sparky-core\Sparky-core (Develop)\src\utils/Log.h(129): note: see reference to function template instantiation 'void Sparky::Internal::print_log_internal<_Ty>(char *,int &,First &&)' being compiled
+          with
+          [
+              _Ty=const char *,
+              First=const char *
+          ]
+  C:\Users\Rafael\Downloads\Sparky-core\Sparky-core (Develop)\src\utils/Log.h(138): note: see reference to function template instantiation 'void Sparky::Internal::print_log_internal<_Ty,_Ty>(char *,int &,First &&,_Ty &&)' being compiled
+          with
+          [
+              _Ty=const char *,
+              First=const char *
+          ]
+  FontManager.cpp
+C:\Users\Rafael\Downloads\Sparky-core\Sparky-core (Develop)\src\utils/Log.h(183): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\Rafael\Downloads\Sparky-core\Sparky-core (Develop)\src\utils/Log.h(195): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\Rafael\Downloads\Sparky-core\Sparky-core (Develop)\src\utils/Log.h(207): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\Rafael\Downloads\Sparky-core\Sparky-core (Develop)\src\utils/Log.h(219): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+c:\users\rafael\downloads\sparky-core\sparky-core (develop)\src\maths\Maths_func.h(16): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
+C:\Users\Rafael\Downloads\Sparky-core\Sparky-core (Develop)\src\utils/Log.h(124): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  C:\Users\Rafael\Downloads\Sparky-core\Sparky-core (Develop)\src\utils/Log.h(138): note: see reference to function template instantiation 'void Sparky::Internal::print_log_internal<_Ty,_Ty,std::basic_string<char,std::char_traits<char>,std::allocator<char>>,_Ty>(char *,int &,First &&,_Ty &&,std::basic_string<char,std::char_traits<char>,std::allocator<char>> &&,_Ty &&)' being compiled
+          with
+          [
+              _Ty=const char *,
+              First=const char *
+          ]
+  src\graphics\FontManager.cpp(30): note: see reference to function template instantiation 'void Sparky::Internal::log_message<const char*,const char*,std::string,const char*>(int,bool,const char *,const char *,std::string,const char *)' being compiled
+C:\Users\Rafael\Downloads\Sparky-core\Sparky-core (Develop)\src\utils/Log.h(115): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  C:\Users\Rafael\Downloads\Sparky-core\Sparky-core (Develop)\src\utils/Log.h(129): note: see reference to function template instantiation 'void Sparky::Internal::print_log_internal<_Ty>(char *,int &,First &&)' being compiled
+          with
+          [
+              _Ty=const char *,
+              First=const char *
+          ]
+  C:\Users\Rafael\Downloads\Sparky-core\Sparky-core (Develop)\src\utils/Log.h(129): note: see reference to function template instantiation 'void Sparky::Internal::print_log_internal<_Ty,const char*>(char *,int &,First &&,const char *&&)' being compiled
+          with
+          [
+              _Ty=std::string,
+              First=std::string
+          ]
+  Label.cpp
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\shared\minwindef.h(130): warning C4005: 'APIENTRY': macro redefinition
+  C:\Users\Rafael\Downloads\Sparky-core\Dependencias\GLFW\include\GLFW/glfw3.h(98): note: see previous definition of 'APIENTRY'
+C:\Users\Rafael\Downloads\Sparky-core\Sparky-core (Develop)\src\utils/Log.h(183): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\Rafael\Downloads\Sparky-core\Sparky-core (Develop)\src\utils/Log.h(195): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\Rafael\Downloads\Sparky-core\Sparky-core (Develop)\src\utils/Log.h(207): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\Rafael\Downloads\Sparky-core\Sparky-core (Develop)\src\utils/Log.h(219): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+c:\users\rafael\downloads\sparky-core\sparky-core (develop)\src\maths\Maths_func.h(16): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
+c:\users\rafael\downloads\sparky-core\sparky-core (develop)\src\graphics\../utils/ColorFormat.h(12): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+c:\users\rafael\downloads\sparky-core\sparky-core (develop)\src\graphics\../utils/ColorFormat.h(13): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+c:\users\rafael\downloads\sparky-core\sparky-core (develop)\src\graphics\../utils/ColorFormat.h(14): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+c:\users\rafael\downloads\sparky-core\sparky-core (develop)\src\graphics\../utils/ColorFormat.h(15): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\Rafael\Downloads\Sparky-core\Sparky-core (Develop)\src\utils/Log.h(124): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  C:\Users\Rafael\Downloads\Sparky-core\Sparky-core (Develop)\src\utils/Log.h(138): note: see reference to function template instantiation 'void Sparky::Internal::print_log_internal<_Ty,_Ty,std::basic_string<char,std::char_traits<char>,std::allocator<char>>>(char *,int &,First &&,_Ty &&,std::basic_string<char,std::char_traits<char>,std::allocator<char>> &&)' being compiled
+          with
+          [
+              _Ty=const char *,
+              First=const char *
+          ]
+  src\graphics\Label.cpp(48): note: see reference to function template instantiation 'void Sparky::Internal::log_message<const char*,const char*,std::string>(int,bool,const char *,const char *,std::string)' being compiled
+C:\Users\Rafael\Downloads\Sparky-core\Sparky-core (Develop)\src\utils/Log.h(115): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  C:\Users\Rafael\Downloads\Sparky-core\Sparky-core (Develop)\src\utils/Log.h(138): note: see reference to function template instantiation 'void Sparky::Internal::print_log_internal<_Ty>(char *,int &,First &&)' being compiled
+          with
+          [
+              _Ty=const char *,
+              First=const char *
+          ]
+  src\graphics\Label.cpp(52): note: see reference to function template instantiation 'void Sparky::Internal::log_message<const char*>(int,bool,const char *)' being compiled
+  Shader.cpp
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\shared\minwindef.h(130): warning C4005: 'APIENTRY': macro redefinition
+  C:\Users\Rafael\Downloads\Sparky-core\Dependencias\GLFW\include\GLFW/glfw3.h(98): note: see previous definition of 'APIENTRY'
+C:\Users\Rafael\Downloads\Sparky-core\Sparky-core (Develop)\src\utils/Log.h(183): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\Rafael\Downloads\Sparky-core\Sparky-core (Develop)\src\utils/Log.h(195): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\Rafael\Downloads\Sparky-core\Sparky-core (Develop)\src\utils/Log.h(207): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\Rafael\Downloads\Sparky-core\Sparky-core (Develop)\src\utils/Log.h(219): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+c:\users\rafael\downloads\sparky-core\sparky-core (develop)\src\maths\Maths_func.h(16): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
+C:\Users\Rafael\Downloads\Sparky-core\Sparky-core (Develop)\src\utils/Log.h(124): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  C:\Users\Rafael\Downloads\Sparky-core\Sparky-core (Develop)\src\utils/Log.h(138): note: see reference to function template instantiation 'void Sparky::Internal::print_log_internal<_Ty,_Ty>(char *,int &,First &&,_Ty &&)' being compiled
+          with
+          [
+              _Ty=const char *,
+              First=const char *
+          ]
+  src\graphics\Shader.cpp(13): note: see reference to function template instantiation 'void Sparky::Internal::log_message<const char*,const char*>(int,bool,const char *,const char *)' being compiled
+C:\Users\Rafael\Downloads\Sparky-core\Sparky-core (Develop)\src\utils/Log.h(115): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  C:\Users\Rafael\Downloads\Sparky-core\Sparky-core (Develop)\src\utils/Log.h(129): note: see reference to function template instantiation 'void Sparky::Internal::print_log_internal<_Ty>(char *,int &,First &&)' being compiled
+          with
+          [
+              _Ty=const char *,
+              First=const char *
+          ]
+  C:\Users\Rafael\Downloads\Sparky-core\Sparky-core (Develop)\src\utils/Log.h(138): note: see reference to function template instantiation 'void Sparky::Internal::print_log_internal<_Ty,_Ty>(char *,int &,First &&,_Ty &&)' being compiled
+          with
+          [
+              _Ty=const char *,
+              First=const char *
+          ]
+  Sprite.cpp
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\shared\minwindef.h(130): warning C4005: 'APIENTRY': macro redefinition
+  C:\Users\Rafael\Downloads\Sparky-core\Dependencias\GLFW\include\GLFW/glfw3.h(98): note: see previous definition of 'APIENTRY'
+C:\Users\Rafael\Downloads\Sparky-core\Sparky-core (Develop)\src\utils/Log.h(183): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\Rafael\Downloads\Sparky-core\Sparky-core (Develop)\src\utils/Log.h(195): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\Rafael\Downloads\Sparky-core\Sparky-core (Develop)\src\utils/Log.h(207): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\Rafael\Downloads\Sparky-core\Sparky-core (Develop)\src\utils/Log.h(219): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+c:\users\rafael\downloads\sparky-core\sparky-core (develop)\src\maths\Maths_func.h(16): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
+c:\users\rafael\downloads\sparky-core\sparky-core (develop)\src\graphics\../utils/ColorFormat.h(12): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+c:\users\rafael\downloads\sparky-core\sparky-core (develop)\src\graphics\../utils/ColorFormat.h(13): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+c:\users\rafael\downloads\sparky-core\sparky-core (develop)\src\graphics\../utils/ColorFormat.h(14): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+c:\users\rafael\downloads\sparky-core\sparky-core (develop)\src\graphics\../utils/ColorFormat.h(15): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+src\graphics\Sprite.cpp(6): warning C4244: 'argument': conversion from 'unsigned int' to 'const float', possible loss of data
+src\graphics\Sprite.cpp(12): warning C4244: 'argument': conversion from 'unsigned int' to 'const float', possible loss of data
+  Texture.cpp
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\shared\minwindef.h(130): warning C4005: 'APIENTRY': macro redefinition
+  C:\Users\Rafael\Downloads\Sparky-core\Dependencias\GLFW\include\GLFW/glfw3.h(98): note: see previous definition of 'APIENTRY'
+C:\Users\Rafael\Downloads\Sparky-core\Sparky-core (Develop)\src\utils/Log.h(183): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\Rafael\Downloads\Sparky-core\Sparky-core (Develop)\src\utils/Log.h(195): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\Rafael\Downloads\Sparky-core\Sparky-core (Develop)\src\utils/Log.h(207): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\Rafael\Downloads\Sparky-core\Sparky-core (Develop)\src\utils/Log.h(219): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\Rafael\Downloads\Sparky-core\Sparky-core (Develop)\src\utils/Log.h(124): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  C:\Users\Rafael\Downloads\Sparky-core\Sparky-core (Develop)\src\utils/Log.h(138): note: see reference to function template instantiation 'void Sparky::Internal::print_log_internal<_Ty,_Ty,std::basic_string<char,std::char_traits<char>,std::allocator<char>>>(char *,int &,First &&,_Ty &&,std::basic_string<char,std::char_traits<char>,std::allocator<char>> &&)' being compiled
+          with
+          [
+              _Ty=const char *,
+              First=const char *
+          ]
+  src\graphics\Texture.cpp(32): note: see reference to function template instantiation 'void Sparky::Internal::log_message<const char*,const char*,std::string>(int,bool,const char *,const char *,std::string)' being compiled
+C:\Users\Rafael\Downloads\Sparky-core\Sparky-core (Develop)\src\utils/Log.h(115): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  C:\Users\Rafael\Downloads\Sparky-core\Sparky-core (Develop)\src\utils/Log.h(129): note: see reference to function template instantiation 'void Sparky::Internal::print_log_internal<_Ty>(char *,int &,First &&)' being compiled
+          with
+          [
+              _Ty=std::string,
+              First=std::string
+          ]
+  C:\Users\Rafael\Downloads\Sparky-core\Sparky-core (Develop)\src\utils/Log.h(129): note: see reference to function template instantiation 'void Sparky::Internal::print_log_internal<_Ty,std::basic_string<char,std::char_traits<char>,std::allocator<char>>>(char *,int &,First &&,std::basic_string<char,std::char_traits<char>,std::allocator<char>> &&)' being compiled
+          with
+          [
+              _Ty=const char *,
+              First=const char *
+          ]
+  TextureManager.cpp
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\shared\minwindef.h(130): warning C4005: 'APIENTRY': macro redefinition
+  C:\Users\Rafael\Downloads\Sparky-core\Dependencias\GLFW\include\GLFW/glfw3.h(98): note: see previous definition of 'APIENTRY'
+C:\Users\Rafael\Downloads\Sparky-core\Sparky-core (Develop)\src\utils/Log.h(183): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\Rafael\Downloads\Sparky-core\Sparky-core (Develop)\src\utils/Log.h(195): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\Rafael\Downloads\Sparky-core\Sparky-core (Develop)\src\utils/Log.h(207): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\Rafael\Downloads\Sparky-core\Sparky-core (Develop)\src\utils/Log.h(219): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\Rafael\Downloads\Sparky-core\Sparky-core (Develop)\src\utils/Log.h(124): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  C:\Users\Rafael\Downloads\Sparky-core\Sparky-core (Develop)\src\utils/Log.h(138): note: see reference to function template instantiation 'void Sparky::Internal::print_log_internal<_Ty,_Ty>(char *,int &,First &&,_Ty &&)' being compiled
+          with
+          [
+              _Ty=const char *,
+              First=const char *
+          ]
+  src\graphics\TextureManager.cpp(19): note: see reference to function template instantiation 'void Sparky::Internal::log_message<const char*,const char*>(int,bool,const char *,const char *)' being compiled
+C:\Users\Rafael\Downloads\Sparky-core\Sparky-core (Develop)\src\utils/Log.h(115): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  C:\Users\Rafael\Downloads\Sparky-core\Sparky-core (Develop)\src\utils/Log.h(129): note: see reference to function template instantiation 'void Sparky::Internal::print_log_internal<_Ty>(char *,int &,First &&)' being compiled
+          with
+          [
+              _Ty=const char *,
+              First=const char *
+          ]
+  C:\Users\Rafael\Downloads\Sparky-core\Sparky-core (Develop)\src\utils/Log.h(138): note: see reference to function template instantiation 'void Sparky::Internal::print_log_internal<_Ty,_Ty>(char *,int &,First &&,_Ty &&)' being compiled
+          with
+          [
+              _Ty=const char *,
+              First=const char *
+          ]
+  Window.cpp
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\shared\minwindef.h(130): warning C4005: 'APIENTRY': macro redefinition
+  C:\Users\Rafael\Downloads\Sparky-core\Dependencias\GLFW\include\GLFW/glfw3.h(98): note: see previous definition of 'APIENTRY'
+C:\Users\Rafael\Downloads\Sparky-core\Sparky-core (Develop)\src\utils/Log.h(183): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\Rafael\Downloads\Sparky-core\Sparky-core (Develop)\src\utils/Log.h(195): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\Rafael\Downloads\Sparky-core\Sparky-core (Develop)\src\utils/Log.h(207): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\Rafael\Downloads\Sparky-core\Sparky-core (Develop)\src\utils/Log.h(219): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+c:\users\rafael\downloads\sparky-core\sparky-core (develop)\src\maths\Maths_func.h(16): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
+C:\Users\Rafael\Downloads\Sparky-core\Sparky-core (Develop)\src\utils/Log.h(124): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  C:\Users\Rafael\Downloads\Sparky-core\Sparky-core (Develop)\src\utils/Log.h(138): note: see reference to function template instantiation 'void Sparky::Internal::print_log_internal<_Ty,_Ty>(char *,int &,First &&,_Ty &&)' being compiled
+          with
+          [
+              _Ty=const char *,
+              First=const char *
+          ]
+  src\graphics\Window.cpp(19): note: see reference to function template instantiation 'void Sparky::Internal::log_message<const char*,const char*>(int,bool,const char *,const char *)' being compiled
+C:\Users\Rafael\Downloads\Sparky-core\Sparky-core (Develop)\src\utils/Log.h(115): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  C:\Users\Rafael\Downloads\Sparky-core\Sparky-core (Develop)\src\utils/Log.h(129): note: see reference to function template instantiation 'void Sparky::Internal::print_log_internal<_Ty>(char *,int &,First &&)' being compiled
+          with
+          [
+              _Ty=const char *,
+              First=const char *
+          ]
+  C:\Users\Rafael\Downloads\Sparky-core\Sparky-core (Develop)\src\utils/Log.h(138): note: see reference to function template instantiation 'void Sparky::Internal::print_log_internal<_Ty,_Ty>(char *,int &,First &&,_Ty &&)' being compiled
+          with
+          [
+              _Ty=const char *,
+              First=const char *
+          ]
+  Buffer.cpp
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\shared\minwindef.h(130): warning C4005: 'APIENTRY': macro redefinition
+  C:\Users\Rafael\Downloads\Sparky-core\Dependencias\GLFW\include\GLFW/glfw3.h(98): note: see previous definition of 'APIENTRY'
+C:\Users\Rafael\Downloads\Sparky-core\Sparky-core (Develop)\src\utils/Log.h(183): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\Rafael\Downloads\Sparky-core\Sparky-core (Develop)\src\utils/Log.h(195): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\Rafael\Downloads\Sparky-core\Sparky-core (Develop)\src\utils/Log.h(207): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\Rafael\Downloads\Sparky-core\Sparky-core (Develop)\src\utils/Log.h(219): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\Rafael\Downloads\Sparky-core\Sparky-core (Develop)\src\utils/Log.h(124): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  C:\Users\Rafael\Downloads\Sparky-core\Sparky-core (Develop)\src\utils/Log.h(138): note: see reference to function template instantiation 'void Sparky::Internal::print_log_internal<_Ty,_Ty>(char *,int &,First &&,_Ty &&)' being compiled
+          with
+          [
+              _Ty=const char *,
+              First=const char *
+          ]
+  src\graphics\buffers\Buffer.cpp(12): note: see reference to function template instantiation 'void Sparky::Internal::log_message<const char*,const char*>(int,bool,const char *,const char *)' being compiled
+C:\Users\Rafael\Downloads\Sparky-core\Sparky-core (Develop)\src\utils/Log.h(115): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  C:\Users\Rafael\Downloads\Sparky-core\Sparky-core (Develop)\src\utils/Log.h(129): note: see reference to function template instantiation 'void Sparky::Internal::print_log_internal<_Ty>(char *,int &,First &&)' being compiled
+          with
+          [
+              _Ty=const char *,
+              First=const char *
+          ]
+  C:\Users\Rafael\Downloads\Sparky-core\Sparky-core (Develop)\src\utils/Log.h(138): note: see reference to function template instantiation 'void Sparky::Internal::print_log_internal<_Ty,_Ty>(char *,int &,First &&,_Ty &&)' being compiled
+          with
+          [
+              _Ty=const char *,
+              First=const char *
+          ]
+  Indexbuffer.cpp
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\shared\minwindef.h(130): warning C4005: 'APIENTRY': macro redefinition
+  C:\Users\Rafael\Downloads\Sparky-core\Dependencias\GLFW\include\GLFW/glfw3.h(98): note: see previous definition of 'APIENTRY'
+C:\Users\Rafael\Downloads\Sparky-core\Sparky-core (Develop)\src\utils/Log.h(183): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\Rafael\Downloads\Sparky-core\Sparky-core (Develop)\src\utils/Log.h(195): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\Rafael\Downloads\Sparky-core\Sparky-core (Develop)\src\utils/Log.h(207): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\Rafael\Downloads\Sparky-core\Sparky-core (Develop)\src\utils/Log.h(219): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\Rafael\Downloads\Sparky-core\Sparky-core (Develop)\src\utils/Log.h(124): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  C:\Users\Rafael\Downloads\Sparky-core\Sparky-core (Develop)\src\utils/Log.h(138): note: see reference to function template instantiation 'void Sparky::Internal::print_log_internal<_Ty,_Ty>(char *,int &,First &&,_Ty &&)' being compiled
+          with
+          [
+              _Ty=const char *,
+              First=const char *
+          ]
+  src\graphics\buffers\Indexbuffer.cpp(12): note: see reference to function template instantiation 'void Sparky::Internal::log_message<const char*,const char*>(int,bool,const char *,const char *)' being compiled
+C:\Users\Rafael\Downloads\Sparky-core\Sparky-core (Develop)\src\utils/Log.h(115): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  C:\Users\Rafael\Downloads\Sparky-core\Sparky-core (Develop)\src\utils/Log.h(129): note: see reference to function template instantiation 'void Sparky::Internal::print_log_internal<_Ty>(char *,int &,First &&)' being compiled
+          with
+          [
+              _Ty=const char *,
+              First=const char *
+          ]
+  C:\Users\Rafael\Downloads\Sparky-core\Sparky-core (Develop)\src\utils/Log.h(138): note: see reference to function template instantiation 'void Sparky::Internal::print_log_internal<_Ty,_Ty>(char *,int &,First &&,_Ty &&)' being compiled
+          with
+          [
+              _Ty=const char *,
+              First=const char *
+          ]
+  vertexarray.cpp
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\shared\minwindef.h(130): warning C4005: 'APIENTRY': macro redefinition
+  C:\Users\Rafael\Downloads\Sparky-core\Dependencias\GLFW\include\GLFW/glfw3.h(98): note: see previous definition of 'APIENTRY'
+C:\Users\Rafael\Downloads\Sparky-core\Sparky-core (Develop)\src\utils/Log.h(183): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\Rafael\Downloads\Sparky-core\Sparky-core (Develop)\src\utils/Log.h(195): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\Rafael\Downloads\Sparky-core\Sparky-core (Develop)\src\utils/Log.h(207): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\Rafael\Downloads\Sparky-core\Sparky-core (Develop)\src\utils/Log.h(219): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\Rafael\Downloads\Sparky-core\Sparky-core (Develop)\src\utils/Log.h(124): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  C:\Users\Rafael\Downloads\Sparky-core\Sparky-core (Develop)\src\utils/Log.h(138): note: see reference to function template instantiation 'void Sparky::Internal::print_log_internal<_Ty,_Ty>(char *,int &,First &&,_Ty &&)' being compiled
+          with
+          [
+              _Ty=const char *,
+              First=const char *
+          ]
+  src\graphics\buffers\vertexarray.cpp(10): note: see reference to function template instantiation 'void Sparky::Internal::log_message<const char*,const char*>(int,bool,const char *,const char *)' being compiled
+C:\Users\Rafael\Downloads\Sparky-core\Sparky-core (Develop)\src\utils/Log.h(115): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  C:\Users\Rafael\Downloads\Sparky-core\Sparky-core (Develop)\src\utils/Log.h(129): note: see reference to function template instantiation 'void Sparky::Internal::print_log_internal<_Ty>(char *,int &,First &&)' being compiled
+          with
+          [
+              _Ty=const char *,
+              First=const char *
+          ]
+  C:\Users\Rafael\Downloads\Sparky-core\Sparky-core (Develop)\src\utils/Log.h(138): note: see reference to function template instantiation 'void Sparky::Internal::print_log_internal<_Ty,_Ty>(char *,int &,First &&,_Ty &&)' being compiled
+          with
+          [
+              _Ty=const char *,
+              First=const char *
+          ]
+  Group.cpp
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\shared\minwindef.h(130): warning C4005: 'APIENTRY': macro redefinition
+  C:\Users\Rafael\Downloads\Sparky-core\Dependencias\GLFW\include\GLFW/glfw3.h(98): note: see previous definition of 'APIENTRY'
+C:\Users\Rafael\Downloads\Sparky-core\Sparky-core (Develop)\src\utils/Log.h(183): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\Rafael\Downloads\Sparky-core\Sparky-core (Develop)\src\utils/Log.h(195): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\Rafael\Downloads\Sparky-core\Sparky-core (Develop)\src\utils/Log.h(207): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\Rafael\Downloads\Sparky-core\Sparky-core (Develop)\src\utils/Log.h(219): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+c:\users\rafael\downloads\sparky-core\sparky-core (develop)\src\maths\Maths_func.h(16): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
+c:\users\rafael\downloads\sparky-core\sparky-core (develop)\src\graphics\../utils/ColorFormat.h(12): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+c:\users\rafael\downloads\sparky-core\sparky-core (develop)\src\graphics\../utils/ColorFormat.h(13): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+c:\users\rafael\downloads\sparky-core\sparky-core (develop)\src\graphics\../utils/ColorFormat.h(14): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+c:\users\rafael\downloads\sparky-core\sparky-core (develop)\src\graphics\../utils/ColorFormat.h(15): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+  Layer.cpp
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\shared\minwindef.h(130): warning C4005: 'APIENTRY': macro redefinition
+  C:\Users\Rafael\Downloads\Sparky-core\Dependencias\GLFW\include\GLFW/glfw3.h(98): note: see previous definition of 'APIENTRY'
+C:\Users\Rafael\Downloads\Sparky-core\Sparky-core (Develop)\src\utils/Log.h(183): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\Rafael\Downloads\Sparky-core\Sparky-core (Develop)\src\utils/Log.h(195): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\Rafael\Downloads\Sparky-core\Sparky-core (Develop)\src\utils/Log.h(207): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\Rafael\Downloads\Sparky-core\Sparky-core (Develop)\src\utils/Log.h(219): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+c:\users\rafael\downloads\sparky-core\sparky-core (develop)\src\maths\Maths_func.h(16): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
+c:\users\rafael\downloads\sparky-core\sparky-core (develop)\src\graphics\../utils/ColorFormat.h(12): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+c:\users\rafael\downloads\sparky-core\sparky-core (develop)\src\graphics\../utils/ColorFormat.h(13): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+c:\users\rafael\downloads\sparky-core\sparky-core (develop)\src\graphics\../utils/ColorFormat.h(14): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+c:\users\rafael\downloads\sparky-core\sparky-core (develop)\src\graphics\../utils/ColorFormat.h(15): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+  Sparky-core (Develop).vcxproj -> C:\Users\Rafael\Downloads\Sparky-core\bin\Release\Sparky-core (Develop).lib
