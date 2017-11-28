@@ -6,6 +6,7 @@ Window::Window(QWidget *parent) :
     ui(new Ui::Window)
 {
     ui->setupUi(this);
+    setWindowTitle("Kaprekar");
 }
 
 Window::~Window()
@@ -27,7 +28,7 @@ int Window::Calculate(int input)
             if(vector[i] < min){ min = vector[i];}
             if(vector[i] > max){ max = vector[i];}
         }
-        int counted[max-min+1] = {0};
+        QVector<int> counted(max-min+1, 0);
         for (int i=0;i<vector.size();i++) {
             counted[vector[i]-min]++;
         }
