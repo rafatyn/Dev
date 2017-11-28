@@ -4,3 +4,4 @@
 .gitignore
 build*
 .ipch
+.pro.user
