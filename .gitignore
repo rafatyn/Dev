@@ -3,5 +3,7 @@
 .tmp
 .gitignore
 build*
-.ipch
-.pro.user
+*.ipch
+*.pro.user
+*.tlog
+.vs
