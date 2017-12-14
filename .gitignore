@@ -7,3 +7,5 @@ build*
 *.pro.user
 *.tlog
 .vs
+*Debug
+!*.exe
