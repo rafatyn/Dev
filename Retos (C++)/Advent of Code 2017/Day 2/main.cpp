@@ -9,7 +9,7 @@
 int main() {
 
 	int rows = 0;
-#ifndef INPUT_FILE
+#if INPUT_FILE
 	std::cout << "Introduce the numbers of rows: ";
 	std::cin >> rows;
 	getchar();
@@ -25,7 +25,7 @@ int main() {
 	for (int i = 0; i < rows; i++) {
 		char *tok, *next;
 		std::string input;
-#ifndef INPUT_FILE
+#if INPUT_FILE
 		std::getline(std::cin, input);
 #else
 		std::getline(fp, input);
