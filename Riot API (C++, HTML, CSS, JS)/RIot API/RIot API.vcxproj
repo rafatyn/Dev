@@ -20,8 +20,8 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
-    <ProjectGuid>{A4B70BA8-6A7F-4BFC-9BD9-5BF12A3A6BEA}</ProjectGuid>
-    <RootNamespace>RIotAPI</RootNamespace>
+    <ProjectGuid>{46ED44D1-C3E6-4E17-AFB8-8BB8BA58AD9F}</ProjectGuid>
+    <RootNamespace>RiotAPI</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -29,14 +29,14 @@
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v141</PlatformToolset>
-    <CharacterSet>MultiByte</CharacterSet>
+    <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <PlatformToolset>v141</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
-    <CharacterSet>MultiByte</CharacterSet>
+    <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
@@ -72,12 +72,12 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <IncludePath>$(AWE_DIR)include;$(IncludePath)</IncludePath>
     <LibraryPath>$(AWE_DIR)build\lib;$(LibraryPath)</LibraryPath>
-    <IntDir>$(Configuration)\Intermediates\</IntDir>
+    <IntDir>$(Configuration)\Imntermediates\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <IncludePath>$(AWE_DIR)include;$(IncludePath)</IncludePath>
     <LibraryPath>$(AWE_DIR)build\lib;$(LibraryPath)</LibraryPath>
-    <IntDir>$(Configuration)\Intermediates\</IntDir>
+    <IntDir>$(Configuration)\Imntermediates\</IntDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -128,7 +128,23 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp" />
+    <ClCompile Include="Src\AwesomiumApp\application_win.cc" />
+    <ClCompile Include="Src\AwesomiumApp\app.cpp" />
+    <ClCompile Include="Src\AwesomiumApp\method_dispatcher.cpp" />
+    <ClCompile Include="Src\AwesomiumApp\view_win.cc" />
+    <ClCompile Include="Src\main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Src\AwesomiumApp\app.h" />
+    <ClInclude Include="Src\AwesomiumApp\application.h" />
+    <ClInclude Include="Src\AwesomiumApp\js_delegate.h" />
+    <ClInclude Include="Src\AwesomiumApp\method_dispatcher.h" />
+    <ClInclude Include="Src\Utils.h" />
+    <ClInclude Include="Src\AwesomiumApp\view.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Debug\WebResources\App.html" />
+    <None Include="Release\WebResources\App.html" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
