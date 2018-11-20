@@ -1,0 +1,96 @@
+.summoner-name-input-cover {
+    margin: 0;
+    padding: 0;
+    padding-left: 1%;
+    padding-right: 1%;
+}
+
+[id^=current-game-img] {
+    padding: 0;
+    height: 100%;
+}
+
+[id^=current-game-row] {
+    position: relative;
+    height: 18%;
+}
+
+#current-game-row-0 {
+    top: 2%;
+}
+
+#current-game-row-1 {
+    top: 4%;
+}
+
+#current-game-row-2 {
+    top: 6%;
+}
+
+#current-game-row-3 {
+    top: 8%;
+}
+
+#current-game-row-4 {
+    top: 10%;
+}
+
+.center {
+    margin: auto;
+}
+
+.champion-img {
+    display: block;
+    margin: auto;
+    height: 100%;
+}
+
+.spell1-img {
+    position: absolute;
+    top: 0%;
+    left: 15%;
+    height: 30%;
+}
+
+.spell2-img {
+    position: absolute;
+    top: 70%;
+    left: 15%;
+    height: 30%;
+}
+
+.maestry1-img {
+    position: absolute;
+    top: 0%;
+    left: 70%;
+    height: 30%;
+}
+
+.maestry2-img {
+    position: absolute;
+    top: 70%;
+    left: 70%;
+    height: 30%;
+}
+
+[id^=current-game-cd] * {
+    position: absolute;
+    top: 15%;
+    height: 70%;
+}
+
+.status-first {
+    left: 15%;
+}
+
+.status-second {
+    left: 45%;
+}
+
+.status-third {
+    left: 75%;
+}
+
+.timer-canvas {
+    z-index: 5;
+}
