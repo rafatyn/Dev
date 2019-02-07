@@ -14,6 +14,26 @@ MainWindow::MainWindow(QWidget *parent) :
         LogDat("Listening to 1024");
     else
         LogDatError("Failed to listen");
+
+    rpm.append("0E78");
+    rpm.append("0F85");
+    rpm.append("13B8");
+    rpm.append("18E2");
+    rpm.append("1E20");
+    rpm.append("2156");
+    rpm.append("26A0");
+    rpm.append("2C20");
+    rpm.append("32A5");
+    rpm.append("3534");
+    rpm.append("39CA");
+    rpm.append("3EA0");
+    rpm.append("457F");
+    rpm.append("4845");
+    rpm.append("4FB4");
+    rpm.append("514F");
+    rpm.append("5610");
+    rpm.append("5D2D");
+    rpm.append("633B");
 }
 
 MainWindow::~MainWindow()
@@ -67,20 +87,80 @@ void MainWindow::readyRead()
             socket->write("13.5V\r>");
         else if (readed == "ATSP0\r")
             socket->write("OK\r>");
-        else if (readed == "0100\r")
-            socket->write("416B10410000000000\r>");
         else if (readed == "ATDP\r")
             socket->write("AUTO,SAE J1850 PWM\r>");
-        else if (readed == "011C\r")
+        else if (readed == "0100\r"){
+            socket->write("416B104100FFFFFFFF\r");
+            socket->write("416B104100FFFFFFFF\r\r>");
+        }else if (readed == "0120\r"){
+            socket->write("416B104120FFFFFFFF\r");
+            socket->write("416B104120FFFFFFFF\r\r>");
+        }else if (readed == "0140\r"){
+            socket->write("416B104140FFFFFFFF\r");
+            socket->write("416B104140FFFFFFFF\r\r>");
+        }else if (readed == "0160\r"){
+            socket->write("416B104160FFFFFFFF\r");
+            socket->write("416B104160FFFFFFFF\r\r>");
+        }else if (readed == "0180\r"){
+            socket->write("416B104180FFFFFFFF\r");
+            socket->write("416B104180FFFFFFFF\r\r>");
+        }else if (readed == "01A0\r"){
+            socket->write("416B1041A0FFFFFFFF\r");
+            socket->write("416B1041A0FFFFFFFF\r\r>");
+        }else if (readed == "01C0\r"){
+            socket->write("416B1041C0FFFFFFFF\r");
+            socket->write("416B1041C0FFFFFFFF\r\r>");
+        }else if (readed == "0500\r"){
+            socket->write("416B104500FFFFFFFF\r");
+            socket->write("416B104500FFFFFFFF\r\r>");
+        }else if (readed == "0600\r"){
+            socket->write("416B104600FFFFFFFF\r");
+            socket->write("416B104600FFFFFFFF\r\r>");
+        }else if (readed == "0620\r"){
+            socket->write("416B104620FFFFFFFF\r");
+            socket->write("416B104620FFFFFFFF\r\r>");
+        }else if (readed == "0640\r"){
+            socket->write("416B104640FFFFFFFF\r");
+            socket->write("416B104640FFFFFFFF\r\r>");
+        }else if (readed == "0660\r"){
+            socket->write("416B104660FFFFFFFF\r");
+            socket->write("416B104660FFFFFFFF\r\r>");
+        }else if (readed == "0680\r"){
+            socket->write("416B104680FFFFFFFF\r");
+            socket->write("416B104680FFFFFFFF\r\r>");
+        }else if (readed == "06A0\r"){
+            socket->write("416B1046A0FFFFFFFF\r");
+            socket->write("416B1046A0FFFFFFFF\r\r>");
+        }else if (readed == "06C0\r"){
+            socket->write("416B1046C0FFFFFFFF\r");
+            socket->write("416B1046C0FFFFFFFF\r\r>");
+        }else if (readed == "0900\r"){
+            socket->write("416B104900FFFFFFFF\r");
+            socket->write("416B104900FFFFFFFF\r\r>");
+        }else if (readed == "011C\r")
             socket->write("NO DATA\r>");
-        else if (readed == "0101\r")
-            socket->write("416B1041010306E0E0\r>");
-        else if (readed == "010C\r")
-            socket->write("416B10410C0E78\r>");
-        else if (readed == "0103\r")
-            socket->write("416B1041030100\r>");
-        else if (readed == "0113\r")
-            socket->write("416B10411333\r>");
+        else if (readed == "0101\r"){
+            socket->write("416B1041010306E0E0\r");
+            socket->write("416B1041010306E0E0\r\r>");
+        }else if (readed == "010C\r"){
+            //socket->write("416B10410C0E78\r");
+            //socket->write("416B10410C0E78\r\r>");
+            socket->write("416B10410C" + rpm[co] + "\r");
+            socket->write("416B10410C" + rpm[co] + "\r\r>");
+            co != rpm.size()-1 ? co++ : co = 0;
+        }else if (readed == "0103\r"){
+            socket->write("416B1041030100\r");
+            socket->write("416B1041030100\r\r>");
+        }else if (readed == "010F\r"){
+            socket->write("416B10410F32\r");
+            socket->write("416B10410F32\r\r>");
+        }else if (readed == "0111\r"){
+            socket->write("416B1041117F\r");
+            socket->write("416B1041117F\r\r>");
+        }else if (readed == "0113\r"){
+            socket->write("416B10411333\r");
+            socket->write("416B10411333\r\r>");
+        }
     }
 }
 

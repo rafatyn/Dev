@@ -28,6 +28,9 @@ private slots:
 private:
     QTcpServer *server;
     Ui::MainWindow *ui;
+    QVector<QByteArray> rpm;
+    int co = 0;
+
     void LogDat(QString log);
     void LogDatError(QString log);
 };
