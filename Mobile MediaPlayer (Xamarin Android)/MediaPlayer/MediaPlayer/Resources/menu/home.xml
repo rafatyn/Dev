@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+  <item
+      android:id="@+id/menu_playlist"
+      android:showAsAction="never"
+      android:title="Playlist" >
+      <menu>
+        <item
+            android:id="@+id/new_playlist"
+            android:showAsAction="never"
+            android:title="New Playlist" />
+      </menu>
+  </item>
+  <item
+      android:id="@+id/aux_menu_playlist"
+      android:showAsAction="never"
+      android:title="New Playlist" />  
+</menu>

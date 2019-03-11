@@ -1,0 +1,24 @@
+Estructura documento:
+	Fecha datos (DD/MM/YYYY HH:MM:SS)
+	
+	Registros:
+		Codigo Postal (99999)
+		Direccion (XX...)
+		Horario (XX...)
+		Latitud (+-09,999999)
+		Localidad (XX...)
+		Longitud (+-09,999999)
+		Margen (D|I|N)
+		Municipio (XX...)
+		
+		Provincia (XX...)		
+		Rem. (dm|OM)
+		Rotulo (XX...)
+		Tipo venta (P|R)
+		% BioEtanol (<XX...>)
+		% EsterMetilico (<XX...>)
+		
+		
+		
+//www.geoportalgasolineras.es/resources/files/preciosEESS_es.xls
+//https://sedeaplicaciones.minetur.gob.es/ServiciosRESTCarburantes/PreciosCarburantes/EstacionesTerrestres/

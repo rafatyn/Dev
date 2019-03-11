@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content">
+	<android.support.v7.widget.Toolbar
+		android:minHeight="?android:attr/actionBarSize"
+		android:background="?android:attr/colorPrimary"
+		android:minWidth="25px"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:id="@+id/AppToolbar" 
+		android:theme="@style/ToolBarStyle"
+		app:popupTheme="@style/ThemeOverlay.AppCompat.Light" >
+	</android.support.v7.widget.Toolbar>
+
+	<RelativeLayout
+		android:id="@+id/Page1_Layout"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_below="@id/AppToolbar"
+		android:visibility="visible">
+		<ImageView
+			android:src="@android:drawable/ic_menu_gallery"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:id="@+id/Page1_SongImage" 
+			android:layout_centerInParent="true" />
+		<android.support.percent.PercentRelativeLayout
+			android:id="@+id/Page1_MediaControlsLayout"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_alignParentBottom="true">			
+			<ImageButton
+				android:src="@drawable/ic_play_song_button"
+				app:layout_widthPercent="20%"
+				app:layout_heightPercent="10%"
+				android:scaleType="fitCenter"
+				android:adjustViewBounds="true"
+				android:id="@+id/Page1_PlayPauseButton" 
+				android:layout_centerInParent="true" />
+			<ImageButton
+				android:src="@drawable/ic_previous_song_button"
+				app:layout_widthPercent="20%"
+				app:layout_heightPercent="10%"
+				android:scaleType="fitCenter"
+				android:adjustViewBounds="true"
+				android:layout_above="@id/AppToolbar"
+				android:layout_toLeftOf="@id/Page1_PlayPauseButton"
+				android:id="@+id/Page1_PreviousSongButton"/>
+			<ImageButton
+				android:src="@drawable/ic_next_song_button"
+				app:layout_widthPercent="20%"
+				app:layout_heightPercent="10%"
+				android:scaleType="fitCenter"
+				android:adjustViewBounds="true"
+				android:layout_toRightOf="@id/Page1_PlayPauseButton"
+				android:id="@+id/Page1_NextSongButton"/>
+		</android.support.percent.PercentRelativeLayout>
+	</RelativeLayout>
+
+	<RelativeLayout
+		android:id="@+id/Page2_Layout"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"		
+		android:layout_below="@id/AppToolbar"
+		android:visibility="invisible">		
+		<ListView
+			android:minWidth="25px"
+			android:minHeight="25px"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:id="@+id/Page2_FolderStructure"
+			android:paddingBottom="56dp"
+			android:clipToPadding="false"
+			android:scrollbarStyle="outsideOverlay" />
+		<TextView
+			android:text="The folder is empty"
+			android:textAppearance="?android:attr/textAppearanceMedium"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:visibility="invisible"
+			android:id="@+id/Page2_FolderEmpty" />
+
+		<RelativeLayout
+			android:id="@+id/Page2_BottomToolbarLayout"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_alignParentBottom="true">
+			<Toolbar
+				android:minHeight="?android:attr/actionBarSize"
+				android:background="?android:attr/colorPrimary"
+				android:minWidth="25px"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:id="@+id/Page2_BottomToolbar" >
+				<LinearLayout
+					android:id="@+id/Page2_BottomToolbarLinearLayout"
+					android:layout_width="match_parent"
+					android:layout_height="match_parent"
+					android:orientation="horizontal">
+					<Button
+						android:text="Cancel"
+						android:layout_width="0dp"
+						android:layout_height="wrap_content"
+						android:layout_weight="1"
+						android:id="@+id/Page2_ToolbarCancelButton"
+						android:theme="@style/InvisibleWhiteButton"
+						android:gravity="center_horizontal" />
+					<Button
+						android:text="Select"
+						android:layout_width="0dp"
+						android:layout_height="wrap_content"
+						android:layout_weight="1"
+						android:id="@+id/Page2_ToolbarSelectButton" 
+						android:theme="@style/InvisibleWhiteButton" 
+						android:gravity="center_horizontal" />
+				</LinearLayout>
+			</Toolbar>
+		</RelativeLayout>
+	</RelativeLayout>	
+</RelativeLayout>
