@@ -48,6 +48,9 @@
     <AndroidUseSharedRuntime>False</AndroidUseSharedRuntime>
     <AndroidLinkMode>SdkOnly</AndroidLinkMode>
     <EmbedAssembliesIntoApk>True</EmbedAssembliesIntoApk>
+    <EnableProguard>true</EnableProguard>
+    <AndroidSupportedAbis />
+    <BundleAssemblies>true</BundleAssemblies>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -58,6 +61,7 @@
   <ItemGroup>
     <Compile Include="Core\CurrentInfo.cs" />
     <Compile Include="Core\DirectoryNavigation.cs" />
+    <Compile Include="Core\NotificationBroadcast.cs" />
     <Compile Include="Core\Playlist.cs" />
     <Compile Include="Database\Database.cs" />
     <Compile Include="Database\Tables\Setup.cs" />
@@ -115,6 +119,17 @@
     <PackageReference Include="Xamarin.Android.Support.Percent">
       <Version>28.0.0.1</Version>
     </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\ic_shuffle_disabled_song_button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\ic_shuffle_song_button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\notification.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

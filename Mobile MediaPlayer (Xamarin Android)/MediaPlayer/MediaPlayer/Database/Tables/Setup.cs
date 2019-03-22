@@ -6,5 +6,6 @@ namespace MediaPlayer.Database.Tables
     {
         public string PlaylistName { get; set; }
         public int SongIndex { get; set; }
+        public int PlayingMode { get; set; }
     }
 }

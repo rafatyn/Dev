@@ -18,19 +18,24 @@ namespace MediaPlayer.Core
             if (uri != null && uri != "")
                 CurrentFolder = uri;
             else
-                CurrentFolder = Environment.RootDirectory.Path;
+                //CurrentFolder = Environment.RootDirectory.Path;
+                CurrentFolder = "/mnt";
 
             ListView = list;
             Handler = handler;
 
             ListView.ItemClick += (sender, e) =>
             {
+                string previousFolder = CurrentFolder;
                 CurrentFolder = CurrentFolder + '/' + ((ArrayAdapter)((ListView)sender).Adapter).GetItem(e.Position);
-                OpenFolder();
+                if (!OpenFolder())
+                {
+                    CurrentFolder = previousFolder;
+                }
             };
         }
 
-        public void OpenFolder()
+        public bool OpenFolder()
         {
             List<string> items = new List<string>();
             File rootDirectory;
@@ -63,8 +68,12 @@ namespace MediaPlayer.Core
                         Handler.ShowFolderEmpty();
                         ListView.Visibility = ViewStates.Invisible;
                     }
+
+                    return true;
                 }
             }
+
+            return false;
         }
 
         public void BackOneStep()
@@ -119,14 +128,19 @@ namespace MediaPlayer.Core
             else
                 rootFolder = new File(path);
 
-            foreach (File file in rootFolder.ListFiles())
+            File[] files = rootFolder.ListFiles();
+
+            if (files != null)
             {
-                if (file.IsFile)
+                foreach (File file in files)
                 {
-                    if (file.Name.ToLower().EndsWith(".mp3") || file.Name.ToLower().EndsWith(".m4a") || file.Name.ToLower().EndsWith(".wav") ||
-                        file.Name.ToLower().EndsWith(".ogg") || file.Name.ToLower().EndsWith(".aac"))
+                    if (file.IsFile)
                     {
-                        return true;
+                        if (file.Name.ToLower().EndsWith(".mp3") || file.Name.ToLower().EndsWith(".m4a") || file.Name.ToLower().EndsWith(".wav") ||
+                            file.Name.ToLower().EndsWith(".ogg") || file.Name.ToLower().EndsWith(".aac"))
+                        {
+                            return true;
+                        }
                     }
                 }
             }

@@ -11,7 +11,7 @@
 		android:minWidth="25px"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
-		android:id="@+id/AppToolbar" 
+		android:id="@+id/AppToolbar"
 		android:theme="@style/ToolBarStyle"
 		app:popupTheme="@style/ThemeOverlay.AppCompat.Light" >
 	</android.support.v7.widget.Toolbar>
@@ -22,11 +22,37 @@
 		android:layout_height="wrap_content"
 		android:layout_below="@id/AppToolbar"
 		android:visibility="visible">
+		<android.support.percent.PercentRelativeLayout
+			android:id="@+id/Page1_MediaControlsLayout"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content">
+			<TextView
+				android:text=""
+				android:textAppearance="?android:attr/textAppearanceLarge"
+				android:maxLines="1"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_above="@id/AppToolbar"
+				android:textColor="#000"
+				android:gravity="center_horizontal"
+				android:id="@+id/Page1_SongName" />
+			<TextView
+				android:text=""
+				android:textAppearance="?android:attr/textAppearanceMedium"
+				android:maxLines="1"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_below="@id/Page1_SongName"
+				android:gravity="center_horizontal"
+				android:id="@+id/Page1_SongAuthor" />
+		</android.support.percent.PercentRelativeLayout>
 		<ImageView
-			android:src="@android:drawable/ic_menu_gallery"
-			android:layout_width="wrap_content"
+			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
 			android:id="@+id/Page1_SongImage" 
+			android:adjustViewBounds="true"
+			android:paddingLeft="20px"
+			android:paddingRight="20px"
 			android:layout_centerInParent="true" />
 		<android.support.percent.PercentRelativeLayout
 			android:id="@+id/Page1_MediaControlsLayout"
@@ -49,7 +75,7 @@
 				android:adjustViewBounds="true"
 				android:layout_above="@id/AppToolbar"
 				android:layout_toLeftOf="@id/Page1_PlayPauseButton"
-				android:id="@+id/Page1_PreviousSongButton"/>
+				android:id="@+id/Page1_PreviousSongButton"/>			
 			<ImageButton
 				android:src="@drawable/ic_next_song_button"
 				app:layout_widthPercent="20%"
@@ -58,6 +84,15 @@
 				android:adjustViewBounds="true"
 				android:layout_toRightOf="@id/Page1_PlayPauseButton"
 				android:id="@+id/Page1_NextSongButton"/>
+			<ImageButton
+				android:src="@drawable/ic_shuffle_disabled_song_button"
+				app:layout_widthPercent="20%"
+				app:layout_heightPercent="10%"
+				android:scaleType="fitCenter"
+				android:adjustViewBounds="true"
+				android:layout_above="@id/AppToolbar"
+				android:layout_toLeftOf="@id/Page1_PreviousSongButton"
+				android:id="@+id/Page1_ShuffleSongButton"/>
 		</android.support.percent.PercentRelativeLayout>
 	</RelativeLayout>
 

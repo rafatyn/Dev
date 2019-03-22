@@ -10,12 +10,13 @@ namespace MediaPlayer.Database
 
         public Database(string dbPath, bool reset = false, bool hardReset = false)
         {
+            Connection = new SQLiteConnection(dbPath);
+
             if (hardReset)
                 new File(dbPath).Delete();
             else if (reset)
                 ResetDatabase();
-
-            Connection = new SQLiteConnection(dbPath);
+            
             Connection.CreateTable<Tables.Setup>();
             Connection.CreateTable<Tables.Playlist>();
             Connection.CreateTable<Tables.Song>();
@@ -47,7 +48,8 @@ namespace MediaPlayer.Database
             Tables.Setup setup = new Tables.Setup
             {
                 PlaylistName = currentInfo.Playlist.Name,
-                SongIndex = currentInfo.SongIndex
+                SongIndex = currentInfo.SongIndex,
+                PlayingMode = (int)currentInfo.PlayingMode
             };
 
             int result = Connection.Insert(setup);

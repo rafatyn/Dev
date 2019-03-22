@@ -16,6 +16,11 @@
         <item name="colorPrimary">@color/colorPrimary</item>
     </style>
 
+    <style name="BlackText">
+        <item name="android:textColorPrimary">@android:color/black</item>
+        <item name="android:textColorSecondary">@android:color/black</item>
+    </style>
+
     <style name="InvisibleWhiteButton" parent="Theme.AppCompat.Light.DarkActionBar">
         <item name="buttonStyle">@style/Widget.AppCompat.Button.Borderless</item>
         <item name="android:textColorPrimary">@android:color/white</item>
