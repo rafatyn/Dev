@@ -51,21 +51,21 @@ namespace FuelXLS2DB
             Horario     = row[23].ToString().Replace("'", "#");
 
             // Numbers
-            CodigoPostal    = row[ 3].ToString() == "" ? "-1" : row[ 3].ToString();
-            Longitud        = row[ 6].ToString() == "" ? "-1" : row[ 6].ToString().Replace(",", ".");
-            Latitud         = row[ 7].ToString() == "" ? "-1" : row[ 7].ToString().Replace(",", ".");
-            Gasolina95      = row[ 8].ToString() == "" ? "-1" : row[ 8].ToString().Replace(",", ".");
-            Gasolina98      = row[16].ToString() == "" ? "-1" : row[16].ToString().Replace(",", ".");
-            GasoleoA        = row[ 9].ToString() == "" ? "-1" : row[ 9].ToString().Replace(",", ".");
-            GasoleoAPlus    = row[12].ToString() == "" ? "-1" : row[12].ToString().Replace(",", ".");
-            GasoleoB        = row[10].ToString() == "" ? "-1" : row[10].ToString().Replace(",", ".");
-            BioEtanol       = row[11].ToString() == "" ? "-1" : row[11].ToString().Replace(",", ".");
-            Biodiesel       = row[13].ToString() == "" ? "-1" : row[13].ToString().Replace(",", ".");
-            GNC             = row[17].ToString() == "" ? "-1" : row[17].ToString().Replace(",", ".");
-            GNL             = row[18].ToString() == "" ? "-1" : row[18].ToString().Replace(",", ".");
-            GLP             = row[19].ToString() == "" ? "-1" : row[19].ToString().Replace(",", ".");
-            EsterMetilico   = row[14].ToString() == "" ? "-1" : row[14].ToString().Replace(",", ".");
-            BioAlcohol      = row[15].ToString() == "" ? "-1" : row[15].ToString().Replace(",", ".");
+            CodigoPostal    = row[ 3].ToString() == "" ? "NULL" : row[ 3].ToString();
+            Longitud        = row[ 6].ToString() == "" ? "NULL" : row[ 6].ToString().Replace(",", ".");
+            Latitud         = row[ 7].ToString() == "" ? "NULL" : row[ 7].ToString().Replace(",", ".");
+            Gasolina95      = row[ 8].ToString() == "" ? "NULL" : row[ 8].ToString().Replace(",", ".");
+            Gasolina98      = row[16].ToString() == "" ? "NULL" : row[16].ToString().Replace(",", ".");
+            GasoleoA        = row[ 9].ToString() == "" ? "NULL" : row[ 9].ToString().Replace(",", ".");
+            GasoleoAPlus    = row[12].ToString() == "" ? "NULL" : row[12].ToString().Replace(",", ".");
+            GasoleoB        = row[10].ToString() == "" ? "NULL" : row[10].ToString().Replace(",", ".");
+            BioEtanol       = row[11].ToString() == "" ? "NULL" : row[11].ToString().Replace(",", ".");
+            Biodiesel       = row[13].ToString() == "" ? "NULL" : row[13].ToString().Replace(",", ".");
+            GNC             = row[17].ToString() == "" ? "NULL" : row[17].ToString().Replace(",", ".");
+            GNL             = row[18].ToString() == "" ? "NULL" : row[18].ToString().Replace(",", ".");
+            GLP             = row[19].ToString() == "" ? "NULL" : row[19].ToString().Replace(",", ".");
+            EsterMetilico   = row[14].ToString() == "" ? "NULL" : row[14].ToString().Replace(",", ".");
+            BioAlcohol      = row[15].ToString() == "" ? "NULL" : row[15].ToString().Replace(",", ".");
         }
     }
 }

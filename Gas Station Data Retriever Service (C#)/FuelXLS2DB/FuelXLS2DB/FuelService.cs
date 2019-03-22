@@ -56,18 +56,18 @@ namespace FuelXLS2DB
 
                     Database.Database db = new Database.Database();
                     ushort count = 0;
-                    string accRows = "";
+                    string[] accRows = new string[Constants.RowsPerTransaction];
 
                     foreach (DataRow row in rows)
                     {
                         GasStation gas = new GasStation(row);
-                        accRows += db.CreateInsert(DateTime.Parse(date), gas);
+                        accRows[count] = db.CreateInsert(DateTime.Parse(date), gas);
                         count++;
 
                         if (count % Constants.RowsPerTransaction == 0)
                         {
                             db.InsertMultipleRows(accRows);
-                            accRows = "";
+                            accRows = new string[Constants.RowsPerTransaction];
                             count = 0;
                         }
                     }
@@ -76,8 +76,6 @@ namespace FuelXLS2DB
                     {
                         db.InsertMultipleRows(accRows);
                     }
-
-                    db.SetNulls();
 
                     db.Connection.Close();
                 }
