@@ -15,7 +15,7 @@ namespace Riot_API
         private const string RiotAPIUrl = ".api.riotgames.com";
         private const string DDragonAPIUrl = "ddragon.leagueoflegends.com";
         private const string PreKey = "api_key=";
-        private const string Key = "RGAPI-203dc1bb-1c7e-456a-9eba-101f5e2aee44";
+        private const string Key = "RGAPI-f50adc70-bc7d-4fce-a4e0-98aa58ef2edf";
         private const string RequestSummonerByName = "/lol/summoner/v3/summoners/by-name/";
         private const string RequestCurrentGame = "/lol/spectator/v3/active-games/by-summoner/";
         private const string RequestChampions = "/data/en_US/champion.json";
