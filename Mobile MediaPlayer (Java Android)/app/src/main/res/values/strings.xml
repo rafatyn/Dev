@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">MediaPlayer</string>
+
+    <string name="EmptyFolderMsg">The folder is empty</string>
+    <string name="CancelButtonMsg">Cancel</string>
+    <string name="SelectButtonMsg">Select</string>
+    <string name="SongCoverMsg">Song Cover</string>
+    <string name="PlayPauseButtonMsg">Play/Pause button</string>
+    <string name="PreviousButtonMsg">Previous song button</string>
+    <string name="NextButtonMsg">Next song button</string>
+    <string name="ShuffleButtonMsg">Shuffle song button</string>
+    <string name="ToolbarMsg">Media Player</string>
+    <string name="M_Playlist">Playlist</string>
+    <string name="M_NewPlaylist">New Playlist</string>
+    <string name="AudioLockButtonMsg">Audio Lock Button</string>
+</resources>

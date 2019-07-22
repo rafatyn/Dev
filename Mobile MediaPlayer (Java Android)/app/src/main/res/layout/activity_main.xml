@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/AppToolbar"
+        app:title="@string/ToolbarMsg"
+        android:minHeight="?android:attr/actionBarSize"
+        android:background="?android:attr/colorPrimary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ToolBarStyle"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" >
+    </android.support.v7.widget.Toolbar>
+
+    <RelativeLayout
+        android:id="@+id/Page1_Layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/AppToolbar"
+        android:visibility="visible" >
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/Page1_MediaControlsLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="15dp" >
+            <TextView
+                android:id="@+id/Page1_SongName"
+                android:text=""
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:maxLines="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#000"
+                android:gravity="center_horizontal"
+                app:layout_constraintBottom_toTopOf="@+id/Page1_SongAuthor" />
+            <TextView
+                android:id="@+id/Page1_SongAuthor"
+                android:text=""
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:maxLines="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/Page1_SongName"
+                android:gravity="center_horizontal"
+                app:layout_constraintTop_toBottomOf="@+id/Page1_SongName" />
+        </android.support.constraint.ConstraintLayout>
+        <ImageView
+            android:id="@+id/Page1_SongImage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:layout_centerInParent="true"
+            android:contentDescription="@string/SongCoverMsg" />
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/Page1_MediaInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:paddingBottom="10dp"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp" >
+            <android.support.constraint.Guideline
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/Page1_MediaInfo_Horizontal_Mid"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.415" />
+            <ImageButton
+                android:id="@+id/Page1_PlayPauseButton"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_centerInParent="true"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/PlayPauseButtonMsg"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_play_song_button"
+                app:layout_constraintBottom_toBottomOf="@id/Page1_MediaInfo"
+                app:layout_constraintStart_toEndOf="@+id/Page1_MediaInfo_Horizontal_Mid"
+                app:layout_constraintWidth_percent="0.17" />
+            <ImageButton
+                android:id="@+id/Page1_PreviousSongButton"
+                android:src="@drawable/ic_previous_song_button"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                app:layout_constraintWidth_percent="0.17"
+                android:scaleType="fitCenter"
+                android:adjustViewBounds="true"
+                app:layout_constraintEnd_toStartOf="@+id/Page1_PlayPauseButton"
+                app:layout_constraintBottom_toBottomOf="@id/Page1_MediaInfo"
+                android:contentDescription="@string/PreviousButtonMsg" />
+            <ImageButton
+                android:id="@+id/Page1_NextSongButton"
+                android:src="@drawable/ic_next_song_button"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                app:layout_constraintWidth_percent="0.17"
+                android:scaleType="fitCenter"
+                android:adjustViewBounds="true"
+                app:layout_constraintStart_toEndOf="@+id/Page1_PlayPauseButton"
+                app:layout_constraintBottom_toBottomOf="@id/Page1_MediaInfo"
+                android:contentDescription="@string/NextButtonMsg" />
+            <ImageButton
+                android:id="@+id/Page1_ShuffleSongButton"
+                android:src="@drawable/ic_shuffle_disabled_song_button"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                app:layout_constraintWidth_percent="0.17"
+                android:scaleType="fitCenter"
+                android:adjustViewBounds="true"
+                android:layout_toStartOf="@id/Page1_PreviousSongButton"
+                app:layout_constraintStart_toStartOf="@id/Page1_MediaInfo"
+                app:layout_constraintBottom_toBottomOf="@id/Page1_MediaInfo"
+                android:contentDescription="@string/ShuffleButtonMsg" />
+        </android.support.constraint.ConstraintLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/Page2_Layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/AppToolbar"
+        android:visibility="invisible">
+        <ListView
+            android:id="@+id/Page2_FolderStructure"
+            android:minWidth="25dp"
+            android:minHeight="25dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="56dp"
+            android:clipToPadding="false"
+            android:scrollbarStyle="outsideOverlay" />
+        <TextView
+            android:id="@+id/Page2_FolderEmpty"
+            android:text="@string/EmptyFolderMsg"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="invisible" />
+
+        <RelativeLayout
+            android:id="@+id/Page2_BottomToolbarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true">
+            <Toolbar
+                android:id="@+id/Page2_BottomToolbar"
+                android:minHeight="?android:attr/actionBarSize"
+                android:background="?android:attr/colorPrimary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:contentInsetStart="0dp" >
+                <LinearLayout
+                    android:id="@+id/Page2_BottomToolbarLinearLayout"
+                    style="?android:attr/buttonBarStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+                    <Button
+                        android:id="@+id/Page2_ToolbarCancelButton"
+                        style="?android:attr/buttonBarButtonStyle"
+                        android:text="@string/CancelButtonMsg"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:theme="@style/InvisibleWhiteButton"
+                        android:gravity="center_horizontal" />
+                    <Button
+                        android:id="@+id/Page2_ToolbarSelectButton"
+                        style="?android:attr/buttonBarButtonStyle"
+                        android:text="@string/SelectButtonMsg"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:theme="@style/InvisibleWhiteButton"
+                        android:gravity="center_horizontal" />
+                </LinearLayout>
+            </Toolbar>
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>
