@@ -1,0 +1,211 @@
+body {
+  background-size: 100% 100%;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  max-width: 100%;
+  height: 100%;
+  padding:2%;
+}
+
+#pag {
+  margin: auto;
+}
+
+encabezado {
+  background-color: lightblue;
+  margin: auto;
+  margin-top: 2%;
+  padding-top: 8px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  max-height: 100px;
+  width:100vw;
+}
+
+#titulo {
+  background-color: lightblue;
+  padding: 2%;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+  font-family: 'Press Start 2P', serif;
+  font-size: 5vw;
+  text-shadow: 0 0 10px grey;
+  color: #484848;
+  text-align: center;
+  max-height: 50px;
+}
+
+.botones > div {
+  padding: 3px;
+  background-image: linear-gradient(to bottom, lightblue, rgba(23, 76, 166, 1) 100%);
+  text-align: center;
+  min-width:80%;
+}
+
+
+#about:hover + #sobremi, #sobremi:hover {
+  display:block;
+  height:auto;
+}
+
+#sobremi {
+  margin:auto;
+  background-image: linear-gradient(to bottom, rgba(23, 76, 166, 1) 0%, lightblue 30%);
+  height:0;
+  padding:5%;
+  display:none;
+}
+
+#sobremi > div {
+  display:inline-block;
+}
+
+#mfoto {
+    width:35%;
+    height:100%;
+    margin:auto;
+}
+
+#foto {
+  background-image: url(http://i.imgur.com/LTPbu1a.png);
+  background-size:100% 100%;
+  background-repeat:no-repeat;
+  min-width:50px;
+  width:15vw;
+  min-height:50px;
+  height:15vw;
+  border-radius: 15px;
+}
+
+#info {
+  font-family: 'Lobster', cursive;
+  font-size: 2vw;
+  text-align:left;
+}
+
+#pestana:hover + #tit, #tit:hover {
+  display:block;
+  height:auto;
+}
+
+#tit strong {
+  font-size:3.5vw;
+  text-decoration:underline;
+}
+
+li {
+  list-style-image: url("http://universidadtepantlato.edu.mx/images/flecha-galeria.png")
+}
+
+#tit {
+  font-family: 'Lobster', cursive;
+  font-size: 2vw;
+  text-align:center;
+  height:0;
+  display:none;
+  padding-bottom:5%;
+  background-image: linear-gradient(to bottom, rgba(23, 76, 166, 1) 0%, lightblue 30%);
+}
+
+#ull, #hc {
+  display:inline-block;
+  margin:auto;
+  margin-top:5%;
+}
+
+#ull {
+  background-image:url("http://internacional.ull.es/wp-content/images/logo_ULL_300px.png");
+  background-size:100% 100%;
+  width:13vw;
+  height:13vw;
+}
+
+#hc {
+  background-image:url("http://www.css3dashboard.com/images/html5-css3.png");
+  background-size:100% 100%;
+  width:25vw;
+  height:13vw;
+  margin-left:10%;
+}
+
+#iconos {
+  margin:auto;
+  padding:1vw;
+  border-bottom-left-radius:20px;
+  border-bottom-right-radius:20px;
+  background-image: linear-gradient(to bottom, rgba(23, 76, 166, 1) 0%, lightblue 30%);
+  display:none;
+}
+
+#description:hover + #iconos, #iconos:hover {
+  display:block;
+}
+
+#iconos > a {
+  display:inline-block;
+  margin-left:5%;
+  margin-right:5%;
+}
+
+#facebook {
+  background-image:url("http://imagenes.es.sftcdn.net/es/scrn/118000/118150/facebook-42.png");
+  background-size:100% 100%;
+  width: 3vw;
+  height: 3vw;
+}
+
+#twitter{
+  background-image:url("https://g.twimg.com/Twitter_logo_blue.png");
+  background-size:100% 100%;
+  width: 3vw;
+  height: 3vw;
+}
+
+#google {
+  background-image:url("http://www.siliconnews.es/wp-content/uploads/2014/07/google+-logo.png");
+  background-size:100% 100%;
+  width: 3vw;
+  height: 3vw;
+}
+
+#alu {
+  background-image:url("http://icons.iconarchive.com/icons/marcus-roberto/google-play/512/Gmail-icon.png");
+  background-size:100% 100%;
+  width: 3vw;
+  height: 3vw;
+}
+
+@media screen and (min-width:1024px) {
+  body {
+    background-image: url("http://www.wallpaperwide.xyz/wp-content/uploads/2016/02/star-wars-background-free-cool.jpg");
+    max-width: 100%;
+    min-width: 50%;
+    height: 1080px;
+  }
+  #titulo {
+    font-size: 52px;
+  }
+}
+
+@media screen and (max-width:1024px) and (min-width:640px) {
+  body {
+    background-image: url("http://www.encabezadostwitter.com/panel/encabezados/stormtroopers-y-cita.jpg");
+    max-width: 100%;
+    min-width: 50%;
+    height: 600px;
+  }
+  #titulo {
+    font-size: 5vw;
+  }
+}
+
+@media screen and (max-width:640px) {
+  body {
+    background-image: url("https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQ4ta150zwha2AG1HFA1mA3VaHk40DfqXFjUfhhsh98zKz5UK7ejg");
+    max-width: 100%;
+    height: 1136px;
+  }
+  #titulo {
+    font-size: 5vw;
+  }
+}

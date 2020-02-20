@@ -1,0 +1,800 @@
+@import url(https://fonts.googleapis.com/css?family=Sansita+One);
+
+body {
+    margin: 0;
+}
+
+.cuerpo {
+    margin: auto;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    padding: 70px 0;
+    width: 1300px;
+    height: auto;
+    background-color: lightgrey;
+}
+
+.cu_cabecera {
+    margin: auto;
+    width: 1150px;
+    height: 480px;
+    padding: 0;
+    font-family: 'Sansita One', cursive;
+    border: 2px solid #535353;
+}
+
+.imagen, .precio {
+    display: inline-block;
+}
+
+.imagen {
+    width: 750px;
+    height: 400px;
+    background-color: #5c5b5b;
+    margin: 0;
+}
+
+.ig, .ip {
+    display: inline-block;
+}
+
+.ip {
+    width: 150px;
+    height: 380px;
+    margin: 10px;
+    position: absolute;
+}
+
+.ig {
+    width: 580px;
+    height: 400px;
+    background-size: 100% 100%;
+    margin: 0;
+    margin-left: 170px;
+    box-shadow: 1px 1px 20px 1px black;
+    position: relative;
+}
+
+.color {
+    width: 100%;
+    height: 50px;
+    margin: auto;
+    position: absolute;
+    bottom: 0;
+}
+
+.color li {
+    text-align: center;
+}
+
+.cd {
+    display: none;
+    margin: auto;
+    margin-left: 8px;
+    margin-top: 10px;
+    width: 25px;
+    height: 25px;
+    border: 1px solid black;
+    box-shadow: 1px 1px 10px black;
+    position: absolute;
+    background-color: lightgrey;
+}
+
+.cd > div {
+    width: 15px;
+    height: 15px;
+    border: 1px solid black;
+    margin: 4px;
+}
+
+.cd:nth-child(1) {
+    left: 0;
+}
+
+.cd:nth-child(2) {
+    left: 35px;
+}
+
+.cd:nth-child(3) {
+    left: 70px;
+}
+
+.cd:nth-child(4) {
+    left: 105px;
+}
+
+.cd > button {
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+.img {
+    margin-top: 8px;
+    width: 150px;
+    height: 89px;
+    background-size: 100% 100%;
+}
+
+.img:nth-child(1) {
+    margin-top: 0;
+}
+
+button {
+    outline: none;
+}
+
+.img button {
+    background-color: transparent;
+    border: none;
+    width: 150px;
+    height: 89px;
+    box-shadow: 1px 1px 20px 1px black;
+}
+
+.img button:hover {
+    box-shadow: 1px 1px 20px 1px white;
+}
+
+.precio {
+    width: 400px;
+    height: 400px;
+    position: absolute;
+}
+
+.mon > h3, .mon > p {
+    display: inline-block;
+}
+
+.mon {
+    width: 390px;
+    text-align: center;
+}
+
+.mon > h3 {
+    font-size: 80px;
+    margin: auto;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+.mon > p {
+    font-size: 15px;
+}
+
+.envio * {
+    display: inline-block;
+}
+
+.envio h3 {
+    font-size: 30px;
+    color: #303030;
+    text-align: center;
+}
+
+.envio div {
+    width: 50px;
+    height: 50px;
+    margin-left: 40px;
+    margin-right: 15px;
+    position: relative;
+    top: 13px;
+}
+
+.disp {
+    background-size: 100% 100%;
+    background-image: url("img/greencheck.png");
+}
+
+.nodisp {
+    background-size: 100% 100%;
+    background-image: url("img/nocheck.png");
+}
+
+.disponibilidad > *, .valor > * {
+    display: inline-block;
+}
+
+.disponibilidad > h3, .valor > h3 {
+    font-size: 20px;
+    margin: 5px 0 10px 25px;
+}
+
+.bdis {
+    display: inline-block;
+    width: 45px;
+    height: 12px;
+    border: 3px solid black;
+    border-right: none;
+    position: absolute;
+    bottom: -3px;
+}
+
+.barradisp {
+    padding: 0;
+    margin-left: 15px;
+    position: relative;
+}
+
+.bdis1 {
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+
+.bdis2 {
+    margin-left: 45px;
+}
+
+.bdis3 {
+    margin-left: 90px;
+}
+
+.bdis4 {
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    margin-left: 135px;
+    border-right: 3px solid black;
+}
+
+.bdissi {
+    background-color: green;
+}
+
+.bdisno {
+    background-color: none;
+}
+
+.est {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    background-size: 100% 100%;
+    position: relative;
+    top: 8px;
+}
+
+.est1 {
+    margin-left: 10px;
+}
+
+.estsi {
+    background-image: url("img/star.png");
+}
+
+.estno {
+    background-size: 95% 95%;
+    background-repeat: no-repeat;
+    background-image: url("img/starn.png");
+}
+
+.estm {
+    background-image: url("img/starm.png");
+}
+
+.comprar {
+    width: 300px;
+    height: 80px;
+    background-color: #a18951;
+    margin: 78px 0 0 55px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+.comprar button {
+    background-color: transparent;
+    width: 300px;
+    height: 80px;
+    position: absolute;
+    outline: none;
+    border: none;
+    padding: 0;
+}
+
+.comprar form {
+    margin: 0;
+}
+
+.comprar h3, .comprar div {
+    display: inline-block;
+}
+
+.comprar h3 {
+    margin: 15px 0;
+    font-size: 40px;
+}
+
+.imgcomprar {
+    width: 40px;
+    height: 40px;
+    background-size: 100% 100%;
+    background-image: url("img/cart.png");
+    margin-left: 25px;
+    margin-right: 20px;
+    position: relative;
+    top: 5px;
+}
+
+.nombre {
+    width: auto;
+    height: 80px;
+    background-color: #525252;
+}
+
+.nombre > h1 {
+    text-align: center;
+    font-size: 50px;
+    margin: 0;
+    padding: 10px 0;
+}
+
+.cu_barra {
+    margin: auto;
+    margin-top: 30px;
+    width: 1150px;
+    height: 70px;
+    padding: 2px;
+    background-color: #535353;
+}
+
+.cu_barra > li {
+    list-style: none;
+    display: inline-block;
+    text-align: center;
+    width: 383px;
+    height: 70px;
+    background-color: white;
+    font-size: 20px;
+    position: relative;
+}
+
+.bob > button {
+    position: absolute;
+    width: 383px;
+    height: 70px;
+    border: none;
+    background-color: transparent;
+    top: 0;
+    left: 0;
+    padding: 0;
+}
+
+.cu_barra > li:hover {
+    background-color: #ebebeb;
+}
+
+.cu_info {
+    width: 1150px;
+    height: auto;
+    background-color: white;
+    margin: auto;
+    margin-top: 30px;
+}
+
+.cu_carac, .cu_espec, .cu_opi {
+    display: none;
+    font-size: 20px;
+    margin: 25px;
+}
+
+.opi {
+    position: relative;
+    height: 132px;
+}
+
+.opiult {
+    height: 90px;
+}
+
+.opiimg {
+    height: 80px;
+}
+
+.opiimg > img {
+    margin-left: 20px;
+    width: 80px;
+    height: 80px;
+    box-shadow: 1px 1px 20px 1px black;
+}
+
+.opiimg , .tex {
+    display: inline-block;
+}
+
+.tex {
+    position: absolute;
+    top: 0;
+}
+
+.tex > p {
+    margin: 0;
+    font-size: 17px;
+    height: 40px;
+    max-width: 950px;
+    overflow: hidden;
+}
+
+.reco, .tex > .valor {
+    display: inline-block;
+}
+
+.reco {
+    position: relative;
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.reco h3 {
+    margin: 0;
+}
+
+.reco * {
+    display: inline-block;
+}
+
+.reco div {
+    width: 30px;
+    height: 30px;
+    position: relative;
+    top: 8px;
+}
+
+.tex > .valor {
+    position: relative;
+    margin-left: 80px;
+}
+
+.tex .est {
+    width: 30px;
+    height: 30px;
+}
+
+.tex {
+    margin-left: 50px;
+    max-width: 970px;
+}
+
+.tex > p {
+}
+
+.tex h3 {
+    margin-left: 0;
+}
+
+.opibar {
+    width: 100%;
+    height: 2px;
+    background-color: black;
+    margin: 20px 0;
+}
+
+.opiult > .opibar {
+    display: none;
+}
+
+.opivac {
+    text-align: center;
+    width: 100%;
+    font-size: 25px;
+    font-weight: bold;
+    color: darkgrey;
+}
+
+@media screen and (max-width: 1400px) and (min-width: 1000px) {
+    .cuerpo {
+        width: 900px;
+        padding: 35px 0;
+    }
+
+    .cu_cabecera {
+        width: 750px;
+        height: 680px;
+    }
+
+    .imagen, .precio {
+        display: block;
+    }
+
+    .precio {
+        width: 750px;
+        height: 200px;
+    }
+
+    .envio, .mon {
+        display: inline-block;
+    }
+
+    .mom > h3 {
+        margin-left: 30px;
+    }
+
+    .envio {
+        margin-top: 15px;
+        position: absolute;
+    }
+
+    .envio > div {
+        margin-left: 20px;
+    }
+
+    .cu_barra {
+        width: 750px;
+    }
+
+    .cu_barra > li {
+        width: 250px;
+    }
+
+    .bob > button {
+        width: 250px;
+    }
+
+    .cu_info {
+        width: 750px;
+    }
+
+    .tex {
+        margin-left: 35px;
+        max-width: 580px;
+        height: 130px;
+    }
+
+    .tex > p {
+        max-width: 570px;
+        max-height: 60px;
+    }
+
+    .opiimg {
+        height: 150px;
+    }
+
+    .opiimg > img {
+        margin: 30px 0;
+        margin-left: 0;
+    }
+
+    .opi {
+        height: 172px;
+    }
+
+    .opiult {
+        height: 150px;
+    }
+
+    .opibar {
+        margin-top: 0;
+    }
+
+    .reco, .tex > .valor {
+        display: block;
+    }
+
+    .tex > .valor {
+        margin-left: 0;
+    }
+}
+
+@media screen and (max-width: 1000px) and (min-width: 550px) {
+    .cuerpo {
+        width: 500px;
+        padding: 15px 0;
+    }
+
+    .cu_cabecera {
+        width: 450px;
+        height: 675px;
+    }
+
+    .nombre > h1 {
+        font-size: 20px;
+    }
+
+    .nombre {
+        height: 40px;
+    }
+
+    .imagen {
+        width: 450px;
+        height: 390px;
+    }
+
+    .ip {
+        width: 430px;
+        height: 70px;
+    }
+
+    .img {
+        margin-top: 0;
+        width: 105px;
+        height: 70px;
+    }
+
+    .img button {
+        width: 105px;
+        height: 70px;
+    }
+
+    .ip div {
+        display: inline-block;
+    }
+
+    .ig {
+        width: 450px;
+        height: 300px;
+        top: 90px;
+        margin-left:0;
+    }
+
+    .imagen, .precio {
+        display: block;
+    }
+
+    .precio {
+        width: 450px;
+        height: 245px;
+    }
+
+    .envio, .mon {
+        display: inline-block;
+    }
+
+    .mon {
+        width: 250px;
+    }
+
+    .mon > h3 {
+        font-size: 45px;
+    }
+
+    .envio {
+        width: 200px;
+        height: 75px;
+        position: absolute;
+    }
+
+    .envio > div {
+        margin-left: 5px;
+        margin-right: 5px;
+        width: 30px;
+        height: 30px;
+        top: 8px;
+    }
+
+    .envio > h3 {
+        margin: 0;
+        margin-top: 35px;
+        font-size: 16px;
+    }
+
+    .disponibilidad > h3, .valor > h3 {
+        font-size: 15px;
+        margin-left: 100px;
+    }
+
+    .bdis {
+        width: 30px;
+        height: 8px;
+        border: 2px solid black;
+        border-right: none;
+        bottom: 0;
+    }
+
+    .bdis2 {
+        margin-left: 30px;
+    }
+
+    .bdis3 {
+        margin-left: 60px;
+    }
+
+    .bdis4 {
+        margin-left: 90px;
+        border-right: 2px solid black;
+    }
+
+    .est {
+        width: 25px;
+        height: 25px;
+        top: 5px;
+    }
+
+    .comprar {
+        width: 450px;
+        bottom: 0;
+        left: 0;
+        margin: 0;
+    }
+
+    .imgcomprar {
+        margin-left: 105px;
+    }
+
+    .comprar input {
+        width: 450px;
+    }
+
+    .cu_barra {
+        width: 450px;
+        height: 210px;
+    }
+
+    .cu_barra > li {
+        width: 450px;
+        display: block;
+        border-bottom: 1px solid black;
+    }
+
+    .bob > h3 {
+        position: relative;
+        margin: 0;
+        top: 20px;
+    }
+
+    .bob > button {
+        width: 450px;
+    }
+
+    .cu_carac, .cu_espec {
+        font-size: 17px;
+    }
+
+    .cu_info {
+        width: 450px;
+    }
+
+    .tex {
+        margin-left: 35px;
+        max-width: 580px;
+        height: 180px;
+    }
+
+    .tex > p {
+        max-width: 450px;
+        height: 100px;
+    }
+
+    .opiimg {
+        height: 180px;
+    }
+
+    .opiimg > img {
+        width: 50px;
+        height: 50px;
+        margin: 40px 0;
+        margin-left: 0;
+    }
+
+    .tex h3:nth-last-of-type(1) {
+        font-size: 15px;
+        margin-left: 10px;
+    }
+
+    .reco h3 {
+        font-size: 20px;
+    }
+
+    .opi {
+        height: 212px;
+    }
+
+    .opiult {
+        height: 180px;
+    }
+
+    .opibar {
+        margin-top: 10px;
+    }
+
+    .reco, .tex > .valor {
+        display: block;
+    }
+
+    .tex > .valor {
+        margin-left: 0;
+    }
+}
