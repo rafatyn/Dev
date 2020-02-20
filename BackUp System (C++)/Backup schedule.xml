@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<backup>
+  <sourceFolders>
+    <folder>C:\Program Files</folder>
+    <folder>C:\Program Files (x86)</folder>
+    <folder>C:\ProgramData</folder>
+    <folder>C:\Dev</folder>
+	  <folder>C:\Programs</folder>
+	  <folder>C:\Trabajo</folder>
+	  <folder>C:\Users</folder>
+	  <folder>C:\VulkanSDK</folder>
+  </sourceFolders>
+  <destinationFolders>
+    <folder>D:\Backup Raid</folder>
+  </destinationFolders>
+</backup>
