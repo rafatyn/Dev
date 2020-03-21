@@ -15,10 +15,9 @@
 
 #import <msxml6.dll> rename_namespace(_T("MSXML"))
 
-void findChildsInDirectory(uint16_t level, std::wstring& directory, std::wstring& dstFolder, std::atomic_uint& threadsPending)
+void findChildsInDirectory(std::wstring& directory, std::wstring& dstFolder, std::atomic_uint& threadsPending)
 {
 	WIN32_FIND_DATA ffd;
-	LARGE_INTEGER filesize;
 	HANDLE hFind = INVALID_HANDLE_VALUE;
 	std::wstring childs = directory + L"\\*";
 
@@ -46,7 +45,7 @@ void findChildsInDirectory(uint16_t level, std::wstring& directory, std::wstring
 				if(dstFileTime.QuadPart == 0)
 					CreateDirectoryW(dstFile.c_str(), NULL);
 
-				findChildsInDirectory(level + 1, srcFile, dstFile, threadsPending);
+				findChildsInDirectory(srcFile, dstFile, threadsPending);
 			}
 			else {
 				LARGE_INTEGER srcFileSize, srcFileTime;
@@ -73,6 +72,69 @@ void findChildsInDirectory(uint16_t level, std::wstring& directory, std::wstring
 						});
 					}
 				}
+			}
+		}
+	} while (FindNextFile(hFind, &ffd) != 0);
+
+	DWORD dwError = GetLastError();
+	if (dwError != ERROR_NO_MORE_FILES) {
+		std::cerr << "Error: " << dwError << std::endl;
+		return;
+	}
+
+	FindClose(hFind);
+}
+
+void findToDeleteChildsInDirectory(std::wstring& directory, std::wstring& srcFolder, std::atomic_uint& threadsPending)
+{
+	WIN32_FIND_DATA ffd;
+	HANDLE hFind = INVALID_HANDLE_VALUE;
+	std::wstring childs = directory + L"\\*";
+
+	hFind = FindFirstFileW(childs.c_str(), &ffd);
+
+	if (INVALID_HANDLE_VALUE == hFind)
+		return;
+
+	do
+	{
+		if (wcscmp(ffd.cFileName, L".") != 0 && wcscmp(ffd.cFileName, L"..") != 0) {
+			std::wstring srcFile = srcFolder + L'\\' + ffd.cFileName;
+			std::wstring dstFile = directory + L"\\" + ffd.cFileName;
+
+			WIN32_FILE_ATTRIBUTE_DATA srcFileInfo;
+			LARGE_INTEGER srcFileSize, srcFileTime;
+			srcFileSize.QuadPart = 0; srcFileTime.QuadPart = 0;
+			if (GetFileAttributesExW(srcFile.c_str(), GetFileExInfoStandard, &srcFileInfo)) {
+				srcFileSize.LowPart = srcFileInfo.nFileSizeLow; srcFileSize.HighPart = srcFileInfo.nFileSizeHigh;
+				srcFileTime.LowPart = srcFileInfo.ftLastWriteTime.dwLowDateTime; srcFileTime.HighPart = srcFileInfo.ftLastWriteTime.dwHighDateTime;
+			}
+
+			if (srcFileSize.QuadPart == 0 && srcFileTime.QuadPart == 0) {
+				if (ffd.dwFileAttributes & FILE_ATTRIBUTE_DIRECTORY)
+				{
+					findToDeleteChildsInDirectory(dstFile, srcFile, threadsPending);
+
+					threadsPending++;
+					std::async(std::launch::async, [&threadsPending, &dstFile]() {
+						BOOL result = RemoveDirectoryW(dstFile.c_str());
+						if (result == 0)
+							std::wcerr << std::wstring(L"Error removing directory: " + dstFile + L" Error: " + std::to_wstring(GetLastError())) << std::endl;
+						threadsPending--;
+					});
+				}
+				else {
+					threadsPending++;
+					std::async(std::launch::async, [&threadsPending, &dstFile]() {
+						BOOL result = DeleteFileW(dstFile.c_str());
+						if (result == 0)
+							std::wcerr << std::wstring(L"Error removing file: " + dstFile + L" Error: " + std::to_wstring(GetLastError())) << std::endl;
+						threadsPending--;
+					});
+				}
+			}
+			else {
+				findToDeleteChildsInDirectory(dstFile, srcFile, threadsPending);
 			}
 		}
 	} while (FindNextFile(hFind, &ffd) != 0);
@@ -139,7 +201,7 @@ int main(int argc, char* argv[])
 	}
 	CoUninitialize();	
 
-	srcFolders = {
+	/*srcFolders = {
 		"C:\\Prueba1",
 		"C:\\Prueba2",
 		"C:\\Prueba3"
@@ -147,7 +209,7 @@ int main(int argc, char* argv[])
 
 	dstFolders = {
 		"D:\\Backup Raid"
-	};
+	};*/
 
 	std::cout << "Starting to BackUp..." << std::endl;
 
@@ -189,7 +251,54 @@ int main(int argc, char* argv[])
 				if (dstFileTime.QuadPart == 0) {
 					CreateDirectoryW(dstRootFolderW.c_str(), NULL);
 				}
-				findChildsInDirectory(0, srcFolderW, dstRootFolderW, threadsPending);
+				findChildsInDirectory(srcFolderW, dstRootFolderW, threadsPending);
+				srcFoldersPending--;
+			});
+			dstFoldersPending--;
+		});
+
+		while (true)
+		{
+			if (threadsPending == 0 && srcFoldersPending == 0 && dstFoldersPending == 0)
+				break;
+
+			std::this_thread::sleep_for(std::chrono::milliseconds(150));
+		}
+
+		dstFoldersPending = static_cast<unsigned int>(dstFolders.size());
+		srcFoldersPending = static_cast<unsigned int>(srcFolders.size() * dstFolders.size());
+		threadsPending = 0;
+
+		std::for_each(std::execution::par_unseq, dstFolders.begin(), dstFolders.end(), [&srcFolders, &srcFoldersPending, &dstFoldersPending, &threadsPending](auto& dstFolder) {
+
+			int dstCharsNum = MultiByteToWideChar(CP_UTF8, 0, dstFolder.c_str(), -1, NULL, 0);
+			wchar_t* dstWstr = new wchar_t[dstCharsNum];
+			MultiByteToWideChar(CP_UTF8, 0, dstFolder.c_str(), -1, dstWstr, dstCharsNum);
+			std::wstring dstFolderW(dstWstr);
+			delete[] dstWstr;
+
+			std::for_each(std::execution::par_unseq, srcFolders.begin(), srcFolders.end(), [&dstFolderW, &srcFoldersPending, &dstFoldersPending, &threadsPending](auto& srcFolder) {
+
+				int srcCharsNum = MultiByteToWideChar(CP_UTF8, 0, srcFolder.c_str(), -1, NULL, 0);
+				wchar_t* srcWstr = new wchar_t[srcCharsNum];
+				MultiByteToWideChar(CP_UTF8, 0, srcFolder.c_str(), -1, srcWstr, srcCharsNum);
+				std::wstring srcFolderW(srcWstr);
+				delete[] srcWstr;
+
+				size_t parentFolderSize = srcFolderW.substr(0, srcFolderW.find_last_of(L"\\") + 1).length();
+				std::wstring dstRootFolderW = dstFolderW + L'\\' + (srcFolderW.substr(parentFolderSize));
+
+				WIN32_FILE_ATTRIBUTE_DATA dstFileInfo;
+				LARGE_INTEGER dstFileTime;
+				dstFileTime.QuadPart = 0;
+				if (GetFileAttributesExW(dstRootFolderW.c_str(), GetFileExInfoStandard, &dstFileInfo)) {
+					dstFileTime.LowPart = dstFileInfo.ftLastWriteTime.dwLowDateTime; dstFileTime.HighPart = dstFileInfo.ftLastWriteTime.dwHighDateTime;
+				}
+
+				if (dstFileTime.QuadPart == 0) {
+					CreateDirectoryW(dstRootFolderW.c_str(), NULL);
+				}
+				findToDeleteChildsInDirectory(dstRootFolderW, srcFolderW, threadsPending);
 				srcFoldersPending--;
 			});
 			dstFoldersPending--;
