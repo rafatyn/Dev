@@ -15,7 +15,7 @@
 
 #import <msxml6.dll> rename_namespace(_T("MSXML"))
 
-void findChildsInDirectory(std::wstring& directory, std::wstring& dstFolder, std::atomic_uint& threadsPending)
+void findChildsInDirectory(std::wstring& directory, std::wstring& dstFolder, std::atomic_uint& threadsPending, std::atomic_bool& showErrors)
 {
 	WIN32_FIND_DATA ffd;
 	HANDLE hFind = INVALID_HANDLE_VALUE;
@@ -45,7 +45,7 @@ void findChildsInDirectory(std::wstring& directory, std::wstring& dstFolder, std
 				if(dstFileTime.QuadPart == 0)
 					CreateDirectoryW(dstFile.c_str(), NULL);
 
-				findChildsInDirectory(srcFile, dstFile, threadsPending);
+				findChildsInDirectory(srcFile, dstFile, threadsPending, showErrors);
 			}
 			else {
 				LARGE_INTEGER srcFileSize, srcFileTime;
@@ -55,18 +55,18 @@ void findChildsInDirectory(std::wstring& directory, std::wstring& dstFolder, std
 				if ((dstFileSize.QuadPart == 0 && dstFileTime.QuadPart == 0) || srcFileSize.QuadPart != dstFileSize.QuadPart || srcFileTime.QuadPart > dstFileTime.QuadPart) {
 					if (srcFileSize.QuadPart > 150000000) {
 						threadsPending++;
-						std::async(std::launch::async, [&threadsPending, &srcFile, &dstFile]() {
+						std::async(std::launch::async, [&threadsPending, &showErrors, &srcFile, &dstFile]() {
 							BOOL result = CopyFileExW(srcFile.c_str(), dstFile.c_str(), FALSE, NULL, NULL, COPY_FILE_NO_BUFFERING);
-							if (result == 0)
+							if (showErrors && result == 0)
 								std::wcerr << std::wstring(L"Error in file: " + srcFile + L" Error: " + std::to_wstring(GetLastError())) << std::endl;
 							threadsPending--;
 						});
 					}
 					else {
 						threadsPending++;
-						std::async(std::launch::async, [&threadsPending, &srcFile, &dstFile]() {
+						std::async(std::launch::async, [&threadsPending, &showErrors, &srcFile, &dstFile]() {
 							BOOL result = CopyFileW(srcFile.c_str(), dstFile.c_str(), FALSE);
-							if (result == 0)
+							if (showErrors && result == 0)
 								std::wcerr << std::wstring(L"Error in file: " + srcFile + L" Error: " + std::to_wstring(GetLastError())) << std::endl;
 							threadsPending--;
 						});
@@ -85,7 +85,7 @@ void findChildsInDirectory(std::wstring& directory, std::wstring& dstFolder, std
 	FindClose(hFind);
 }
 
-void findToDeleteChildsInDirectory(std::wstring& directory, std::wstring& srcFolder, std::atomic_uint& threadsPending)
+void findToDeleteChildsInDirectory(std::wstring& directory, std::wstring& srcFolder, std::atomic_uint& threadsPending, std::atomic_bool& showErrors)
 {
 	WIN32_FIND_DATA ffd;
 	HANDLE hFind = INVALID_HANDLE_VALUE;
@@ -113,28 +113,28 @@ void findToDeleteChildsInDirectory(std::wstring& directory, std::wstring& srcFol
 			if (srcFileSize.QuadPart == 0 && srcFileTime.QuadPart == 0) {
 				if (ffd.dwFileAttributes & FILE_ATTRIBUTE_DIRECTORY)
 				{
-					findToDeleteChildsInDirectory(dstFile, srcFile, threadsPending);
+					findToDeleteChildsInDirectory(dstFile, srcFile, threadsPending, showErrors);
 
 					threadsPending++;
-					std::async(std::launch::async, [&threadsPending, &dstFile]() {
+					std::async(std::launch::async, [&threadsPending, &showErrors, &dstFile]() {
 						BOOL result = RemoveDirectoryW(dstFile.c_str());
-						if (result == 0)
+						if (showErrors && result == 0)
 							std::wcerr << std::wstring(L"Error removing directory: " + dstFile + L" Error: " + std::to_wstring(GetLastError())) << std::endl;
 						threadsPending--;
 					});
 				}
 				else {
 					threadsPending++;
-					std::async(std::launch::async, [&threadsPending, &dstFile]() {
+					std::async(std::launch::async, [&threadsPending, &showErrors, &dstFile]() {
 						BOOL result = DeleteFileW(dstFile.c_str());
-						if (result == 0)
+						if (showErrors && result == 0)
 							std::wcerr << std::wstring(L"Error removing file: " + dstFile + L" Error: " + std::to_wstring(GetLastError())) << std::endl;
 						threadsPending--;
 					});
 				}
 			}
 			else {
-				findToDeleteChildsInDirectory(dstFile, srcFile, threadsPending);
+				findToDeleteChildsInDirectory(dstFile, srcFile, threadsPending, showErrors);
 			}
 		}
 	} while (FindNextFile(hFind, &ffd) != 0);
@@ -150,9 +150,30 @@ void findToDeleteChildsInDirectory(std::wstring& directory, std::wstring& srcFol
 
 int main(int argc, char* argv[])
 {
-	if (argc != 2) {
-		std::cerr << "Wrong number of arguments, usage: [backupConfigFile.xml]" << std::endl;
+	ShowWindow(GetConsoleWindow(), SW_FORCEMINIMIZE);
+
+	std::atomic_bool showErrors = true;
+
+	if (argc < 2 || argc > 3) {
+		std::cerr << "Wrong number of arguments, usage: [backupConfigFile.xml] [-ne]" << std::endl;
 		return 1;
+	}
+
+	switch (argc)
+	{
+	case 2:
+		if (std::string(argv[1]) == "-ne") {
+			std::cerr << "Wrong number of arguments, usage: [backupConfigFile.xml] [-ne]" << std::endl;
+			return 1;
+		}
+		break;
+	case 3:
+		if (std::string(argv[2]) == "-ne") {
+			showErrors = false;
+		}
+		break;
+	default:
+		break;
 	}
 
 	std::vector<std::string> srcFolders;
@@ -222,7 +243,7 @@ int main(int argc, char* argv[])
 
 	try
 	{
-		std::for_each(std::execution::par_unseq, dstFolders.begin(), dstFolders.end(), [&srcFolders, &srcFoldersPending, &dstFoldersPending, &threadsPending](auto& dstFolder) {
+		std::for_each(std::execution::par_unseq, dstFolders.begin(), dstFolders.end(), [&srcFolders, &srcFoldersPending, &dstFoldersPending, &threadsPending, &showErrors](auto& dstFolder) {
 		
 			int dstCharsNum = MultiByteToWideChar(CP_UTF8, 0, dstFolder.c_str(), -1, NULL, 0);
 			wchar_t* dstWstr = new wchar_t[dstCharsNum];
@@ -230,7 +251,7 @@ int main(int argc, char* argv[])
 			std::wstring dstFolderW(dstWstr);
 			delete[] dstWstr;
 
-			std::for_each(std::execution::par_unseq, srcFolders.begin(), srcFolders.end(), [&dstFolderW, &srcFoldersPending, &dstFoldersPending, &threadsPending](auto& srcFolder) {
+			std::for_each(std::execution::par_unseq, srcFolders.begin(), srcFolders.end(), [&dstFolderW, &srcFoldersPending, &dstFoldersPending, &threadsPending, &showErrors](auto& srcFolder) {
 
 				int srcCharsNum = MultiByteToWideChar(CP_UTF8, 0, srcFolder.c_str(), -1, NULL, 0);
 				wchar_t* srcWstr = new wchar_t[srcCharsNum];
@@ -251,7 +272,7 @@ int main(int argc, char* argv[])
 				if (dstFileTime.QuadPart == 0) {
 					CreateDirectoryW(dstRootFolderW.c_str(), NULL);
 				}
-				findChildsInDirectory(srcFolderW, dstRootFolderW, threadsPending);
+				findChildsInDirectory(srcFolderW, dstRootFolderW, threadsPending, showErrors);
 				srcFoldersPending--;
 			});
 			dstFoldersPending--;
@@ -269,7 +290,7 @@ int main(int argc, char* argv[])
 		srcFoldersPending = static_cast<unsigned int>(srcFolders.size() * dstFolders.size());
 		threadsPending = 0;
 
-		std::for_each(std::execution::par_unseq, dstFolders.begin(), dstFolders.end(), [&srcFolders, &srcFoldersPending, &dstFoldersPending, &threadsPending](auto& dstFolder) {
+		std::for_each(std::execution::par_unseq, dstFolders.begin(), dstFolders.end(), [&srcFolders, &srcFoldersPending, &dstFoldersPending, &threadsPending, &showErrors](auto& dstFolder) {
 
 			int dstCharsNum = MultiByteToWideChar(CP_UTF8, 0, dstFolder.c_str(), -1, NULL, 0);
 			wchar_t* dstWstr = new wchar_t[dstCharsNum];
@@ -277,7 +298,7 @@ int main(int argc, char* argv[])
 			std::wstring dstFolderW(dstWstr);
 			delete[] dstWstr;
 
-			std::for_each(std::execution::par_unseq, srcFolders.begin(), srcFolders.end(), [&dstFolderW, &srcFoldersPending, &dstFoldersPending, &threadsPending](auto& srcFolder) {
+			std::for_each(std::execution::par_unseq, srcFolders.begin(), srcFolders.end(), [&dstFolderW, &srcFoldersPending, &dstFoldersPending, &threadsPending, &showErrors](auto& srcFolder) {
 
 				int srcCharsNum = MultiByteToWideChar(CP_UTF8, 0, srcFolder.c_str(), -1, NULL, 0);
 				wchar_t* srcWstr = new wchar_t[srcCharsNum];
@@ -298,7 +319,7 @@ int main(int argc, char* argv[])
 				if (dstFileTime.QuadPart == 0) {
 					CreateDirectoryW(dstRootFolderW.c_str(), NULL);
 				}
-				findToDeleteChildsInDirectory(dstRootFolderW, srcFolderW, threadsPending);
+				findToDeleteChildsInDirectory(dstRootFolderW, srcFolderW, threadsPending, showErrors);
 				srcFoldersPending--;
 			});
 			dstFoldersPending--;
@@ -328,5 +349,6 @@ int main(int argc, char* argv[])
 
 	system("PAUSE");
 
-	// Bests times // Debug All = 65000ms // Release All = 40000ms // Release Folder = 650ms
+	// Copy errors: 3-5-32-1920
+	// Remove errors: 145
 }
