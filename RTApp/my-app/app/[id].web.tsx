@@ -112,7 +112,7 @@ export default function Path() {
                     />
                     <View style={styles.flexContainer}>
                         <View style={styles.flexContainer}>
-                            <LoadScript googleMapsApiKey="AIzaSyCPK6nK2bH23lWtp-c7iojNXHk2kaRsD3Y">
+                            <LoadScript googleMapsApiKey="#">
                                 <MapView
                                     ref={map}
                                     style={styles.flexContainer}
